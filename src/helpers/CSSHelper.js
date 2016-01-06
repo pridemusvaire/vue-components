@@ -28,7 +28,7 @@ export default {
      * @param classType The given class type
      * @returns {string} The corrected contextual class
      */
-    contextualClass: function (element, classType) {
+    contextualClass (element, classType) {
         var contextualClass;
 
         if (classType && this.contextualTypes.indexOf(classType.toLowerCase()) !== -1) {
@@ -45,7 +45,7 @@ export default {
      * @param element The name of the element
      * @returns {string} The corrected class
      */
-    has: function (block, element) {
+    has (block, element) {
         return block + this.elementSeparator + element;
     },
 
@@ -56,7 +56,7 @@ export default {
      * @param variant The name of the variant
      * @returns {string} The corrected class
      */
-    variant: function (item, variant) {
+    variant (item, variant) {
         return item + this.modifierSeparator + variant;
     }
 };
