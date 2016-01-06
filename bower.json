@@ -1,7 +1,7 @@
 {
   "name": "vue-components",
   "description": "Vue Components",
-  "main": "",
+  "main": "src/components",
   "authors": [
     "Peter van Meijgaard <peter@vivid-websolutions.nl>"
   ],
@@ -26,7 +26,7 @@
     "globals"
   ],
   "homepage": "http://vue-components.vivid-websolutions.nl",
-  "private": true,
+  "private": false,
   "ignore": [
     "**/.*",
     "node_modules",

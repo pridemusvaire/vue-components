@@ -1,7 +1,7 @@
 {
   "name": "vue-components",
-  "version": "1.0.0",
-  "description": "Vue Webpack",
+  "version": "1.0.1",
+  "description": "Vue Components",
   "author": "Peter van Meijgaard <peter@vivid-websolutions.nl>",
   "private": false,
   "repository": {
@@ -16,13 +16,12 @@
     "js",
     "javascript",
     "framework",
-    "styles",
+    "BEM",
     "ES6",
     "babel",
     "front-end",
     "frontend"
   ],
   "license": "MIT",
-  "scripts": {
-  }
+  "scripts": {}
 }
