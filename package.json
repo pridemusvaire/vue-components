@@ -1,6 +1,6 @@
 {
   "name": "vue-components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vue Components",
   "author": "Peter van Meijgaard <peter@vivid-websolutions.nl>",
   "private": false,
@@ -23,6 +23,5 @@
     "frontend"
   ],
   "license": "MIT",
-  "scripts": {
-  }
+  "scripts": {}
 }
