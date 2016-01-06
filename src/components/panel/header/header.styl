@@ -1,0 +1,25 @@
+@import "./../../../assets/stylus/settings/variables.styl"
+@import "./../../../assets/stylus/mixins/mixins.styl"
+
+.panel
+  +has(header)
+    border-radius-top()
+    background-color: #eee
+    border: 1px solid #aaa
+    border-bottom: none
+    padding: .75rem 1rem
+    +variant(primary)
+      background-color: #0af
+      border-color: #0af
+    +variant(success)
+      background-color: #efe
+      border-color: #5c5
+    +variant(danger)
+      background-color: #fff0f0
+      border-color: #cc5656
+    +variant(warning)
+      background-color: #fffbf2
+      border-color: #cca558
+    +variant(info)
+      background-color: #f2f9ff
+      border-color: #5a93cc

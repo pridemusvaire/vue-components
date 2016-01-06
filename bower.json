@@ -1,0 +1,41 @@
+{
+  "name": "vue-components",
+  "description": "Vue Components",
+  "main": "",
+  "authors": [
+    "Peter van Meijgaard <peter@vivid-websolutions.nl>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "vivid",
+    "websolutions",
+    "vue",
+    "components",
+    "js",
+    "javascript",
+    "framework",
+    "styles",
+    "ES6",
+    "babel",
+    "front-end",
+    "frontend"
+  ],
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals"
+  ],
+  "homepage": "http://vue-components.vivid-websolutions.nl",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "flexbox-grid-stylus": "latest",
+    "normalize.styl": "latest"
+  }
+}

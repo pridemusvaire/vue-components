@@ -1,0 +1,24 @@
+<div
+		class="panel"
+		:class="panelClass"
+>
+	<v-panel-header
+			v-if="header"
+			:style="headerStyle"
+			:title="header.title"
+	></v-panel-header>
+
+	<v-panel-body
+			v-if="body"
+			:style="bodyStyle"
+			:content="body.content"
+			:has-header="hasHeader"
+			:has-footer="hasFooter"
+	></v-panel-body>
+
+	<v-panel-footer
+			v-if="footer"
+			:style="footerStyle"
+			:content="footer.content"
+	></v-panel-footer>
+</div>

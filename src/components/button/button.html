@@ -1,0 +1,17 @@
+<button
+		v-if="type === 'button'"
+		class="button"
+		:class="buttonClass"
+		@click.prevent="action"
+>
+	{{{ content }}}
+</button>
+<a
+		v-if="type === 'link'"
+		class="button"
+		:class="buttonClass"
+		:href="link.url"
+		:target="link.target"
+>
+	{{{ content }}}
+</a>
