@@ -35,7 +35,6 @@
     "tests"
   ],
   "dependencies": {
-    "flexbox-grid-stylus": "latest",
     "normalize.styl": "latest"
   }
 }
