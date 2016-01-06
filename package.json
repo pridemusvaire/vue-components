@@ -23,5 +23,8 @@
     "frontend"
   ],
   "license": "MIT",
-  "scripts": {}
+  "scripts": {},
+  "devDependencies": {
+    "eslint": "^1.10.3"
+  }
 }

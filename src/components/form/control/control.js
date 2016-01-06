@@ -1,6 +1,6 @@
 import * as label from './../label/label.vue';
 
-module.exports = {
+export default {
     data () {
     },
     props: {

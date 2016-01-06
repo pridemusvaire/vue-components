@@ -1,6 +1,6 @@
 import * as CSSHelper from './../../helpers/CSSHelper';
 
-module.exports = {
+export default {
     data () {
         return {
             block: 'button'

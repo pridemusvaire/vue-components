@@ -3,7 +3,7 @@ import * as Header from './header/header.vue';
 import * as Body from './body/body.vue';
 import * as Footer from './footer/footer.vue';
 
-module.exports = {
+export default {
     data () {
         return {
             block: 'panel'
@@ -45,7 +45,7 @@ module.exports = {
          * Computed property which will output
          * whether there is a footer or not
          *
-         * @returns {boolean} It there is a footer
+         * @returns {boolean} If there is a footer
          */
         hasFooter () {
             return !!this.footer;

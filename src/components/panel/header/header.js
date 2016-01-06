@@ -1,7 +1,7 @@
 import * as CSSHelper from './../../../helpers/CSSHelper';
 import * as Title from './../title/title.vue';
 
-module.exports = {
+export default {
     data () {
         return {
             block: 'panel'
