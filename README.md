@@ -1,5 +1,4 @@
 # vue-components
-
 > Vue Components
 
 ## Build Setup
@@ -19,3 +18,4 @@ npm test
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+A simple to use Vue.js components library
