@@ -1,4 +1,4 @@
-import * as CSSHelper from './../../helpers/CSSHelper';
+import CSSHelper from './../../helpers/CSSHelper';
 import * as Header from './header/header.vue';
 import * as Body from './body/body.vue';
 import * as Footer from './footer/footer.vue';

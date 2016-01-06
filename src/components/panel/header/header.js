@@ -1,4 +1,4 @@
-import * as CSSHelper from './../../../helpers/CSSHelper';
+import CSSHelper from './../../../helpers/CSSHelper';
 import * as Title from './../title/title.vue';
 
 export default {
