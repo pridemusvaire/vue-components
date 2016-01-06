@@ -1,5 +1,6 @@
 {
   "name": "vue-components",
+  "version": "1.0.0",
   "description": "Vue Webpack",
   "author": "Peter van Meijgaard <peter@vivid-websolutions.nl>",
   "private": false,
