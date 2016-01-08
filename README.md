@@ -1,5 +1,6 @@
 # Vue Components #
 >vue-components
+
 Vue Components is an easy to use Vue component library
 
 ## Components ##
@@ -14,7 +15,6 @@ Don't like the `--` or `__` that is used in the BEM syntax?
 You can change that easily!
 
 >todo: make global
-Create a file called `vue-components.json`.
 
 ### File ###
 ```
