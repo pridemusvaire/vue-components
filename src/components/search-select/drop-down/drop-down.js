@@ -1,27 +1,32 @@
 import CSSHelper from './../../../helpers/CSSHelper';
+import * as Item from './../item/item.vue';
 
 export default {
     data () {
         return {
-            block: 'panel'
+            block: 'search-select'
         };
     },
-    props: {
-        style: {},
-        content: {}
+    props: [
+        'items',
+        'style',
+        'isActivated',
+        'selectItem'
+    ],
+    components: {
+        'v-search-select-item': Item
     },
-
     computed: {
 
         /**
          * Computed property which will output the
-         * corrected class names for the title
+         * corrected class names for the drop down
          *
          * @returns {Array} The corrected class name
          */
-        titleClass () {
+        dropDownClass () {
             var classNames = [];
-            var element = CSSHelper.has(this.block, 'title');
+            var element = CSSHelper.has(this.block, 'drop-down');
             var contextualClass = CSSHelper.contextualClass(element, this.style);
 
             classNames.push(element);

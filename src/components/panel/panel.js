@@ -9,18 +9,19 @@ export default {
             block: 'panel'
         };
     },
-    props: {
-        style: {},
-        header: {},
-        body: {},
-        footer: {}
-    },
+    props: [
+        'style',
+        'header',
+        'body',
+        'footer'
+    ],
     components: {
         'v-panel-header': Header,
         'v-panel-body': Body,
         'v-panel-footer': Footer
     },
     computed: {
+
         /**
          * Computed property which will output
          * whether there is an header or not
@@ -90,6 +91,8 @@ export default {
         panelClass () {
             var classNames = [];
             var contextualClass = CSSHelper.contextualClass(this.block, this.style);
+
+            classNames.push(this.block);
 
             if (contextualClass) {
                 classNames.push(contextualClass);

@@ -6,10 +6,10 @@ export default {
             block: 'panel'
         };
     },
-    props: {
-        style: {},
-        content: {}
-    },
+    props: [
+        'style',
+        'content'
+    ],
     computed: {
 
         /**
@@ -22,6 +22,8 @@ export default {
             var classNames = [];
             var element = CSSHelper.has(this.block, 'footer');
             var contextualClass = CSSHelper.contextualClass(element, this.style);
+
+            classNames.push(element);
 
             if (contextualClass) {
                 classNames.push(contextualClass);

@@ -1,3 +1,5 @@
+import * as Config from './../config.json';
+
 export default {
 
     /**
@@ -14,12 +16,22 @@ export default {
     /**
      * The element separator
      */
-    elementSeparator: '__',
+    elementSeparator () {
+        if (Config.element_separator) {
+            return Config.element_separator;
+        }
+        return '__';
+    },
 
     /**
      * The modifier separator
      */
-    modifierSeparator: '--',
+    modifierSeparator () {
+        if (Config.modifier_separator) {
+            return Config.modifier_separator;
+        }
+        return '--';
+    },
 
     /**
      * Method which will return the corrected contextual class
@@ -46,7 +58,7 @@ export default {
      * @returns {string} The corrected class
      */
     has (block, element) {
-        return block + this.elementSeparator + element;
+        return block + this.elementSeparator() + element;
     },
 
     /**
@@ -57,6 +69,6 @@ export default {
      * @returns {string} The corrected class
      */
     variant (item, variant) {
-        return item + this.modifierSeparator + variant;
+        return item + this.modifierSeparator() + variant;
     }
 };

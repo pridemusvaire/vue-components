@@ -1,0 +1,10 @@
+<ul :class="dropDownClass"
+	v-if="isActivated"
+>
+	<v-search-select-item
+			v-for="item in items"
+			:item="item"
+			:select-item="selectItem"
+			:style="item.style || style"
+	></v-search-select-item>
+</ul>

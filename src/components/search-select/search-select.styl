@@ -7,56 +7,6 @@
   display: block
   overflow: hidden
 
-  +has(input)
-    background-color: transparent
-    border: none
-    display: block
-    width: 100%
-    padding: .5rem
-    &:focus,
-    &:active,
-    &:hover
-      outline: none
-
-    +variant(primary)
-      &::-webkit-input-placeholder
-        color: #fff
-      &:-moz-placeholder
-        color: #fff
-      &::-moz-placeholder
-        color: #fff
-      &:-ms-input-placeholder
-        color: #fff
-      color: #fff
-      background-color: #0af
-    +variant(success)
-      background-color: #efe
-    +variant(danger)
-      background-color: #fff0f0
-    +variant(warning)
-      background-color: #fffbf2
-    +variant(info)
-      background-color: #f2f9ff
-
-  +has(results)
-    display: block
-    list-style: none
-    margin: 0
-    max-height: 200px
-    overflow-y: scroll
-    padding: 0
-
-    +variant(primary)
-      color: #0af
-    +variant(success)
-      color: #080
-    +variant(danger)
-      color: #870000
-    +variant(warning)
-      color: #cca558
-    +variant(info)
-      color: #5a93cc
-
   +has(result)
     background-color: #fff;
     border-top: 1px solid #e6e6e6

@@ -1,0 +1,31 @@
+@import "./../../../assets/stylus/settings/variables.styl"
+@import "./../../../assets/stylus/mixins/mixins.styl"
+
+.search-select
+  //Element
+  +has(input)
+    background-color: transparent
+    border: none
+    display: block
+    width: 100%
+    padding: .5rem
+    &:focus,
+    &:active,
+    &:hover
+      outline: none
+
+    // Modifiers
+    +variant(primary)
+      color: #0af
+    +variant(success)
+      background-color: #efe
+      color: #080
+    +variant(danger)
+      background-color: #fff0f0
+      color: #870000
+    +variant(warning)
+      background-color: #fffbf2
+      color: #cca558
+    +variant(info)
+      background-color: #f2f9ff
+      color: #5a93cc

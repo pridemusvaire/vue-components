@@ -6,14 +6,14 @@ export default {
             block: 'panel'
         };
     },
-    props: {
-        style: {},
-        content: {},
-        hasFooter: {},
-        hasHeader: {}
-    },
-
+    props: [
+        'content',
+        'hasHeader',
+        'hasFooter',
+        'style'
+    ],
     computed: {
+
         /**
          * Computed property which will output the
          * corrected class names for the body
@@ -24,6 +24,8 @@ export default {
             var classNames = [];
             var element = CSSHelper.has(this.block, 'body');
             var contextualClass = CSSHelper.contextualClass(element, this.style);
+
+            classNames.push(element);
 
             if (contextualClass) {
                 classNames.push(contextualClass);

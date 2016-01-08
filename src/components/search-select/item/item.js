@@ -3,25 +3,25 @@ import CSSHelper from './../../../helpers/CSSHelper';
 export default {
     data () {
         return {
-            block: 'panel'
+            block: 'search-select'
         };
     },
-    props: {
-        style: {},
-        content: {}
-    },
-
+    props: [
+        'item',
+        'style',
+        'selectItem'
+    ],
     computed: {
 
         /**
          * Computed property which will output the
-         * corrected class names for the title
+         * corrected class names for the item
          *
          * @returns {Array} The corrected class name
          */
-        titleClass () {
+        itemClass () {
             var classNames = [];
-            var element = CSSHelper.has(this.block, 'title');
+            var element = CSSHelper.has(this.block, 'item');
             var contextualClass = CSSHelper.contextualClass(element, this.style);
 
             classNames.push(element);

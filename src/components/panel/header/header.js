@@ -7,10 +7,10 @@ export default {
             block: 'panel'
         };
     },
-    props: {
-        style: {},
-        title: {}
-    },
+    props: [
+        'style',
+        'title'
+    ],
     components: {
         'v-panel-title': Title
     },
@@ -26,6 +26,8 @@ export default {
             var classNames = [];
             var element = CSSHelper.has(this.block, 'header');
             var contextualClass = CSSHelper.contextualClass(element, this.style);
+
+            classNames.push(element);
 
             if (contextualClass) {
                 classNames.push(contextualClass);

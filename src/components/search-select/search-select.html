@@ -1,23 +1,18 @@
-<div class="search-select"
-	 :class="searchSelectClass">
-	<input
-		class="search-select__input"
-		:class="inputClass"
-		type="text"
-		placeholder="Search and select"
-		v-model="input"
-		@click.prevent="activate()"
-	>
-	<ul class="search-select__results"
-		:class="resultsClass"
-		v-if="isActivated"
-	>
-		<li class="search-select__result"
-			:class="resultClass"
-			v-for="item in filteredItems"
-			@click.prevent="selectItem(item)"
-		>
-			{{ item.content }}
-		</li>
-	</ul>
+<div
+	:class="searchSelectClass"
+>
+
+	<v-search-select-input
+			:style="inputStyle"
+			:is-activated.sync="isActivated"
+			:input.sync="input"
+	></v-search-select-input>
+
+	<v-search-select-drop-down
+			:style="dropDownStyle"
+			:items="filteredItems"
+			:is-activated.sync="isActivated"
+			:select-item="selectItem"
+	></v-search-select-drop-down>
+
 </div>
