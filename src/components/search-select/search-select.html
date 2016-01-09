@@ -1,18 +1,18 @@
 <div
-	:class="searchSelectClass"
+        :class="searchSelectClass"
 >
 
-	<v-search-select-input
-			:style="inputStyle"
-			:is-activated.sync="isActivated"
-			:input.sync="input"
-	></v-search-select-input>
+    <v-search-select-input
+            :style="inputStyle"
+            :is-activated.sync="isActivated"
+            :content.sync="input.content"
+    ></v-search-select-input>
 
-	<v-search-select-drop-down
-			:style="dropDownStyle"
-			:items="filteredItems"
-			:is-activated.sync="isActivated"
-			:select-item="selectItem"
-	></v-search-select-drop-down>
+    <v-search-select-drop-down
+            :style="dropDownStyle"
+            :items="filteredItems"
+            :is-activated.sync="isActivated"
+            :select-item="selectItem"
+    ></v-search-select-drop-down>
 
 </div>

@@ -9,13 +9,18 @@ export default {
             isActivated: false
         };
     },
-    props: [
-        'input',
-        'items',
-        'style',
-        'selected',
-        'dropDown'
-    ],
+    props: {
+        input: {
+            content: '',
+            style: null
+        },
+        items: [],
+        style: '',
+        selected: {},
+        dropDown: {
+            style: null
+        }
+    },
     components: {
         'v-search-select-drop-down': DropDown,
         'v-search-select-input': Input
@@ -38,7 +43,15 @@ export default {
          * @returns {string} The corrected style
          */
         inputStyle () {
-            return this.input.style || this.style;
+            if (this.input && this.input.style) {
+                return this.input.style;
+            }
+
+            if (this.selected && this.selected.style) {
+                return this.selected.style;
+            }
+
+            return this.style;
         },
 
         /**
@@ -50,9 +63,9 @@ export default {
         dropDownStyle () {
             if (this.dropDown && this.dropDown.style) {
                 return this.dropDown.style;
-            } else {
-                return this.style;
             }
+
+            return this.style;
         },
 
         /**
@@ -82,7 +95,7 @@ export default {
          * @param item The given result
          */
         selectItem (item) {
-            this.input = item.content;
+            this.input.content = item.content;
             this.selected = item;
             this.isActivated = false;
         },
@@ -95,7 +108,7 @@ export default {
          */
         userInputFilter (item) {
             var content = item.content.toUpperCase();
-            var input = this.input.toUpperCase();
+            var input = this.input.content.toUpperCase();
             var hasMatch = false;
 
             if (input === '') {

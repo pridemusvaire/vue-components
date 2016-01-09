@@ -6,11 +6,11 @@ export default {
             block: 'search-select'
         };
     },
-    props: [
-        'input',
-        'style',
-        'isActivated'
-    ],
+    props: {
+        style: null,
+        content: '',
+        isActivated: false
+    },
     computed: {
 
         /**
