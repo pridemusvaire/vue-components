@@ -1,23 +1,27 @@
-<div
-	:class="panelClass"
->
-	<v-panel-header
-			v-if="header"
-			:style="headerStyle"
-			:title="header.title"
-	></v-panel-header>
+<div :class="panelClass">
 
-	<v-panel-body
-			v-if="body"
-			:style="bodyStyle"
-			:content="body.content"
-			:has-header="hasHeader"
-			:has-footer="hasFooter"
-	></v-panel-body>
+	<!-- Panel Header -->
+	<div :class="headerClass"
+		 v-show="hasHeader"
+	>
+		<slot name="title" :class="titleClass"></slot>
+	</div>
+	<!--/ Panel Header -->
 
-	<v-panel-footer
-			v-if="footer"
-			:style="footerStyle"
-			:content="footer.content"
-	></v-panel-footer>
+	<!-- Panel Body -->
+	<div :class="bodyClass"
+		 v-show="hasBody"
+	>
+		<slot name="body"></slot>
+	</div>
+	<!--/ Panel Body -->
+
+	<!-- Panel Footer -->
+	<div :class="footerClass"
+		 v-show="hasFooter"
+	>
+		<slot name="footer"></slot>
+	</div>
+	<!--/ Panel Footer -->
+
 </div>
