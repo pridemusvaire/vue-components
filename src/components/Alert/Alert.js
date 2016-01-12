@@ -3,61 +3,39 @@ import CSSHelper from './../../utils/CSSUtil';
 export default {
     data () {
         return {
-            block: 'panel'
+            block: 'alert'
         };
     },
     props: [
         'style',
-        'header',
         'title',
-        'body',
-        'footer'
+        'message',
+        'dismiss',
+        'timer',
+        'isDismissable',
+        'hasTimer'
     ],
     components: {},
     computed: {
 
         /**
          * Computed property which will output
-         * whether there is an header or not
+         * whether there is a title or not
          *
-         * @returns {boolean} If there is an header
+         * @returns {boolean} If there is a title
          */
-        hasHeader () {
-            return !!this.header;
+        hasTitle () {
+            return !!this.title;
         },
 
         /**
          * Computed property which will output
-         * whether there is a body or not
+         * whether there is a message or not
          *
-         * @returns {boolean} If there is a body
+         * @returns {boolean} If there is a message
          */
-        hasBody () {
-            return !!this.body;
-        },
-
-        /**
-         * Computed property which will output
-         * whether there is a footer or not
-         *
-         * @returns {boolean} If there is a footer
-         */
-        hasFooter () {
-            return !!this.footer;
-        },
-
-        /**
-         * Computed property which will output the
-         * corrected style for the header
-         *
-         * @returns {string} The corrected style
-         */
-        headerStyle () {
-            if (this.header) {
-                return this.header.style || this.style;
-            }
-
-            return this.style;
+        hasMessage () {
+            return !!this.message;
         },
 
         /**
@@ -76,13 +54,13 @@ export default {
 
         /**
          * Computed property which will output the
-         * corrected style for the body
+         * corrected style for the message
          *
          * @returns {string} The corrected style
          */
-        bodyStyle () {
-            if (this.body) {
-                return this.body.style || this.style;
+        messageStyle () {
+            if (this.message) {
+                return this.message.style || this.style;
             }
 
             return this.style;
@@ -90,13 +68,14 @@ export default {
 
         /**
          * Computed property which will output the
-         * corrected style for the footer
+         * corrected style for the dismiss button
          *
          * @returns {string} The corrected style
          */
-        footerStyle () {
-            if (this.footer) {
-                return this.footer.style || this.style;
+        dismissStyle () {
+            console.log(this.dismiss);
+            if (this.dismiss) {
+                return this.dismiss.style || this.style;
             }
 
             return this.style;
@@ -104,35 +83,29 @@ export default {
 
         /**
          * Computed property which will output the
-         * corrected class names for the panel
+         * corrected style for the timer
+         *
+         * @returns {string} The corrected style
+         */
+        timerStyle () {
+            if (this.timer) {
+                return this.timer.style || this.style;
+            }
+
+            return this.style;
+        },
+
+        /**
+         * Computed property which will output the
+         * corrected class names for the alert
          *
          * @returns {Array} The corrected class name
          */
-        panelClass () {
+        alertClass () {
             var classNames = [];
             var contextualClass = CSSHelper.contextualClass(this.block, this.style);
 
             classNames.push(this.block);
-
-            if (contextualClass) {
-                classNames.push(contextualClass);
-            }
-
-            return classNames;
-        },
-
-        /**
-         * Computed property which will output the
-         * corrected class names for the header
-         *
-         * @returns {Array} The corrected class name
-         */
-        headerClass () {
-            var classNames = [];
-            var element = CSSHelper.has(this.block, 'header');
-            var contextualClass = CSSHelper.contextualClass(element, this.headerStyle);
-
-            classNames.push(element);
 
             if (contextualClass) {
                 classNames.push(contextualClass);
@@ -163,27 +136,19 @@ export default {
 
         /**
          * Computed property which will output the
-         * corrected class names for the body
+         * corrected class names for the message
          *
          * @returns {Array} The corrected class name
          */
-        bodyClass () {
+        messageClass () {
             var classNames = [];
-            var element = CSSHelper.has(this.block, 'body');
-            var contextualClass = CSSHelper.contextualClass(element, this.bodyStyle);
+            var element = CSSHelper.has(this.block, 'message');
+            var contextualClass = CSSHelper.contextualClass(element, this.messageStyle);
 
             classNames.push(element);
 
             if (contextualClass) {
                 classNames.push(contextualClass);
-            }
-
-            if (!this.hasFooter && !this.hasHeader) {
-                classNames.push(CSSHelper.variant(element, 'border-radius'));
-            } else if (!this.hasFooter) {
-                classNames.push(CSSHelper.variant(element, 'no-border-radius-top'));
-            } else if (!this.hasHeader) {
-                classNames.push(CSSHelper.variant(element, 'no-border-radius-bottom'));
             }
 
             return classNames;
@@ -191,14 +156,14 @@ export default {
 
         /**
          * Computed property which will output the
-         * corrected class names for the header
+         * corrected class names for the dismiss button
          *
          * @returns {Array} The corrected class name
          */
-        footerClass () {
+        dismissClass () {
             var classNames = [];
-            var element = CSSHelper.has(this.block, 'footer');
-            var contextualClass = CSSHelper.contextualClass(element, this.footerStyle);
+            var element = CSSHelper.has(this.block, 'dismiss');
+            var contextualClass = CSSHelper.contextualClass(element, this.dismissStyle);
 
             classNames.push(element);
 
@@ -207,6 +172,49 @@ export default {
             }
 
             return classNames;
+        },
+
+        /**
+         * Computed property which will output the
+         * corrected class names for the timer button
+         *
+         * @returns {Array} The corrected class name
+         */
+        timerClass () {
+            var classNames = [];
+            var element = CSSHelper.has(this.block, 'timer');
+            var contextualClass = CSSHelper.contextualClass(element, this.timerStyle);
+
+            classNames.push(element);
+
+            if (contextualClass) {
+                classNames.push(contextualClass);
+            }
+
+            return classNames;
+        }
+    },
+    methods: {
+
+        /**
+         * Method used to dismiss the alert.
+         * It will destroy the vm and clean it up.
+         */
+        dismissAlert () {
+            this.$destroy(true);
+        },
+
+        /**
+         * Method used to start the timer.
+         * When the timer is complete, it will dismiss the alert.
+         */
+        startTimer () {
+            setTimeout(this.dismissAlert, 5000);
+        }
+    },
+    ready () {
+        if (this.hasTimer) {
+            this.startTimer();
         }
     }
 };

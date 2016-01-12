@@ -6,11 +6,11 @@ export default {
      * The allowed contextual types
      */
     contextualTypes: [
-        'primary',
         'danger',
+        'info',
+        'primary',
         'success',
-        'warning',
-        'info'
+        'warning'
     ],
 
     /**
