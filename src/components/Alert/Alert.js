@@ -73,7 +73,6 @@ export default {
          * @returns {string} The corrected style
          */
         dismissStyle () {
-            console.log(this.dismiss);
             if (this.dismiss) {
                 return this.dismiss.style || this.style;
             }
