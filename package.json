@@ -2,7 +2,7 @@
   "name": "vue-components",
   "version": "1.0.2",
   "description": "Vue Components",
-  "main": "src/main.js",
+  "main": "dist/vue-components.js",
   "author": "Peter van Meijgaard <peter@vivid-websolutions.nl>",
   "private": false,
   "repository": {
@@ -36,7 +36,12 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "rimraf dist && webpack --progress --hide-modules --config build/webpack.prod.conf.js"
+    "docs": "webpack-dev-server --inline --hot --quiet",
+    "builddocs": "webpack --progress --hide-modules && NODE_ENV=production webpack --progress --hide-modules",
+    "build": "webpack --progress --hide-modules --config ./build/webpack.build.min.js && webpack --progress --hide-modules --config  ./build/webpack.build.js"
+  },
+  "dependencies": {
+    "vue": "^1.0.8"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
