@@ -21,6 +21,7 @@ You can choose between:
  - Warning
  - Danger
  - Info
+
 ##### title (optional) #####
 You can specify a title.
 Pass a title as an object.
