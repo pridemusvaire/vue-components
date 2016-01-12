@@ -11,40 +11,13 @@ export default {
         'header',
         'title',
         'body',
-        'footer'
+        'footer',
+        'hasHeader',
+        'hasBody',
+        'hasFooter'
     ],
     components: {},
     computed: {
-
-        /**
-         * Computed property which will output
-         * whether there is an header or not
-         *
-         * @returns {boolean} If there is an header
-         */
-        hasHeader () {
-            return !!this.header;
-        },
-
-        /**
-         * Computed property which will output
-         * whether there is a body or not
-         *
-         * @returns {boolean} If there is a body
-         */
-        hasBody () {
-            return !!this.body;
-        },
-
-        /**
-         * Computed property which will output
-         * whether there is a footer or not
-         *
-         * @returns {boolean} If there is a footer
-         */
-        hasFooter () {
-            return !!this.footer;
-        },
 
         /**
          * Computed property which will output the
