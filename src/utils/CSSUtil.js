@@ -70,5 +70,63 @@ export default {
      */
     variant (item, variant) {
         return item + this.modifierSeparator() + variant;
+    },
+
+    /**
+     * Method which will transform an item to an array of BEM-modifiers
+     *
+     * @param item The name of the item
+     * @param variants The array variants
+     */
+    variants(item, variants) {
+        var tempArray = [];
+
+        variants.forEach((variant) => {
+            tempArray.push(this.variant(item, variant));
+        });
+
+        return tempArray;
+    },
+
+    /**
+     *
+     * @param block
+     * @param variants
+     * @returns {Array}
+     */
+    blockClasses (block, variants) {
+        var classNames = [],
+            modifiers = [];
+
+        classNames.push(block);
+
+        if (variants) {
+            modifiers = this.variants(block, variants);
+            classNames = classNames.concat(modifiers);
+        }
+
+        return classNames;
+    },
+
+    /**
+     *
+     * @param block
+     * @param element
+     * @param variants
+     * @returns {Array}
+     */
+    elementClasses (block, element, variants) {
+        var classNames = [],
+            modifiers = [];
+        var elementClass = this.has(block, element);
+
+        classNames.push(elementClass);
+
+        if (variants) {
+            modifiers = this.variants(elementClass, variants);
+            classNames = classNames.concat(modifiers);
+        }
+
+        return classNames;
     }
 };

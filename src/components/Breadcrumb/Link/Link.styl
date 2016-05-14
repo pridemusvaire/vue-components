@@ -1,0 +1,14 @@
+// Imports
+@import "./../../../assets/stylus/settings/variables.styl"
+@import "./../../../assets/stylus/mixins/mixins.styl"
+
+.Breadcrumb
+  +has(link)
+    transition(100ms)
+    color: $dark_gray
+    display: inline-block
+    text-decoration: none
+    vertical-align: middle
+    &:hover
+      transition(100ms)
+      color: $primary

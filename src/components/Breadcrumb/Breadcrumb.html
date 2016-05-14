@@ -1,0 +1,8 @@
+<ul :class="breadcrumbClass">
+    <breadcrumb-item
+            v-for="item in items"
+            :content="item.content"
+            :link="item.link"
+            :variants="item.variants"
+    ></breadcrumb-item>
+</ul>

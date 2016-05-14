@@ -1,13 +1,13 @@
 // Importing from settings.json
-$JSONVars = json('./../../../config.json', { hash: true, leave-strings: true })
+$config = json('./../../../config.json', { hash: true, leave-strings: true })
 
-if $JSONVars.element_separator
-  $element_separator = $JSONVars.element_separator
+if $config.element_separator
+  $element_separator = $config.element_separator
 else
   $element_separator = '__';
 
-if $JSONVars.modifier_separator
-  $modifier_separator = $JSONVars.modifier_separator
+if $config.modifier_separator
+  $modifier_separator = $config.modifier_separator
 else
   $modifier_separator = '--';
 
@@ -15,3 +15,31 @@ else
 $rem_default = 16px
 
 $border_radius = .375rem
+
+// Colors
+$white = #fff
+$black = #000
+$dark_gray = #192226
+
+/// Primary
+$primary = #0af
+
+/// Success
+$success_light = #efe
+$success = #5c5
+$success_dark = #080
+
+/// Danger
+$danger_light = #fff0f0
+$danger = #cc5656
+$danger_dark = #870000
+
+/// Warning
+$warning_light = #fffbf2
+$warning = #cca558
+$warning_dark = #cca558
+
+/// Info
+$info_light = #f2f9ff
+$info = #5a93cc
+$info_dark = #5a93cc

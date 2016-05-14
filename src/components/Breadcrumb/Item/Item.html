@@ -1,0 +1,15 @@
+<div :class="itemClass">
+    <breadcrumb-link
+            v-if="hasLink"
+            :content="content"
+            :to="link.to"
+            :variants="link.variants"
+    >
+    </breadcrumb-link>
+
+    <breadcrumb-content
+            v-else
+            :text="content.text"
+            :variants="content.variants"
+    ></breadcrumb-content>
+</div>

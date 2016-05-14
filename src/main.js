@@ -1,9 +1,11 @@
-import alert from './components/Alert.vue';
-import panel from './components/Panel.vue';
+import * as Alert from './components/Alert.vue';
+import * as Breadcrumb from './components/Breadcrumb/Breadcrumb.vue';
+import * as Panel from './components/Panel.vue';
 
 const VueComponents = {
-    alert,
-    panel
+    Alert,
+    Breadcrumb,
+    Panel
 };
 
 module.exports = VueComponents;

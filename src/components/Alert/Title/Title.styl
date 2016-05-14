@@ -1,0 +1,16 @@
+@import "./../../../assets/stylus/mixins/mixins.styl"
+@import "./../../../assets/stylus/settings/variables.styl"
+
+.Alert
+  +has(title) // Alert__title
+    font-weight: 600
+    +variant(primary) // Alert__title--primary
+      color: $white
+    +variant(success) // Alert__title--success
+      color: $success_dark
+    +variant(danger) // Alert__title--danger
+      color: $danger_dark
+    +variant(warning) // Alert__title--warning
+      color: $warning_dark
+    +variant(info) // Alert__title--info
+      color: $info_dark
