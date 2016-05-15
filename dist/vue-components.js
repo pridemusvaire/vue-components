@@ -60,11 +60,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var Alert = _interopRequireWildcard(_Alert);
 	
-	var _Breadcrumb = __webpack_require__(22);
+	var _Breadcrumb = __webpack_require__(30);
 	
 	var Breadcrumb = _interopRequireWildcard(_Breadcrumb);
 	
-	var _Panel = __webpack_require__(42);
+	var _Panel = __webpack_require__(50);
 	
 	var Panel = _interopRequireWildcard(_Panel);
 	
@@ -87,7 +87,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/components/Alert/Alert.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(21)
+	__vue_template__ = __webpack_require__(29)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -441,15 +441,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var AlertCloseButton = _interopRequireWildcard(_CloseButton);
 	
-	var _Message = __webpack_require__(10);
+	var _Message = __webpack_require__(14);
 	
 	var AlertMessage = _interopRequireWildcard(_Message);
 	
-	var _Timer = __webpack_require__(11);
+	var _Timer = __webpack_require__(19);
 	
 	var AlertTimer = _interopRequireWildcard(_Timer);
 	
-	var _Title = __webpack_require__(16);
+	var _Title = __webpack_require__(24);
 	
 	var AlertTitle = _interopRequireWildcard(_Title);
 	
@@ -776,28 +776,306 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 9 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "<span\n        :class=\"closeButtonClass\"\n        @click.prevent=\"closeFunction\">\n\t\t&times;\n</span>";
+	var __vue_script__, __vue_template__
+	__webpack_require__(10)
+	__vue_script__ = __webpack_require__(12)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/components/Alert/CloseButton/CloseButton.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(13)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/p.c.vanmeijgaard/Projects/vivid-web/vue-components/src/components/Alert/CloseButton/CloseButton.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
 
 /***/ },
 /* 10 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "<span\n        :class=\"messageClass\">\n\t\t{{content}}\n</span>";
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(11);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../node_modules/stylus-loader/index.js!./CloseButton.styl", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../node_modules/stylus-loader/index.js!./CloseButton.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
 /* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".Alert__close-button {\n  cursor: pointer;\n  font-size: 1.5rem;\n  font-weight: 600;\n  line-height: 2rem;\n  position: absolute;\n  right: 1rem;\n  top: 0.75rem;\n}\n.Alert__close-button--primary {\n  color: #fff;\n}\n.Alert__close-button--success {\n  color: #080;\n}\n.Alert__close-button--danger {\n  color: #870000;\n}\n.Alert__close-button--warning {\n  color: #cca558;\n}\n.Alert__close-button--info {\n  color: #5a93cc;\n}\n", "", {"version":3,"sources":["/./src/components/Alert/CloseButton/src/assets/stylus/mixins/mixins.styl","/./src/components/Alert/CloseButton/src/components/Alert/CloseButton/CloseButton.styl","/./src/components/Alert/CloseButton/CloseButton.styl"],"names":[],"mappings":"AACE;ECIE,gBAAA;EACA,kBAAA;EACA,iBAAA;EACA,kBAAA;EACA,mBAAA;EACA,YAAA;EACA,aAAA;CCHH;AFHC;ECQI,YAAA;CCFL;AFNC;ECUI,YAAA;CCDL;AFTC;ECYI,eAAA;CCAL;AFZC;ECcI,eAAA;CCCL;AFfC;ECgBI,eAAA;CCEL","file":"CloseButton.styl","sourcesContent":["has($name)\n  / &{$element_separator}{$name}\n    {block}\n\nvariant($name)\n  / &{$modifier_separator}{$name}\n    {block}\n\ntransition($time)\n  transition: all $time ease-in-out\n\nborder-radius-none()\n  border-radius: 0\n\nborder-radius-all()\n  border-radius: $border_radius\n\nborder-radius-top()\n  border-radius: $border_radius $border_radius 0 0\n\nborder-radius-right()\n  border-radius: 0 $border_radius $border_radius 0\n\nborder-radius-bottom()\n  border-radius: 0 0 $border_radius $border_radius\n\nborder-radius-left()\n  border-radius: $border_radius 0 0 $border_radius\n","@import \"./../../../assets/stylus/mixins/mixins.styl\"\n@import \"./../../../assets/stylus/settings/variables.styl\"\n\n.Alert\n  +has(close-button) // Alert__close-button\n    cursor: pointer\n    font-size: 1.5rem\n    font-weight: 600\n    line-height: 2rem\n    position: absolute\n    right: 1rem\n    top: .75rem\n    +variant(primary) // Alert__close-button--primary\n      color: $white\n    +variant(success) // Alert__close-button--success\n      color: $success_dark\n    +variant(danger) // Alert__close-button--danger\n      color: $danger_dark\n    +variant(warning) // Alert__close-button--warning\n      color: $warning_dark\n    +variant(info) // Alert__close-button--info\n      color: $info_dark",".Alert__close-button {\n  cursor: pointer;\n  font-size: 1.5rem;\n  font-weight: 600;\n  line-height: 2rem;\n  position: absolute;\n  right: 1rem;\n  top: 0.75rem;\n}\n.Alert__close-button--primary {\n  color: #fff;\n}\n.Alert__close-button--success {\n  color: #080;\n}\n.Alert__close-button--danger {\n  color: #870000;\n}\n.Alert__close-button--warning {\n  color: #cca558;\n}\n.Alert__close-button--info {\n  color: #5a93cc;\n}\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _CSSUtil = __webpack_require__(7);
+	
+	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	    data: function data() {
+	        return {
+	            element: 'close-button'
+	        };
+	    },
+	
+	
+	    props: {
+	        /**
+	         * The function to close the alert
+	         */
+	        closeFunction: {
+	            type: Function,
+	            required: true
+	        },
+	
+	        /**
+	         * The variant styling
+	         */
+	        variants: {
+	            type: Array,
+	            required: false
+	        }
+	    },
+	
+	    computed: {
+	        /**
+	         * The block name from the parent
+	         *
+	         * @returns {string}
+	         */
+	
+	        block: function block() {
+	            return this.$parent.block;
+	        },
+	
+	
+	        /**
+	         * Computed property which will output
+	         * the corrected class names for the close button
+	         *
+	         * @returns {Array} The corrected class names
+	         */
+	        closeButtonClass: function closeButtonClass() {
+	            if (!this.variants) {
+	                this.variants = this.$parent.variants;
+	            }
+	
+	            return _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
+	        }
+	    }
+	};
+
+/***/ },
+/* 13 */
+/***/ function(module, exports) {
+
+	module.exports = "<span\n        :class=\"closeButtonClass\"\n        @click.prevent=\"closeFunction\">\n\t\t&times;\n</span>";
+
+/***/ },
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
 	var __vue_script__, __vue_template__
-	__webpack_require__(12)
-	__vue_script__ = __webpack_require__(14)
+	__webpack_require__(15)
+	__vue_script__ = __webpack_require__(17)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/components/Alert/Message/Message.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(18)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/p.c.vanmeijgaard/Projects/vivid-web/vue-components/src/components/Alert/Message/Message.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(16);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../node_modules/stylus-loader/index.js!./Message.styl", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../node_modules/stylus-loader/index.js!./Message.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".Alert__message--primary {\n  color: #fff;\n}\n.Alert__message--success {\n  color: #080;\n}\n.Alert__message--danger {\n  color: #870000;\n}\n.Alert__message--warning {\n  color: #cca558;\n}\n.Alert__message--info {\n  color: #5a93cc;\n}\n", "", {"version":3,"sources":["/./src/components/Alert/Message/src/assets/stylus/mixins/mixins.styl","/./src/components/Alert/Message/src/components/Alert/Message/Message.styl","/./src/components/Alert/Message/Message.styl"],"names":[],"mappings":"AAKE;ECCI,YAAA;CCJL;AFGC;ECGI,YAAA;CCHL;AFAC;ECKI,eAAA;CCFL;AFHC;ECOI,eAAA;CCDL;AFNC;ECSI,eAAA;CCAL","file":"Message.styl","sourcesContent":["has($name)\n  / &{$element_separator}{$name}\n    {block}\n\nvariant($name)\n  / &{$modifier_separator}{$name}\n    {block}\n\ntransition($time)\n  transition: all $time ease-in-out\n\nborder-radius-none()\n  border-radius: 0\n\nborder-radius-all()\n  border-radius: $border_radius\n\nborder-radius-top()\n  border-radius: $border_radius $border_radius 0 0\n\nborder-radius-right()\n  border-radius: 0 $border_radius $border_radius 0\n\nborder-radius-bottom()\n  border-radius: 0 0 $border_radius $border_radius\n\nborder-radius-left()\n  border-radius: $border_radius 0 0 $border_radius\n","@import \"./../../../assets/stylus/mixins/mixins.styl\"\n@import \"./../../../assets/stylus/settings/variables.styl\"\n\n.Alert\n  +has(message) // Alert__message\n    +variant(primary) // Alert__message--primary\n      color: $white\n    +variant(success) // Alert__message--success\n      color: $success_dark\n    +variant(danger) // Alert__message--danger\n      color: $danger_dark\n    +variant(warning) // Alert__message--warning\n      color: $warning_dark\n    +variant(info) // Alert__message--info\n      color: $info_dark",".Alert__message--primary {\n  color: #fff;\n}\n.Alert__message--success {\n  color: #080;\n}\n.Alert__message--danger {\n  color: #870000;\n}\n.Alert__message--warning {\n  color: #cca558;\n}\n.Alert__message--info {\n  color: #5a93cc;\n}\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _CSSUtil = __webpack_require__(7);
+	
+	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	    data: function data() {
+	        return {
+	            element: 'message'
+	        };
+	    },
+	
+	
+	    props: {
+	        /**
+	         * The message content
+	         */
+	        content: {
+	            type: String,
+	            required: true
+	        },
+	
+	        /**
+	         * The message variants
+	         */
+	        variants: {
+	            type: Array,
+	            required: false
+	        }
+	    },
+	
+	    computed: {
+	        /**
+	         * The block name from the parent
+	         *
+	         * @returns {string}
+	         */
+	
+	        block: function block() {
+	            return this.$parent.block;
+	        },
+	
+	
+	        /**
+	         * Computed property which will output
+	         * the corrected class names for the message
+	         *
+	         * @returns {Array} The corrected class names
+	         */
+	        messageClass: function messageClass() {
+	            if (!this.variants) {
+	                this.variants = this.$parent.variants;
+	            }
+	
+	            return _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
+	        }
+	    }
+	};
+
+/***/ },
+/* 18 */
+/***/ function(module, exports) {
+
+	module.exports = "<span\n        :class=\"messageClass\">\n\t\t{{content}}\n</span>";
+
+/***/ },
+/* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(20)
+	__vue_script__ = __webpack_require__(22)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/components/Alert/Timer/Timer.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(15)
+	__vue_template__ = __webpack_require__(23)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -816,13 +1094,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 12 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(13);
+	var content = __webpack_require__(21);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -842,7 +1120,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 13 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -856,7 +1134,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 14 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -918,23 +1196,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 15 */
+/* 23 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"timerClass\"></div>";
 
 /***/ },
-/* 16 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(17)
-	__vue_script__ = __webpack_require__(19)
+	__webpack_require__(25)
+	__vue_script__ = __webpack_require__(27)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/components/Alert/Title/Title.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(20)
+	__vue_template__ = __webpack_require__(28)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -953,13 +1231,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 17 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(18);
+	var content = __webpack_require__(26);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -979,7 +1257,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 18 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -993,7 +1271,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 19 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1063,29 +1341,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 20 */
+/* 28 */
 /***/ function(module, exports) {
 
 	module.exports = "<span :class=\"titleClass\">\n\t\t{{content}}\n</span>";
 
 /***/ },
-/* 21 */
+/* 29 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"alertClass\">\n\n    <alert-timer\n            v-if=\"hasTimer\"\n            :variants=\"timer.variants\"\n    ></alert-timer>\n\n    <alert-title\n            v-if=\"hasTitle\"\n            :variants=\"title.variants\"\n            :content=\"title.content\"\n    ></alert-title>\n\n    <alert-message\n            v-if=\"hasMessage\"\n            :variants=\"message.variants\"\n            :content=\"message.content\"\n    ></alert-message>\n\n    <alert-close-button\n            v-if=\"hasCloseButton\"\n            :variants=\"closeButton.variants\"\n            :close-function=\"dismissAlert\"\n    ></alert-close-button>\n\n</div>";
 
 /***/ },
-/* 22 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(23)
-	__vue_script__ = __webpack_require__(25)
+	__webpack_require__(31)
+	__vue_script__ = __webpack_require__(33)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/components/Breadcrumb/Breadcrumb.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(41)
+	__vue_template__ = __webpack_require__(49)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -1104,13 +1382,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 23 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(24);
+	var content = __webpack_require__(32);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -1130,7 +1408,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 24 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1144,7 +1422,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 25 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1157,7 +1435,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
 	
-	var _Item = __webpack_require__(26);
+	var _Item = __webpack_require__(34);
 	
 	var BreadcrumbItem = _interopRequireWildcard(_Item);
 	
@@ -1213,17 +1491,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 26 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(27)
-	__vue_script__ = __webpack_require__(29)
+	__webpack_require__(35)
+	__vue_script__ = __webpack_require__(37)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/components/Breadcrumb/Item/Item.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(40)
+	__vue_template__ = __webpack_require__(48)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -1242,13 +1520,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 27 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(28);
+	var content = __webpack_require__(36);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -1268,7 +1546,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 28 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1282,7 +1560,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 29 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1295,11 +1573,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
 	
-	var _Content = __webpack_require__(30);
+	var _Content = __webpack_require__(38);
 	
 	var BreadcrumbContent = _interopRequireWildcard(_Content);
 	
-	var _Link = __webpack_require__(35);
+	var _Link = __webpack_require__(43);
 	
 	var BreadcrumbLink = _interopRequireWildcard(_Link);
 	
@@ -1391,17 +1669,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 30 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(31)
-	__vue_script__ = __webpack_require__(33)
+	__webpack_require__(39)
+	__vue_script__ = __webpack_require__(41)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/components/Breadcrumb/Content/Content.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(34)
+	__vue_template__ = __webpack_require__(42)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -1420,13 +1698,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 31 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(32);
+	var content = __webpack_require__(40);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -1446,7 +1724,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 32 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1460,7 +1738,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 33 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1530,23 +1808,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 34 */
+/* 42 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"contentClass\">\n    {{text}}\n</div>";
 
 /***/ },
-/* 35 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(36)
-	__vue_script__ = __webpack_require__(38)
+	__webpack_require__(44)
+	__vue_script__ = __webpack_require__(46)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/components/Breadcrumb/Link/Link.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(39)
+	__vue_template__ = __webpack_require__(47)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -1565,13 +1843,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 36 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(37);
+	var content = __webpack_require__(45);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -1591,7 +1869,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 37 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1605,7 +1883,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 38 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1618,7 +1896,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
 	
-	var _Content = __webpack_require__(30);
+	var _Content = __webpack_require__(38);
 	
 	var _Content2 = _interopRequireDefault(_Content);
 	
@@ -1694,35 +1972,35 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 39 */
+/* 47 */
 /***/ function(module, exports) {
 
 	module.exports = "<a\n        :class=\"linkClass\"\n        :href=\"to\"\n>\n    <breadcrumb-content\n            :text=\"content.text\"\n            :variants=\"content.variants\"\n    ></breadcrumb-content>\n</a>";
 
 /***/ },
-/* 40 */
+/* 48 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"itemClass\">\n    <breadcrumb-link\n            v-if=\"hasLink\"\n            :content=\"content\"\n            :to=\"link.to\"\n            :variants=\"link.variants\"\n    >\n    </breadcrumb-link>\n\n    <breadcrumb-content\n            v-else\n            :text=\"content.text\"\n            :variants=\"content.variants\"\n    ></breadcrumb-content>\n</div>";
 
 /***/ },
-/* 41 */
+/* 49 */
 /***/ function(module, exports) {
 
 	module.exports = "<ul :class=\"breadcrumbClass\">\n    <breadcrumb-item\n            v-for=\"item in items\"\n            :content=\"item.content\"\n            :link=\"item.link\"\n            :variants=\"item.variants\"\n    ></breadcrumb-item>\n</ul>";
 
 /***/ },
-/* 42 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(43)
-	__vue_script__ = __webpack_require__(45)
+	__webpack_require__(51)
+	__vue_script__ = __webpack_require__(53)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/components/Panel/Panel.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(46)
+	__vue_template__ = __webpack_require__(54)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -1741,13 +2019,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 43 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(44);
+	var content = __webpack_require__(52);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -1767,7 +2045,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 44 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1781,7 +2059,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 45 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1983,7 +2261,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 46 */
+/* 54 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"panelClass\">\n\n    <div :class=\"headerClass\" v-if=\"hasHeader\">\n        <h4 :class=\"titleClass\">\n            <slot name=\"title\"></slot>\n        </h4>\n    </div>\n\n    <div :class=\"bodyClass\" v-if=\"hasBody\">\n        <slot name=\"body\"></slot>\n    </div>\n\n    <div :class=\"footerClass\" v-if=\"hasFooter\">\n        <slot name=\"footer\"></slot>\n    </div>\n\n</div>";
