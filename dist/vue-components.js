@@ -70,13 +70,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
-	var VueComponents = {
+	module.exports = {
 	    Alert: Alert,
 	    Breadcrumb: Breadcrumb,
 	    Panel: Panel
 	};
-	
-	module.exports = VueComponents;
 
 /***/ },
 /* 1 */
