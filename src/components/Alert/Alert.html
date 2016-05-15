@@ -1,16 +1,26 @@
 <div :class="alertClass">
 
-	<div :class="timerClass" v-if="hasTimer"></div>
+    <alert-timer
+            v-if="hasTimer"
+            :variants="timer.variants"
+    ></alert-timer>
 
-	<span :class="titleClass" v-if="hasTitle">
-		{{title.content}}
-	</span>
+    <alert-title
+            v-if="hasTitle"
+            :variants="title.variants"
+            :content="title.content"
+    ></alert-title>
 
-	<span :class="messageClass" v-if="hasMessage">
-		{{message.content}}
-	</span>
+    <alert-message
+            v-if="hasMessage"
+            :variants="message.variants"
+            :content="message.content"
+    ></alert-message>
 
-	<span :class="dismissClass" v-if="isDismissable" @click.prevent="dismissAlert">
-		&times;
-	</span>
+    <alert-close-button
+            v-if="hasCloseButton"
+            :variants="closeButton.variants"
+            :close-function="dismissAlert"
+    ></alert-close-button>
+
 </div>

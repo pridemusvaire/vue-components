@@ -3,10 +3,10 @@ import * as BreadcrumbContent from './../Content/Content.vue';
 import * as BreadcrumbLink from './../Link/Link.vue';
 
 export default {
-    data() {
+    data () {
         return {
             element: 'item'
-        }
+        };
     },
 
     props: {
@@ -47,7 +47,7 @@ export default {
         BreadcrumbLink
     },
 
-    computed : {
+    computed: {
         /**
          * The block name from the parent
          *
@@ -61,7 +61,7 @@ export default {
          * Computed property which will output
          * whether the item has a link or not
          */
-        hasLink() {
+        hasLink () {
             return !!this.link;
         },
 
@@ -71,8 +71,12 @@ export default {
          *
          * @returns {Array} The corrected class names
          */
-        itemClass() {
+        itemClass () {
+            if (!this.variants) {
+                this.variants = this.$parent.variants;
+            }
+
             return CSSUtil.elementClasses(this.block, this.element, this.variants);
         }
     }
-}
+};

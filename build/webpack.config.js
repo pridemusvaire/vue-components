@@ -11,15 +11,11 @@ module.exports = {
     resolve: {
         extensions: ['', '.js', '.vue'],
         alias: {
-            'src': path.resolve(__dirname, '../src')
+            src: path.resolve(__dirname, '../src')
         }
     },
     module: {
         loaders: [
-            {
-                test: /\.jade$/,
-                loader: 'jade-loader'
-            },
             {
                 test: /\.vue$/,
                 loader: 'vue'
@@ -40,6 +36,10 @@ module.exports = {
                     limit: 10000,
                     name: '[name].[ext]?[hash]'
                 }
+            },
+            {
+                test: /\.html$/,
+                loader: 'html'
             }
         ]
     },

@@ -1,7 +1,7 @@
 import CSSUtil from './../../../utils/CSSUtil';
 
 export default {
-    data() {
+    data () {
         return {
             element: 'content'
         };
@@ -29,9 +29,9 @@ export default {
         /**
          * The block name from the parent
          *
-         * @returns {computed.block|string|string|string}
+         * @returns {string}
          */
-        block() {
+        block () {
             return this.$parent.block;
         },
 
@@ -41,7 +41,11 @@ export default {
          *
          * @returns {Array} The corrected class names
          */
-        contentClass() {
+        contentClass () {
+            if (!this.variants) {
+                this.variants = this.$parent.variants;
+            }
+
             return CSSUtil.elementClasses(this.block, this.element, this.variants);
         }
     }

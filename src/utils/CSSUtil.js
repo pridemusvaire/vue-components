@@ -20,6 +20,7 @@ export default {
         if (Config.element_separator) {
             return Config.element_separator;
         }
+
         return '__';
     },
 
@@ -30,6 +31,7 @@ export default {
         if (Config.modifier_separator) {
             return Config.modifier_separator;
         }
+
         return '--';
     },
 
@@ -78,7 +80,7 @@ export default {
      * @param item The name of the item
      * @param variants The array variants
      */
-    variants(item, variants) {
+    variants (item, variants) {
         var tempArray = [];
 
         variants.forEach((variant) => {
@@ -95,8 +97,8 @@ export default {
      * @returns {Array}
      */
     blockClasses (block, variants) {
-        var classNames = [],
-            modifiers = [];
+        var classNames = [];
+        var modifiers = [];
 
         classNames.push(block);
 
@@ -116,8 +118,8 @@ export default {
      * @returns {Array}
      */
     elementClasses (block, element, variants) {
-        var classNames = [],
-            modifiers = [];
+        var classNames = [];
+        var modifiers = [];
         var elementClass = this.has(block, element);
 
         classNames.push(elementClass);

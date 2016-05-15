@@ -2,10 +2,10 @@ import CSSUtil from './../../../utils/CSSUtil';
 import BreadcrumbContent from './../Content/Content.vue';
 
 export default {
-    data() {
+    data () {
         return {
             element: 'link'
-        }
+        };
     },
 
     props: {
@@ -33,24 +33,23 @@ export default {
             required: false
         }
     },
-    
-    components : {
+
+    components: {
         /**
          * The breadcrumb content component
          */
         BreadcrumbContent
     },
-    
+
     computed: {
         /**
          * The block name from the parent
-         * 
+         *
          * @returns {string}
          */
-        block() {
+        block () {
             return this.$parent.block;
         },
-
 
         /**
          * Computed property which will output
@@ -58,7 +57,11 @@ export default {
          *
          * @returns {Array} The corrected class names
          */
-        linkClass() {
+        linkClass () {
+            if (!this.variants) {
+                this.variants = this.$parent.variants;
+            }
+
             return CSSUtil.elementClasses(this.block, this.element, this.variants);
         }
     }

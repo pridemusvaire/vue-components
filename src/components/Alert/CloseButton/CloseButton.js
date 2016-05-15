@@ -3,21 +3,21 @@ import CSSUtil from './../../../utils/CSSUtil';
 export default {
     data () {
         return {
-            element: 'title'
+            element: 'close-button'
         };
     },
 
     props: {
         /**
-         * The message content
+         * The function to close the alert
          */
-        content: {
-            type: String,
+        closeFunction: {
+            type: Function,
             required: true
         },
 
         /**
-         * The message variants
+         * The variant styling
          */
         variants: {
             type: Array,
@@ -37,11 +37,11 @@ export default {
 
         /**
          * Computed property which will output
-         * the corrected class names for the title
+         * the corrected class names for the close button
          *
          * @returns {Array} The corrected class names
          */
-        titleClass () {
+        closeButtonClass () {
             if (!this.variants) {
                 this.variants = this.$parent.variants;
             }

@@ -2,10 +2,10 @@ import CSSUtil from './../../utils/CSSUtil';
 import * as BreadcrumbItem from './Item/Item.vue';
 
 export default {
-    data() {
+    data () {
         return {
             block: 'Breadcrumb'
-        }
+        };
     },
 
     props: {
@@ -37,11 +37,11 @@ export default {
         /**
          * Computed property which will output the
          * corrected class names for the breadcrumbs
-         * 
+         *
          * @returns {Array} The corrected class names
          */
-        breadcrumbClass() {
+        breadcrumbClass () {
             return CSSUtil.blockClasses(this.block, this.variants);
         }
     }
-}
+};
