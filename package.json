@@ -2,7 +2,7 @@
   "name": "vue-components",
   "version": "1.0.2",
   "description": "Vue Components",
-  "main": "src/main.js",
+  "main": "dist/vue-components.js",
   "author": "Peter van Meijgaard <peter@vivid-websolutions.nl>",
   "private": false,
   "repository": {
