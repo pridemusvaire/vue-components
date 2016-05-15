@@ -22,6 +22,14 @@ export default {
         variants: {
             type: Array,
             required: false
+        },
+
+        /**
+         * The contextual styling
+         */
+        contextualStyle: {
+            type: String,
+            required: false
         }
     },
 
@@ -42,11 +50,15 @@ export default {
          * @returns {Array} The corrected class names
          */
         titleClass () {
-            if (!this.variants) {
-                this.variants = this.$parent.variants;
+            var classes = CSSUtil.elementClasses(this.block, this.element, this.variants);
+
+            if (!this.contextualStyle) {
+                this.contextualStyle = this.$parent.contextualStyle;
             }
 
-            return CSSUtil.elementClasses(this.block, this.element, this.variants);
+            classes.push(CSSUtil.contextualClass(CSSUtil.has(this.block, this.element), this.contextualStyle));
+
+            return classes;
         }
     }
 };

@@ -1,0 +1,18 @@
+@import "./../../../assets/stylus/mixins/mixins.styl"
+@import "./../../../assets/stylus/settings/variables.styl"
+
+.Notification
+  +has(message) // Notification__message
+    display: block
+    +variant(primary) // Notification__message--primary
+      color: $white
+    +variant(success) // Notification__message--success
+      color: $success_dark
+    +variant(danger) // Notification__message--danger
+      color: $danger_dark
+    +variant(warning) // Notification__message--warning
+      color: $warning_dark
+    +variant(info) // Notification__message--info
+      color: $info_dark
+    +variant(dark) // notification__message--dark
+      color: $white

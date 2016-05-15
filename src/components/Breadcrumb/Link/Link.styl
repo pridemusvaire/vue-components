@@ -3,7 +3,7 @@
 @import "./../../../assets/stylus/mixins/mixins.styl"
 
 .Breadcrumb
-  +has(link)
+  +has(link) // Breadcrumb__link
     transition(100ms)
     color: $dark_gray
     display: inline-block
@@ -12,3 +12,15 @@
     &:hover
       transition(100ms)
       color: $primary
+    +variant(primary) // Breadcrumb__link--primary
+      color: $primary
+    +variant(success) // Breadcrumb__link--success
+      color: $success
+    +variant(danger) // Breadcrumb__link--danger
+      color: $danger
+    +variant(warning) // Breadcrumb__link--warning
+      color: $warning
+    +variant(info) // Breadcrumb__link--info
+      color: $info
+    +variant(dark) // Breadcrumb__link--dark
+      color: $gray

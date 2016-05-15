@@ -56,9 +56,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
-	var _Alert = __webpack_require__(1);
+	var _Notification = __webpack_require__(1);
 	
-	var Alert = _interopRequireWildcard(_Alert);
+	var Notification = _interopRequireWildcard(_Notification);
 	
 	var _Breadcrumb = __webpack_require__(30);
 	
@@ -71,7 +71,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
 	module.exports = {
-	    Alert: Alert,
+	    Notification: Notification,
 	    Breadcrumb: Breadcrumb,
 	    Panel: Panel
 	};
@@ -86,7 +86,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/components/Alert/Alert.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/components/Notification/Notification.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(29)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -97,7 +97,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/p.c.vanmeijgaard/Projects/vivid-web/vue-components/src/components/Alert/Alert.vue"
+	  var id = "/Users/p.c.vanmeijgaard/Projects/sandbox/vue-components-sandbox/vendor/vue-components/src/components/Notification/Notification.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -121,8 +121,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/stylus-loader/index.js!./Alert.styl", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/stylus-loader/index.js!./Alert.styl");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/stylus-loader/index.js!./Notification.styl", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/stylus-loader/index.js!./Notification.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -140,7 +140,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, ".Alert {\n  border-radius: 0.375rem;\n  border: 1px solid #000;\n  display: block;\n  margin-top: 1rem;\n  overflow: hidden;\n  padding: 1rem;\n  position: relative;\n}\n.Alert:first-child {\n  margin-top: 0;\n}\n.Alert--primary {\n  background-color: #0af;\n  border-color: #0af;\n}\n.Alert--success {\n  background-color: #efe;\n  border-color: #5c5;\n}\n.Alert--danger {\n  background-color: #fff0f0;\n  border-color: #cc5656;\n}\n.Alert--warning {\n  background-color: #fffbf2;\n  border-color: #cca558;\n}\n.Alert--info {\n  background-color: #f2f9ff;\n  border-color: #5a93cc;\n}\n", "", {"version":3,"sources":["/./src/components/Alert/src/components/Alert/Alert.styl","/./src/components/Alert/src/assets/stylus/mixins/mixins.styl","/./src/components/Alert/Alert.styl"],"names":[],"mappings":"AAGA;ECYE,wBAAA;EDVA,uBAAA;EACA,eAAA;EACA,iBAAA;EACA,iBAAA;EACA,cAAA;EACA,mBAAA;CEFD;AFGC;EACE,cAAA;CEDH;ADNC;EDSE,uBAAA;EACA,mBAAA;CEAH;ADVC;EDYE,uBAAA;EACA,mBAAA;CECH;ADdC;EDeE,0BAAA;EACA,sBAAA;CEEH;ADlBC;EDkBE,0BAAA;EACA,sBAAA;CEGH;ADtBC;EDqBE,0BAAA;EACA,sBAAA;CEIH","file":"Alert.styl","sourcesContent":["@import \"./../../assets/stylus/mixins/mixins.styl\"\n@import \"./../../assets/stylus/settings/variables.styl\"\n\n.Alert // alert\n  border-radius-all()\n  border: 1px solid $black\n  display: block\n  margin-top: 1rem\n  overflow: hidden\n  padding: 1rem\n  position: relative\n  &:first-child\n    margin-top: 0\n  +variant(primary) // alert--primary\n    background-color: $primary\n    border-color: $primary\n  +variant(success) // alert--success\n    background-color: $success_light\n    border-color: $success\n  +variant(danger) // alert--danger\n    background-color: $danger_light\n    border-color: $danger\n  +variant(warning) // alert--warning\n    background-color: $warning_light\n    border-color: $warning\n  +variant(info) // alert--info\n    background-color: $info_light\n    border-color: $info","has($name)\n  / &{$element_separator}{$name}\n    {block}\n\nvariant($name)\n  / &{$modifier_separator}{$name}\n    {block}\n\ntransition($time)\n  transition: all $time ease-in-out\n\nborder-radius-none()\n  border-radius: 0\n\nborder-radius-all()\n  border-radius: $border_radius\n\nborder-radius-top()\n  border-radius: $border_radius $border_radius 0 0\n\nborder-radius-right()\n  border-radius: 0 $border_radius $border_radius 0\n\nborder-radius-bottom()\n  border-radius: 0 0 $border_radius $border_radius\n\nborder-radius-left()\n  border-radius: $border_radius 0 0 $border_radius\n",".Alert {\n  border-radius: 0.375rem;\n  border: 1px solid #000;\n  display: block;\n  margin-top: 1rem;\n  overflow: hidden;\n  padding: 1rem;\n  position: relative;\n}\n.Alert:first-child {\n  margin-top: 0;\n}\n.Alert--primary {\n  background-color: #0af;\n  border-color: #0af;\n}\n.Alert--success {\n  background-color: #efe;\n  border-color: #5c5;\n}\n.Alert--danger {\n  background-color: #fff0f0;\n  border-color: #cc5656;\n}\n.Alert--warning {\n  background-color: #fffbf2;\n  border-color: #cca558;\n}\n.Alert--info {\n  background-color: #f2f9ff;\n  border-color: #5a93cc;\n}\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, ".Notification {\n  position: relative;\n  background-color: #fff;\n  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);\n  display: block;\n  font-weight: 300;\n  margin-top: 1rem;\n  padding: 1rem;\n}\n.Notification:first-child {\n  margin-top: 0;\n}\n.Notification--primary {\n  background-color: #2196f3;\n  border-color: #2196f3;\n}\n.Notification--success {\n  background-color: #e8f5e9;\n  border-color: #4caf50;\n}\n.Notification--danger {\n  background-color: #ffebee;\n  border-color: #f44336;\n}\n.Notification--warning {\n  background-color: #fff3e0;\n  border-color: #ff9800;\n}\n.Notification--info {\n  background-color: #e1f5fe;\n  border-color: #03a9f4;\n}\n.Notification--dark {\n  color: #fff;\n  background-color: #333;\n}\n", "", {"version":3,"sources":["/./src/components/Notification/src/components/Notification/Notification.styl","/./src/components/Notification/Notification.styl","/./src/components/Notification/src/assets/stylus/mixins/mixins.styl"],"names":[],"mappings":"AAGA;EACE,mBAAA;EACA,uBAAA;EACA,mEAAA;EACA,eAAA;EACA,iBAAA;EACA,iBAAA;EACA,cAAA;CCFD;ADGC;EACE,cAAA;CCDH;ACNC;EFSE,0BAAA;EACA,sBAAA;CCAH;ACVC;EFYE,0BAAA;EACA,sBAAA;CCCH;ACdC;EFeE,0BAAA;EACA,sBAAA;CCEH;AClBC;EFkBE,0BAAA;EACA,sBAAA;CCGH;ACtBC;EFqBE,0BAAA;EACA,sBAAA;CCIH;AC1BC;EFwBE,YAAA;EACA,uBAAA;CCKH","file":"Notification.styl","sourcesContent":["@import \"./../../assets/stylus/mixins/mixins.styl\"\n@import \"./../../assets/stylus/settings/variables.styl\"\n\n.Notification // Notification\n  position: relative\n  background-color: $white\n  box-shadow: $box_shadow_normal\n  display: block\n  font-weight: 300\n  margin-top: 1rem\n  padding: 1rem\n  &:first-child\n    margin-top: 0\n  +variant(primary) // Notification--primary\n    background-color: $primary\n    border-color: $primary\n  +variant(success) // Notification--success\n    background-color: $success_light\n    border-color: $success\n  +variant(danger) // Notification--danger\n    background-color: $danger_light\n    border-color: $danger\n  +variant(warning) // Notification--warning\n    background-color: $warning_light\n    border-color: $warning\n  +variant(info) // Notification--info\n    background-color: $info_light\n    border-color: $info\n  +variant(dark) // Notification--dark\n    color: $white\n    background-color: $gray",".Notification {\n  position: relative;\n  background-color: #fff;\n  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);\n  display: block;\n  font-weight: 300;\n  margin-top: 1rem;\n  padding: 1rem;\n}\n.Notification:first-child {\n  margin-top: 0;\n}\n.Notification--primary {\n  background-color: #2196f3;\n  border-color: #2196f3;\n}\n.Notification--success {\n  background-color: #e8f5e9;\n  border-color: #4caf50;\n}\n.Notification--danger {\n  background-color: #ffebee;\n  border-color: #f44336;\n}\n.Notification--warning {\n  background-color: #fff3e0;\n  border-color: #ff9800;\n}\n.Notification--info {\n  background-color: #e1f5fe;\n  border-color: #03a9f4;\n}\n.Notification--dark {\n  color: #fff;\n  background-color: #333;\n}\n","has($name)\n  / &{$element_separator}{$name}\n    {block}\n\nvariant($name)\n  / &{$modifier_separator}{$name}\n    {block}\n\ntransition($time)\n  transition: all $time ease-in-out\n\nborder-radius-none()\n  border-radius: 0\n\nborder-radius-all()\n  border-radius: $border_radius\n\nborder-radius-top()\n  border-radius: $border_radius $border_radius 0 0\n\nborder-radius-right()\n  border-radius: 0 $border_radius $border_radius 0\n\nborder-radius-bottom()\n  border-radius: 0 0 $border_radius $border_radius\n\nborder-radius-left()\n  border-radius: $border_radius 0 0 $border_radius\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -439,19 +439,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _CloseButton = __webpack_require__(9);
 	
-	var AlertCloseButton = _interopRequireWildcard(_CloseButton);
+	var NotificationCloseButton = _interopRequireWildcard(_CloseButton);
 	
 	var _Message = __webpack_require__(14);
 	
-	var AlertMessage = _interopRequireWildcard(_Message);
+	var NotificationMessage = _interopRequireWildcard(_Message);
 	
 	var _Timer = __webpack_require__(19);
 	
-	var AlertTimer = _interopRequireWildcard(_Timer);
+	var NotificationTimer = _interopRequireWildcard(_Timer);
 	
 	var _Title = __webpack_require__(24);
 	
-	var AlertTitle = _interopRequireWildcard(_Title);
+	var NotificationTitle = _interopRequireWildcard(_Title);
 	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
@@ -460,14 +460,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = {
 	    data: function data() {
 	        return {
-	            block: 'Alert'
+	            block: 'Notification'
 	        };
 	    },
 	
 	
 	    props: {
 	        /**
-	         * The timer of the alert
+	         * The close button of the notification
+	         */
+	        closeButton: {
+	            type: Object,
+	            required: false
+	        },
+	
+	        /**
+	         * The timer of the notification
 	         */
 	        timer: {
 	            type: Object,
@@ -475,7 +483,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        },
 	
 	        /**
-	         * The title of the alert
+	         * The title of the notification
 	         */
 	        title: {
 	            type: Object,
@@ -483,17 +491,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        },
 	
 	        /**
-	         * The message of the alert
+	         * The message of the notification
 	         */
 	        message: {
-	            type: Object,
-	            required: false
-	        },
-	
-	        /**
-	         * The close button of the alert
-	         */
-	        closeButton: {
 	            type: Object,
 	            required: false
 	        },
@@ -504,50 +504,47 @@ return /******/ (function(modules) { // webpackBootstrap
 	        variants: {
 	            type: Array,
 	            required: false
+	        },
+	
+	        /**
+	         * The contextual styling
+	         */
+	        contextualStyle: {
+	            type: String,
+	            required: false
 	        }
 	    },
 	
 	    components: {
 	        /**
-	         * The alert dismiss button
+	         * The notification dismiss button
 	         */
-	        AlertCloseButton: AlertCloseButton,
+	        NotificationCloseButton: NotificationCloseButton,
 	
 	        /**
-	         * The alert message
+	         * The notification message
 	         */
-	        AlertMessage: AlertMessage,
+	        NotificationMessage: NotificationMessage,
 	
 	        /**
-	         * The alert timer
+	         * The notification timer
 	         */
-	        AlertTimer: AlertTimer,
+	        NotificationTimer: NotificationTimer,
 	
 	        /**
-	         * The alert timer
+	         * The notification timer
 	         */
-	        AlertTitle: AlertTitle
+	        NotificationTitle: NotificationTitle
 	    },
 	
 	    computed: {
-	        /**
-	         * Computed property which will output
-	         * whether there is a timer or not
-	         *
-	         * @returns {boolean}
-	         */
-	
-	        hasTimer: function hasTimer() {
-	            return !!this.timer;
-	        },
-	
-	
 	        /**
 	         * Computed property which will output
 	         * whether there is a title or not
 	         *
 	         * @returns {boolean} If there is a title
 	         */
+	
 	        hasTitle: function hasTitle() {
 	            return !!this.title;
 	        },
@@ -571,7 +568,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	         * @returns {boolean} If there is a close button
 	         */
 	        hasCloseButton: function hasCloseButton() {
-	            return !!this.closeButton;
+	            if (!this.closeButton) {
+	                return false;
+	            }
+	
+	            return !!this.closeButton.enabled;
+	        },
+	
+	
+	        /**
+	         * Computed property which will output
+	         * whether there is a timer or not
+	         *
+	         * @returns {boolean} If there is a timer
+	         */
+	        hasTimer: function hasTimer() {
+	            if (!this.timer) {
+	                return false;
+	            }
+	
+	            return !!this.timer.enabled;
 	        },
 	
 	
@@ -581,34 +597,39 @@ return /******/ (function(modules) { // webpackBootstrap
 	         *
 	         * @returns {Array} The corrected class names
 	         */
-	        alertClass: function alertClass() {
-	            return _CSSUtil2.default.blockClasses(this.block, this.variants);
-	        }
-	    },
-	    methods: {
+	        notificationClass: function notificationClass() {
+	            var classes = _CSSUtil2.default.blockClasses(this.block, this.variants);
+	            classes.push(_CSSUtil2.default.contextualClass(this.block, this.contextualStyle));
 	
-	        /**
-	         * Method used to dismiss the alert.
-	         * It will destroy the vm and clean it up.
-	         */
-	
-	        dismissAlert: function dismissAlert() {
-	            this.$destroy(true);
+	            return classes;
 	        },
 	
 	
 	        /**
-	         * Method used to start the timer.
-	         * When the timer is complete, it will dismiss the alert.
+	         * If the notifications can be closed
+	         *
+	         * @returns {boolean}
 	         */
-	        startTimer: function startTimer() {
-	            setTimeout(this.dismissAlert, 5000);
+	        isClosable: function isClosable() {
+	            return !!(this.hasTimer || this.hasCloseButton);
+	        }
+	    },
+	
+	    methods: {
+	        /**
+	         * Method used to close the notification.
+	         * It will destroy the vm and clean it up.
+	         */
+	
+	        closeNotification: function closeNotification() {
+	            this.$destroy(true);
 	        }
 	    },
 	
 	    ready: function ready() {
-	        if (this.hasTimer) {
-	            this.startTimer();
+	        // Check if the notification can be closed
+	        if (!this.isClosable) {
+	            console.warn('Warning: Cannot close the notification!');
 	        }
 	    }
 	};
@@ -634,7 +655,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    /**
 	     * The allowed contextual types
 	     */
-	    contextualTypes: ['danger', 'info', 'primary', 'success', 'warning'],
+	    contextualTypes: ['danger', 'info', 'primary', 'success', 'warning', 'dark'],
 	
 	    /**
 	     * The element separator
@@ -784,7 +805,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/components/Alert/CloseButton/CloseButton.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/components/Notification/CloseButton/CloseButton.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(13)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -795,7 +816,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/p.c.vanmeijgaard/Projects/vivid-web/vue-components/src/components/Alert/CloseButton/CloseButton.vue"
+	  var id = "/Users/p.c.vanmeijgaard/Projects/sandbox/vue-components-sandbox/vendor/vue-components/src/components/Notification/CloseButton/CloseButton.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -838,7 +859,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, ".Alert__close-button {\n  cursor: pointer;\n  font-size: 1.5rem;\n  font-weight: 600;\n  line-height: 2rem;\n  position: absolute;\n  right: 1rem;\n  top: 0.75rem;\n}\n.Alert__close-button--primary {\n  color: #fff;\n}\n.Alert__close-button--success {\n  color: #080;\n}\n.Alert__close-button--danger {\n  color: #870000;\n}\n.Alert__close-button--warning {\n  color: #cca558;\n}\n.Alert__close-button--info {\n  color: #5a93cc;\n}\n", "", {"version":3,"sources":["/./src/components/Alert/CloseButton/src/assets/stylus/mixins/mixins.styl","/./src/components/Alert/CloseButton/src/components/Alert/CloseButton/CloseButton.styl","/./src/components/Alert/CloseButton/CloseButton.styl"],"names":[],"mappings":"AACE;ECIE,gBAAA;EACA,kBAAA;EACA,iBAAA;EACA,kBAAA;EACA,mBAAA;EACA,YAAA;EACA,aAAA;CCHH;AFHC;ECQI,YAAA;CCFL;AFNC;ECUI,YAAA;CCDL;AFTC;ECYI,eAAA;CCAL;AFZC;ECcI,eAAA;CCCL;AFfC;ECgBI,eAAA;CCEL","file":"CloseButton.styl","sourcesContent":["has($name)\n  / &{$element_separator}{$name}\n    {block}\n\nvariant($name)\n  / &{$modifier_separator}{$name}\n    {block}\n\ntransition($time)\n  transition: all $time ease-in-out\n\nborder-radius-none()\n  border-radius: 0\n\nborder-radius-all()\n  border-radius: $border_radius\n\nborder-radius-top()\n  border-radius: $border_radius $border_radius 0 0\n\nborder-radius-right()\n  border-radius: 0 $border_radius $border_radius 0\n\nborder-radius-bottom()\n  border-radius: 0 0 $border_radius $border_radius\n\nborder-radius-left()\n  border-radius: $border_radius 0 0 $border_radius\n","@import \"./../../../assets/stylus/mixins/mixins.styl\"\n@import \"./../../../assets/stylus/settings/variables.styl\"\n\n.Alert\n  +has(close-button) // Alert__close-button\n    cursor: pointer\n    font-size: 1.5rem\n    font-weight: 600\n    line-height: 2rem\n    position: absolute\n    right: 1rem\n    top: .75rem\n    +variant(primary) // Alert__close-button--primary\n      color: $white\n    +variant(success) // Alert__close-button--success\n      color: $success_dark\n    +variant(danger) // Alert__close-button--danger\n      color: $danger_dark\n    +variant(warning) // Alert__close-button--warning\n      color: $warning_dark\n    +variant(info) // Alert__close-button--info\n      color: $info_dark",".Alert__close-button {\n  cursor: pointer;\n  font-size: 1.5rem;\n  font-weight: 600;\n  line-height: 2rem;\n  position: absolute;\n  right: 1rem;\n  top: 0.75rem;\n}\n.Alert__close-button--primary {\n  color: #fff;\n}\n.Alert__close-button--success {\n  color: #080;\n}\n.Alert__close-button--danger {\n  color: #870000;\n}\n.Alert__close-button--warning {\n  color: #cca558;\n}\n.Alert__close-button--info {\n  color: #5a93cc;\n}\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, ".Notification__close-button {\n  cursor: pointer;\n  font-size: 1.5rem;\n  font-weight: 600;\n  line-height: 2rem;\n  position: absolute;\n  right: 1rem;\n  top: 0.75rem;\n}\n.Notification__close-button--primary {\n  color: #fff;\n}\n.Notification__close-button--success {\n  color: #1b5e20;\n}\n.Notification__close-button--danger {\n  color: #b71c1c;\n}\n.Notification__close-button--warning {\n  color: #b36b00;\n}\n.Notification__close-button--info {\n  color: #01579b;\n}\n.Notification__close-button--dark {\n  color: #fff;\n}\n", "", {"version":3,"sources":["/./src/components/Notification/CloseButton/src/assets/stylus/mixins/mixins.styl","/./src/components/Notification/CloseButton/src/components/Notification/CloseButton/CloseButton.styl","/./src/components/Notification/CloseButton/CloseButton.styl"],"names":[],"mappings":"AACE;ECIE,gBAAA;EACA,kBAAA;EACA,iBAAA;EACA,kBAAA;EACA,mBAAA;EACA,YAAA;EACA,aAAA;CCHH;AFHC;ECQI,YAAA;CCFL;AFNC;ECUI,eAAA;CCDL;AFTC;ECYI,eAAA;CCAL;AFZC;ECcI,eAAA;CCCL;AFfC;ECgBI,eAAA;CCEL;AFlBC;ECkBI,YAAA;CCGL","file":"CloseButton.styl","sourcesContent":["has($name)\n  / &{$element_separator}{$name}\n    {block}\n\nvariant($name)\n  / &{$modifier_separator}{$name}\n    {block}\n\ntransition($time)\n  transition: all $time ease-in-out\n\nborder-radius-none()\n  border-radius: 0\n\nborder-radius-all()\n  border-radius: $border_radius\n\nborder-radius-top()\n  border-radius: $border_radius $border_radius 0 0\n\nborder-radius-right()\n  border-radius: 0 $border_radius $border_radius 0\n\nborder-radius-bottom()\n  border-radius: 0 0 $border_radius $border_radius\n\nborder-radius-left()\n  border-radius: $border_radius 0 0 $border_radius\n","@import \"./../../../assets/stylus/mixins/mixins.styl\"\n@import \"./../../../assets/stylus/settings/variables.styl\"\n\n.Notification\n  +has(close-button) // Notification__close-button\n    cursor: pointer\n    font-size: 1.5rem\n    font-weight: 600\n    line-height: 2rem\n    position: absolute\n    right: 1rem\n    top: .75rem\n    +variant(primary) // Notification__close-button--primary\n      color: $white\n    +variant(success) // Notification__close-button--success\n      color: $success_dark\n    +variant(danger) // Notification__close-button--danger\n      color: $danger_dark\n    +variant(warning) // Notification__close-button--warning\n      color: $warning_dark\n    +variant(info) // Notification__close-button--info\n      color: $info_dark\n    +variant(dark) // Notification__close-button--dark\n      color: $white",".Notification__close-button {\n  cursor: pointer;\n  font-size: 1.5rem;\n  font-weight: 600;\n  line-height: 2rem;\n  position: absolute;\n  right: 1rem;\n  top: 0.75rem;\n}\n.Notification__close-button--primary {\n  color: #fff;\n}\n.Notification__close-button--success {\n  color: #1b5e20;\n}\n.Notification__close-button--danger {\n  color: #b71c1c;\n}\n.Notification__close-button--warning {\n  color: #b36b00;\n}\n.Notification__close-button--info {\n  color: #01579b;\n}\n.Notification__close-button--dark {\n  color: #fff;\n}\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -869,7 +890,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    props: {
 	        /**
-	         * The function to close the alert
+	         * The function to close the notification
 	         */
 	        closeFunction: {
 	            type: Function,
@@ -881,6 +902,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	         */
 	        variants: {
 	            type: Array,
+	            required: false
+	        },
+	
+	        /**
+	         * The contextual styling
+	         */
+	        contextualStyle: {
+	            type: String,
 	            required: false
 	        }
 	    },
@@ -904,11 +933,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	         * @returns {Array} The corrected class names
 	         */
 	        closeButtonClass: function closeButtonClass() {
-	            if (!this.variants) {
-	                this.variants = this.$parent.variants;
+	            var classes = _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
+	
+	            if (!this.contextualStyle) {
+	                this.contextualStyle = this.$parent.contextualStyle;
 	            }
 	
-	            return _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
+	            classes.push(_CSSUtil2.default.contextualClass(_CSSUtil2.default.has(this.block, this.element), this.contextualStyle));
+	
+	            return classes;
 	        }
 	    }
 	};
@@ -929,7 +962,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/components/Alert/Message/Message.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/components/Notification/Message/Message.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(18)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -940,7 +973,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/p.c.vanmeijgaard/Projects/vivid-web/vue-components/src/components/Alert/Message/Message.vue"
+	  var id = "/Users/p.c.vanmeijgaard/Projects/sandbox/vue-components-sandbox/vendor/vue-components/src/components/Notification/Message/Message.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -983,7 +1016,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, ".Alert__message--primary {\n  color: #fff;\n}\n.Alert__message--success {\n  color: #080;\n}\n.Alert__message--danger {\n  color: #870000;\n}\n.Alert__message--warning {\n  color: #cca558;\n}\n.Alert__message--info {\n  color: #5a93cc;\n}\n", "", {"version":3,"sources":["/./src/components/Alert/Message/src/assets/stylus/mixins/mixins.styl","/./src/components/Alert/Message/src/components/Alert/Message/Message.styl","/./src/components/Alert/Message/Message.styl"],"names":[],"mappings":"AAKE;ECCI,YAAA;CCJL;AFGC;ECGI,YAAA;CCHL;AFAC;ECKI,eAAA;CCFL;AFHC;ECOI,eAAA;CCDL;AFNC;ECSI,eAAA;CCAL","file":"Message.styl","sourcesContent":["has($name)\n  / &{$element_separator}{$name}\n    {block}\n\nvariant($name)\n  / &{$modifier_separator}{$name}\n    {block}\n\ntransition($time)\n  transition: all $time ease-in-out\n\nborder-radius-none()\n  border-radius: 0\n\nborder-radius-all()\n  border-radius: $border_radius\n\nborder-radius-top()\n  border-radius: $border_radius $border_radius 0 0\n\nborder-radius-right()\n  border-radius: 0 $border_radius $border_radius 0\n\nborder-radius-bottom()\n  border-radius: 0 0 $border_radius $border_radius\n\nborder-radius-left()\n  border-radius: $border_radius 0 0 $border_radius\n","@import \"./../../../assets/stylus/mixins/mixins.styl\"\n@import \"./../../../assets/stylus/settings/variables.styl\"\n\n.Alert\n  +has(message) // Alert__message\n    +variant(primary) // Alert__message--primary\n      color: $white\n    +variant(success) // Alert__message--success\n      color: $success_dark\n    +variant(danger) // Alert__message--danger\n      color: $danger_dark\n    +variant(warning) // Alert__message--warning\n      color: $warning_dark\n    +variant(info) // Alert__message--info\n      color: $info_dark",".Alert__message--primary {\n  color: #fff;\n}\n.Alert__message--success {\n  color: #080;\n}\n.Alert__message--danger {\n  color: #870000;\n}\n.Alert__message--warning {\n  color: #cca558;\n}\n.Alert__message--info {\n  color: #5a93cc;\n}\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, ".Notification__message {\n  display: block;\n}\n.Notification__message--primary {\n  color: #fff;\n}\n.Notification__message--success {\n  color: #1b5e20;\n}\n.Notification__message--danger {\n  color: #b71c1c;\n}\n.Notification__message--warning {\n  color: #b36b00;\n}\n.Notification__message--info {\n  color: #01579b;\n}\n.Notification__message--dark {\n  color: #fff;\n}\n", "", {"version":3,"sources":["/./src/components/Notification/Message/src/assets/stylus/mixins/mixins.styl","/./src/components/Notification/Message/src/components/Notification/Message/Message.styl","/./src/components/Notification/Message/Message.styl"],"names":[],"mappings":"AACE;ECIE,eAAA;CCHH;AFGC;ECEI,YAAA;CCFL;AFAC;ECII,eAAA;CCDL;AFHC;ECMI,eAAA;CCAL;AFNC;ECQI,eAAA;CCCL;AFTC;ECUI,eAAA;CCEL;AFZC;ECYI,YAAA;CCGL","file":"Message.styl","sourcesContent":["has($name)\n  / &{$element_separator}{$name}\n    {block}\n\nvariant($name)\n  / &{$modifier_separator}{$name}\n    {block}\n\ntransition($time)\n  transition: all $time ease-in-out\n\nborder-radius-none()\n  border-radius: 0\n\nborder-radius-all()\n  border-radius: $border_radius\n\nborder-radius-top()\n  border-radius: $border_radius $border_radius 0 0\n\nborder-radius-right()\n  border-radius: 0 $border_radius $border_radius 0\n\nborder-radius-bottom()\n  border-radius: 0 0 $border_radius $border_radius\n\nborder-radius-left()\n  border-radius: $border_radius 0 0 $border_radius\n","@import \"./../../../assets/stylus/mixins/mixins.styl\"\n@import \"./../../../assets/stylus/settings/variables.styl\"\n\n.Notification\n  +has(message) // Notification__message\n    display: block\n    +variant(primary) // Notification__message--primary\n      color: $white\n    +variant(success) // Notification__message--success\n      color: $success_dark\n    +variant(danger) // Notification__message--danger\n      color: $danger_dark\n    +variant(warning) // Notification__message--warning\n      color: $warning_dark\n    +variant(info) // Notification__message--info\n      color: $info_dark\n    +variant(dark) // notification__message--dark\n      color: $white",".Notification__message {\n  display: block;\n}\n.Notification__message--primary {\n  color: #fff;\n}\n.Notification__message--success {\n  color: #1b5e20;\n}\n.Notification__message--danger {\n  color: #b71c1c;\n}\n.Notification__message--warning {\n  color: #b36b00;\n}\n.Notification__message--info {\n  color: #01579b;\n}\n.Notification__message--dark {\n  color: #fff;\n}\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -1027,6 +1060,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	        variants: {
 	            type: Array,
 	            required: false
+	        },
+	
+	        /**
+	         * The contextual styling
+	         */
+	        contextualStyle: {
+	            type: String,
+	            required: false
 	        }
 	    },
 	
@@ -1049,11 +1090,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	         * @returns {Array} The corrected class names
 	         */
 	        messageClass: function messageClass() {
-	            if (!this.variants) {
-	                this.variants = this.$parent.variants;
+	            var classes = _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
+	
+	            if (!this.contextualStyle) {
+	                this.contextualStyle = this.$parent.contextualStyle;
 	            }
 	
-	            return _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
+	            classes.push(_CSSUtil2.default.contextualClass(_CSSUtil2.default.has(this.block, this.element), this.contextualStyle));
+	
+	            return classes;
 	        }
 	    }
 	};
@@ -1074,7 +1119,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/components/Alert/Timer/Timer.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/components/Notification/Timer/Timer.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(23)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -1085,7 +1130,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/p.c.vanmeijgaard/Projects/vivid-web/vue-components/src/components/Alert/Timer/Timer.vue"
+	  var id = "/Users/p.c.vanmeijgaard/Projects/sandbox/vue-components-sandbox/vendor/vue-components/src/components/Notification/Timer/Timer.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1128,7 +1173,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, ".Alert__timer {\n  height: 0.25rem;\n  left: 0;\n  position: absolute;\n  top: 0;\n  width: 100%;\n  -webkit-animation: timer 5000ms infinite linear;\n          animation: timer 5000ms infinite linear;\n}\n.Alert__timer--primary {\n  background: #0af;\n}\n.Alert__timer--success {\n  background: #5c5;\n}\n.Alert__timer--danger {\n  background: #cc5656;\n}\n.Alert__timer--warning {\n  background: #cca558;\n}\n.Alert__timer--info {\n  background: #5a93cc;\n}\n@-webkit-keyframes timer {\n  0% {\n    width: 100%;\n  }\n  100% {\n    width: 0;\n  }\n}\n@keyframes timer {\n  0% {\n    width: 100%;\n  }\n  100% {\n    width: 0;\n  }\n}\n", "", {"version":3,"sources":["/./src/components/Alert/Timer/src/assets/stylus/mixins/mixins.styl","/./src/components/Alert/Timer/src/components/Alert/Timer/Timer.styl","/./src/components/Alert/Timer/Timer.styl"],"names":[],"mappings":"AACE;ECaE,gBAAA;EACA,QAAA;EACA,mBAAA;EACA,OAAA;EACA,YAAA;EACA,gDAAA;UAAA,wCAAA;CCZH;AFFC;ECgBI,iBAAA;CCXL;AFLC;ECkBI,iBAAA;CCVL;AFRC;ECoBI,oBAAA;CCTL;AFXC;ECsBI,oBAAA;CCRL;AFdC;ECwBI,oBAAA;CCPL;ADnBe;EACd;IACE,YAAA;GC6BD;ED3BD;IACE,SAAA;GC6BD;CACF;ADnCe;EACd;IACE,YAAA;GC6CD;ED3CD;IACE,SAAA;GC6CD;CACF","file":"Timer.styl","sourcesContent":["has($name)\n  / &{$element_separator}{$name}\n    {block}\n\nvariant($name)\n  / &{$modifier_separator}{$name}\n    {block}\n\ntransition($time)\n  transition: all $time ease-in-out\n\nborder-radius-none()\n  border-radius: 0\n\nborder-radius-all()\n  border-radius: $border_radius\n\nborder-radius-top()\n  border-radius: $border_radius $border_radius 0 0\n\nborder-radius-right()\n  border-radius: 0 $border_radius $border_radius 0\n\nborder-radius-bottom()\n  border-radius: 0 0 $border_radius $border_radius\n\nborder-radius-left()\n  border-radius: $border_radius 0 0 $border_radius\n","@import \"./../../../assets/stylus/mixins/mixins.styl\"\n@import \"./../../../assets/stylus/settings/variables.styl\"\n\n@keyframes timer {\n  0% {\n    width: 100%\n  }\n  100% {\n    width: 0\n  }\n}\n\n.Alert\n  +has(timer) // alert__timer\n    height: .25rem\n    left: 0\n    position: absolute\n    top: 0\n    width: 100%\n    animation: timer 5000ms infinite linear\n    +variant(primary) // alert__timer--primary\n      background: $primary\n    +variant(success) // alert__timer--success\n      background: $success\n    +variant(danger) // alert__timer--danger\n      background: $danger\n    +variant(warning) // alert__timer--warning\n      background: $warning\n    +variant(info) // alert__timer--info\n      background: $info",".Alert__timer {\n  height: 0.25rem;\n  left: 0;\n  position: absolute;\n  top: 0;\n  width: 100%;\n  animation: timer 5000ms infinite linear;\n}\n.Alert__timer--primary {\n  background: #0af;\n}\n.Alert__timer--success {\n  background: #5c5;\n}\n.Alert__timer--danger {\n  background: #cc5656;\n}\n.Alert__timer--warning {\n  background: #cca558;\n}\n.Alert__timer--info {\n  background: #5a93cc;\n}\n@-moz-keyframes timer {\n  0% {\n    width: 100%;\n  }\n  100% {\n    width: 0;\n  }\n}\n@-webkit-keyframes timer {\n  0% {\n    width: 100%;\n  }\n  100% {\n    width: 0;\n  }\n}\n@-o-keyframes timer {\n  0% {\n    width: 100%;\n  }\n  100% {\n    width: 0;\n  }\n}\n@keyframes timer {\n  0% {\n    width: 100%;\n  }\n  100% {\n    width: 0;\n  }\n}\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, ".Notification__timer {\n  -webkit-animation: timer 5000ms infinite linear;\n          animation: timer 5000ms infinite linear;\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 0.25rem;\n}\n.Notification__timer--primary {\n  background: #0d47a1;\n}\n.Notification__timer--success {\n  background: #1b5e20;\n}\n.Notification__timer--danger {\n  background: #b71c1c;\n}\n.Notification__timer--warning {\n  background: #b36b00;\n}\n.Notification__timer--info {\n  background: #01579b;\n}\n.Notification__timer--dark {\n  background: #fff;\n}\n@-webkit-keyframes timer {\n  0% {\n    width: 100%;\n  }\n  100% {\n    width: 0;\n  }\n}\n@keyframes timer {\n  0% {\n    width: 100%;\n  }\n  100% {\n    width: 0;\n  }\n}\n", "", {"version":3,"sources":["/./src/components/Notification/Timer/src/assets/stylus/mixins/mixins.styl","/./src/components/Notification/Timer/src/components/Notification/Timer/Timer.styl","/./src/components/Notification/Timer/Timer.styl"],"names":[],"mappings":"AACE;ECaE,gDAAA;UAAA,wCAAA;EACA,mBAAA;EACA,OAAA;EACA,QAAA;EACA,gBAAA;CCZH;AFDC;ECeI,oBAAA;CCXL;AFJC;ECiBI,oBAAA;CCVL;AFPC;ECmBI,oBAAA;CCTL;AFVC;ECqBI,oBAAA;CCRL;AFbC;ECuBI,oBAAA;CCPL;AFhBC;ECyBI,iBAAA;CCNL;ADrBe;EACd;IACE,YAAA;GC+BD;ED7BD;IACE,SAAA;GC+BD;CACF;ADrCe;EACd;IACE,YAAA;GC+CD;ED7CD;IACE,SAAA;GC+CD;CACF","file":"Timer.styl","sourcesContent":["has($name)\n  / &{$element_separator}{$name}\n    {block}\n\nvariant($name)\n  / &{$modifier_separator}{$name}\n    {block}\n\ntransition($time)\n  transition: all $time ease-in-out\n\nborder-radius-none()\n  border-radius: 0\n\nborder-radius-all()\n  border-radius: $border_radius\n\nborder-radius-top()\n  border-radius: $border_radius $border_radius 0 0\n\nborder-radius-right()\n  border-radius: 0 $border_radius $border_radius 0\n\nborder-radius-bottom()\n  border-radius: 0 0 $border_radius $border_radius\n\nborder-radius-left()\n  border-radius: $border_radius 0 0 $border_radius\n","@import \"./../../../assets/stylus/mixins/mixins.styl\"\n@import \"./../../../assets/stylus/settings/variables.styl\"\n\n@keyframes timer {\n  0% {\n    width: 100%\n  }\n  100% {\n    width: 0\n  }\n}\n\n.Notification\n  +has(timer) // notification__timer\n    animation: timer 5000ms infinite linear\n    position: absolute\n    top: 0\n    left: 0\n    height: .25rem\n    +variant(primary) // notification__timer--primary\n      background: $primary_dark\n    +variant(success) // notification__timer--success\n      background: $success_dark\n    +variant(danger) // notification__timer--danger\n      background: $danger_dark\n    +variant(warning) // notification__timer--warning\n      background: $warning_dark\n    +variant(info) // notification__timer--info\n      background: $info_dark\n    +variant(dark) // notification__timer--dark\n      background: $white",".Notification__timer {\n  animation: timer 5000ms infinite linear;\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 0.25rem;\n}\n.Notification__timer--primary {\n  background: #0d47a1;\n}\n.Notification__timer--success {\n  background: #1b5e20;\n}\n.Notification__timer--danger {\n  background: #b71c1c;\n}\n.Notification__timer--warning {\n  background: #b36b00;\n}\n.Notification__timer--info {\n  background: #01579b;\n}\n.Notification__timer--dark {\n  background: #fff;\n}\n@-moz-keyframes timer {\n  0% {\n    width: 100%;\n  }\n  100% {\n    width: 0;\n  }\n}\n@-webkit-keyframes timer {\n  0% {\n    width: 100%;\n  }\n  100% {\n    width: 0;\n  }\n}\n@-o-keyframes timer {\n  0% {\n    width: 100%;\n  }\n  100% {\n    width: 0;\n  }\n}\n@keyframes timer {\n  0% {\n    width: 100%;\n  }\n  100% {\n    width: 0;\n  }\n}\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -1152,17 +1197,34 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = {
 	    data: function data() {
 	        return {
-	            element: 'timer'
+	            element: 'timer',
+	            timer: null
 	        };
 	    },
 	
 	
 	    props: {
 	        /**
+	         * The function to close the notification
+	         */
+	        closeFunction: {
+	            type: Function,
+	            required: true
+	        },
+	
+	        /**
 	         * The message variants
 	         */
 	        variants: {
 	            type: Array,
+	            required: false
+	        },
+	
+	        /**
+	         * The contextual styling
+	         */
+	        contextualStyle: {
+	            type: String,
 	            required: false
 	        }
 	    },
@@ -1186,12 +1248,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	         * @returns {Array} The corrected class names
 	         */
 	        timerClass: function timerClass() {
-	            if (!this.variants) {
-	                this.variants = this.$parent.variants;
+	            var classes = _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
+	
+	            if (!this.contextualStyle) {
+	                this.contextualStyle = this.$parent.contextualStyle;
 	            }
 	
-	            return _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
+	            classes.push(_CSSUtil2.default.contextualClass(_CSSUtil2.default.has(this.block, this.element), this.contextualStyle));
+	
+	            return classes;
 	        }
+	    },
+	
+	    methods: {
+	        /**
+	         * Method used to start the timer
+	         */
+	
+	        startTimer: function startTimer() {
+	            this.timer = setTimeout(this.closeFunction, 5000);
+	        }
+	    },
+	
+	    ready: function ready() {
+	        this.startTimer();
 	    }
 	};
 
@@ -1211,7 +1291,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/components/Alert/Title/Title.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/components/Notification/Title/Title.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(28)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -1222,7 +1302,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/p.c.vanmeijgaard/Projects/vivid-web/vue-components/src/components/Alert/Title/Title.vue"
+	  var id = "/Users/p.c.vanmeijgaard/Projects/sandbox/vue-components-sandbox/vendor/vue-components/src/components/Notification/Title/Title.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1265,7 +1345,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, ".Alert__title {\n  font-weight: 600;\n}\n.Alert__title--primary {\n  color: #fff;\n}\n.Alert__title--success {\n  color: #080;\n}\n.Alert__title--danger {\n  color: #870000;\n}\n.Alert__title--warning {\n  color: #cca558;\n}\n.Alert__title--info {\n  color: #5a93cc;\n}\n", "", {"version":3,"sources":["/./src/components/Alert/Title/src/assets/stylus/mixins/mixins.styl","/./src/components/Alert/Title/src/components/Alert/Title/Title.styl","/./src/components/Alert/Title/Title.styl"],"names":[],"mappings":"AACE;ECIE,iBAAA;CCHH;AFGC;ECEI,YAAA;CCFL;AFAC;ECII,YAAA;CCDL;AFHC;ECMI,eAAA;CCAL;AFNC;ECQI,eAAA;CCCL;AFTC;ECUI,eAAA;CCEL","file":"Title.styl","sourcesContent":["has($name)\n  / &{$element_separator}{$name}\n    {block}\n\nvariant($name)\n  / &{$modifier_separator}{$name}\n    {block}\n\ntransition($time)\n  transition: all $time ease-in-out\n\nborder-radius-none()\n  border-radius: 0\n\nborder-radius-all()\n  border-radius: $border_radius\n\nborder-radius-top()\n  border-radius: $border_radius $border_radius 0 0\n\nborder-radius-right()\n  border-radius: 0 $border_radius $border_radius 0\n\nborder-radius-bottom()\n  border-radius: 0 0 $border_radius $border_radius\n\nborder-radius-left()\n  border-radius: $border_radius 0 0 $border_radius\n","@import \"./../../../assets/stylus/mixins/mixins.styl\"\n@import \"./../../../assets/stylus/settings/variables.styl\"\n\n.Alert\n  +has(title) // Alert__title\n    font-weight: 600\n    +variant(primary) // Alert__title--primary\n      color: $white\n    +variant(success) // Alert__title--success\n      color: $success_dark\n    +variant(danger) // Alert__title--danger\n      color: $danger_dark\n    +variant(warning) // Alert__title--warning\n      color: $warning_dark\n    +variant(info) // Alert__title--info\n      color: $info_dark",".Alert__title {\n  font-weight: 600;\n}\n.Alert__title--primary {\n  color: #fff;\n}\n.Alert__title--success {\n  color: #080;\n}\n.Alert__title--danger {\n  color: #870000;\n}\n.Alert__title--warning {\n  color: #cca558;\n}\n.Alert__title--info {\n  color: #5a93cc;\n}\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, ".Notification__title {\n  display: block;\n  font-size: 1.125rem;\n  font-weight: 600;\n  margin: 0;\n  padding: 0;\n}\n.Notification__title--primary {\n  color: #fff;\n}\n.Notification__title--success {\n  color: #1b5e20;\n}\n.Notification__title--danger {\n  color: #b71c1c;\n}\n.Notification__title--warning {\n  color: #b36b00;\n}\n.Notification__title--info {\n  color: #01579b;\n}\n.Notification__title--dark {\n  color: #fff;\n}\n", "", {"version":3,"sources":["/./src/components/Notification/Title/src/assets/stylus/mixins/mixins.styl","/./src/components/Notification/Title/src/components/Notification/Title/Title.styl","/./src/components/Notification/Title/Title.styl"],"names":[],"mappings":"AACE;ECIE,eAAA;EACA,oBAAA;EACA,iBAAA;EACA,UAAA;EACA,WAAA;CCHH;AFDC;ECMI,YAAA;CCFL;AFJC;ECQI,eAAA;CCDL;AFPC;ECUI,eAAA;CCAL;AFVC;ECYI,eAAA;CCCL;AFbC;ECcI,eAAA;CCEL;AFhBC;ECgBI,YAAA;CCGL","file":"Title.styl","sourcesContent":["has($name)\n  / &{$element_separator}{$name}\n    {block}\n\nvariant($name)\n  / &{$modifier_separator}{$name}\n    {block}\n\ntransition($time)\n  transition: all $time ease-in-out\n\nborder-radius-none()\n  border-radius: 0\n\nborder-radius-all()\n  border-radius: $border_radius\n\nborder-radius-top()\n  border-radius: $border_radius $border_radius 0 0\n\nborder-radius-right()\n  border-radius: 0 $border_radius $border_radius 0\n\nborder-radius-bottom()\n  border-radius: 0 0 $border_radius $border_radius\n\nborder-radius-left()\n  border-radius: $border_radius 0 0 $border_radius\n","@import \"./../../../assets/stylus/mixins/mixins.styl\"\n@import \"./../../../assets/stylus/settings/variables.styl\"\n\n.Notification\n  +has(title) // Notification__title\n    display: block\n    font-size: 1.125rem\n    font-weight: 600\n    margin: 0\n    padding: 0\n    +variant(primary) // Notification__title--primary\n      color: $white\n    +variant(success) // Notification__title--success\n      color: $success_dark\n    +variant(danger) // Notification__title--danger\n      color: $danger_dark\n    +variant(warning) // Notification__title--warning\n      color: $warning_dark\n    +variant(info) // Notification__title--info\n      color: $info_dark\n    +variant(dark) // Notification__title--dark\n      color: $white",".Notification__title {\n  display: block;\n  font-size: 1.125rem;\n  font-weight: 600;\n  margin: 0;\n  padding: 0;\n}\n.Notification__title--primary {\n  color: #fff;\n}\n.Notification__title--success {\n  color: #1b5e20;\n}\n.Notification__title--danger {\n  color: #b71c1c;\n}\n.Notification__title--warning {\n  color: #b36b00;\n}\n.Notification__title--info {\n  color: #01579b;\n}\n.Notification__title--dark {\n  color: #fff;\n}\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -1309,6 +1389,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	        variants: {
 	            type: Array,
 	            required: false
+	        },
+	
+	        /**
+	         * The contextual styling
+	         */
+	        contextualStyle: {
+	            type: String,
+	            required: false
 	        }
 	    },
 	
@@ -1331,11 +1419,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	         * @returns {Array} The corrected class names
 	         */
 	        titleClass: function titleClass() {
-	            if (!this.variants) {
-	                this.variants = this.$parent.variants;
+	            var classes = _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
+	
+	            if (!this.contextualStyle) {
+	                this.contextualStyle = this.$parent.contextualStyle;
 	            }
 	
-	            return _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
+	            classes.push(_CSSUtil2.default.contextualClass(_CSSUtil2.default.has(this.block, this.element), this.contextualStyle));
+	
+	            return classes;
 	        }
 	    }
 	};
@@ -1350,7 +1442,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 29 */
 /***/ function(module, exports) {
 
-	module.exports = "<div :class=\"alertClass\">\n\n    <alert-timer\n            v-if=\"hasTimer\"\n            :variants=\"timer.variants\"\n    ></alert-timer>\n\n    <alert-title\n            v-if=\"hasTitle\"\n            :variants=\"title.variants\"\n            :content=\"title.content\"\n    ></alert-title>\n\n    <alert-message\n            v-if=\"hasMessage\"\n            :variants=\"message.variants\"\n            :content=\"message.content\"\n    ></alert-message>\n\n    <alert-close-button\n            v-if=\"hasCloseButton\"\n            :variants=\"closeButton.variants\"\n            :close-function=\"dismissAlert\"\n    ></alert-close-button>\n\n</div>";
+	module.exports = "<div :class=\"notificationClass\">\n\n    <notification-timer\n            v-if=\"hasTimer\"\n            :variants=\"timer.variants\"\n            :contextual-style=\"timer.contextualStyle\"\n            :close-function=\"closeNotification\"\n    ></notification-timer>\n\n    <notification-title\n            v-if=\"hasTitle\"\n            :variants=\"title.variants\"\n            :contextual-style=\"title.contextualStyle\"\n            :content=\"title.content\"\n    ></notification-title>\n\n    <notification-message\n            v-if=\"hasMessage\"\n            :variants=\"message.variants\"\n            :contextual-style=\"message.contextualStyle\"\n            :content=\"message.content\"\n    ></notification-message>\n\n    <notification-close-button\n            v-if=\"hasCloseButton\"\n            :variants=\"closeButton.variants\"\n            :contextual-style=\"closeButton.contextualStyle\"\n            :close-function=\"closeNotification\"\n    ></notification-close-button>\n\n</div>";
 
 /***/ },
 /* 30 */
@@ -1373,7 +1465,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/p.c.vanmeijgaard/Projects/vivid-web/vue-components/src/components/Breadcrumb/Breadcrumb.vue"
+	  var id = "/Users/p.c.vanmeijgaard/Projects/sandbox/vue-components-sandbox/vendor/vue-components/src/components/Breadcrumb/Breadcrumb.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1416,7 +1508,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, ".Breadcrumb {\n  display: block;\n  list-style: none;\n  margin: 0;\n  margin-bottom: 1rem;\n  padding: 0;\n}\n", "", {"version":3,"sources":["/./src/components/Breadcrumb/src/components/Breadcrumb/Breadcrumb.styl","/./src/components/Breadcrumb/Breadcrumb.styl"],"names":[],"mappings":"AAIA;EACE,eAAA;EACA,iBAAA;EACA,UAAA;EACA,oBAAA;EACA,WAAA;CCHD","file":"Breadcrumb.styl","sourcesContent":["// Imports\n@import \"./../../assets/stylus/settings/variables.styl\"\n@import \"./../../assets/stylus/mixins/mixins.styl\"\n\n.Breadcrumb\n  display: block\n  list-style: none\n  margin: 0\n  margin-bottom: 1rem\n  padding: 0",".Breadcrumb {\n  display: block;\n  list-style: none;\n  margin: 0;\n  margin-bottom: 1rem;\n  padding: 0;\n}\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, ".Breadcrumb {\n  display: block;\n  list-style: none;\n  margin: 0;\n  margin-bottom: 1rem;\n  padding: 0;\n}\n", "", {"version":3,"sources":["/./src/components/Breadcrumb/src/components/Breadcrumb/Breadcrumb.styl","/./src/components/Breadcrumb/Breadcrumb.styl"],"names":[],"mappings":"AAIA;EACE,eAAA;EACA,iBAAA;EACA,UAAA;EACA,oBAAA;EACA,WAAA;CCHD","file":"Breadcrumb.styl","sourcesContent":["// Imports\n@import \"./../../assets/stylus/settings/variables.styl\"\n@import \"./../../assets/stylus/mixins/mixins.styl\"\n\n.Breadcrumb // Breadcrumb\n  display: block\n  list-style: none\n  margin: 0\n  margin-bottom: 1rem\n  padding: 0",".Breadcrumb {\n  display: block;\n  list-style: none;\n  margin: 0;\n  margin-bottom: 1rem;\n  padding: 0;\n}\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -1466,6 +1558,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	        variants: {
 	            type: Array,
 	            required: false
+	        },
+	
+	        /**
+	         * The contextual styling
+	         */
+	        contextualStyle: {
+	            type: String,
+	            required: false
 	        }
 	    },
 	
@@ -1485,7 +1585,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	         */
 	
 	        breadcrumbClass: function breadcrumbClass() {
-	            return _CSSUtil2.default.blockClasses(this.block, this.variants);
+	            var classes = _CSSUtil2.default.blockClasses(this.block, this.variants);
+	            classes.push(_CSSUtil2.default.contextualClass(this.block, this.contextualStyle));
+	
+	            return classes;
 	        }
 	    }
 	};
@@ -1511,7 +1614,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/p.c.vanmeijgaard/Projects/vivid-web/vue-components/src/components/Breadcrumb/Item/Item.vue"
+	  var id = "/Users/p.c.vanmeijgaard/Projects/sandbox/vue-components-sandbox/vendor/vue-components/src/components/Breadcrumb/Item/Item.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1554,7 +1657,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, ".Breadcrumb__item {\n  display: inline-block;\n  vertical-align: middle;\n}\n.Breadcrumb__item:after {\n  content: '\\F238';\n  display: inline-block;\n  font: normal normal normal 24px/1 \"Material Design Icons\";\n  font-weight: 100;\n  vertical-align: middle;\n}\n.Breadcrumb__item:last-child:after {\n  display: none;\n}\n", "", {"version":3,"sources":["/./src/components/Breadcrumb/Item/src/assets/stylus/mixins/mixins.styl","/./src/components/Breadcrumb/Item/src/components/Breadcrumb/Item/Item.styl","/./src/components/Breadcrumb/Item/Item.styl"],"names":[],"mappings":"AACE;ECKE,sBAAA;EACA,uBAAA;CCJH;ADKG;EACE,iBAAA;EACA,sBAAA;EACA,0DAAA;EACA,iBAAA;EACA,uBAAA;CCHL;ADIG;EACE,cAAA;CCFL","file":"Item.styl","sourcesContent":["has($name)\n  / &{$element_separator}{$name}\n    {block}\n\nvariant($name)\n  / &{$modifier_separator}{$name}\n    {block}\n\ntransition($time)\n  transition: all $time ease-in-out\n\nborder-radius-none()\n  border-radius: 0\n\nborder-radius-all()\n  border-radius: $border_radius\n\nborder-radius-top()\n  border-radius: $border_radius $border_radius 0 0\n\nborder-radius-right()\n  border-radius: 0 $border_radius $border_radius 0\n\nborder-radius-bottom()\n  border-radius: 0 0 $border_radius $border_radius\n\nborder-radius-left()\n  border-radius: $border_radius 0 0 $border_radius\n","// Imports\n@import \"./../../../assets/stylus/settings/variables.styl\"\n@import \"./../../../assets/stylus/mixins/mixins.styl\"\n\n.Breadcrumb\n  +has(item)\n    display: inline-block\n    vertical-align: middle\n    &:after\n      content: '\\f238'\n      display: inline-block\n      font: normal normal normal 24px / 1 \"Material Design Icons\"\n      font-weight: 100\n      vertical-align: middle\n    &:last-child:after\n      display: none",".Breadcrumb__item {\n  display: inline-block;\n  vertical-align: middle;\n}\n.Breadcrumb__item:after {\n  content: '\\f238';\n  display: inline-block;\n  font: normal normal normal 24px/1 \"Material Design Icons\";\n  font-weight: 100;\n  vertical-align: middle;\n}\n.Breadcrumb__item:last-child:after {\n  display: none;\n}\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, ".Breadcrumb__item {\n  display: inline-block;\n  vertical-align: middle;\n}\n.Breadcrumb__item:after {\n  content: '\\F238';\n  display: inline-block;\n  font: normal normal normal 24px/1 \"Material Design Icons\";\n  font-weight: 100;\n  vertical-align: middle;\n}\n.Breadcrumb__item:last-child:after {\n  display: none;\n}\n.Breadcrumb__item--primary {\n  color: #2196f3;\n}\n.Breadcrumb__item--success {\n  color: #4caf50;\n}\n.Breadcrumb__item--danger {\n  color: #f44336;\n}\n.Breadcrumb__item--warning {\n  color: #ff9800;\n}\n.Breadcrumb__item--info {\n  color: #03a9f4;\n}\n.Breadcrumb__item--dark {\n  color: #333;\n}\n", "", {"version":3,"sources":["/./src/components/Breadcrumb/Item/src/assets/stylus/mixins/mixins.styl","/./src/components/Breadcrumb/Item/src/components/Breadcrumb/Item/Item.styl","/./src/components/Breadcrumb/Item/Item.styl"],"names":[],"mappings":"AACE;ECKE,sBAAA;EACA,uBAAA;CCJH;ADKG;EACE,iBAAA;EACA,sBAAA;EACA,0DAAA;EACA,iBAAA;EACA,uBAAA;CCHL;ADIG;EACE,cAAA;CCFL;AFRC;ECYI,eAAA;CCDL;AFXC;ECcI,eAAA;CCAL;AFdC;ECgBI,eAAA;CCCL;AFjBC;ECkBI,eAAA;CCEL;AFpBC;ECoBI,eAAA;CCGL;AFvBC;ECsBI,YAAA;CCIL","file":"Item.styl","sourcesContent":["has($name)\n  / &{$element_separator}{$name}\n    {block}\n\nvariant($name)\n  / &{$modifier_separator}{$name}\n    {block}\n\ntransition($time)\n  transition: all $time ease-in-out\n\nborder-radius-none()\n  border-radius: 0\n\nborder-radius-all()\n  border-radius: $border_radius\n\nborder-radius-top()\n  border-radius: $border_radius $border_radius 0 0\n\nborder-radius-right()\n  border-radius: 0 $border_radius $border_radius 0\n\nborder-radius-bottom()\n  border-radius: 0 0 $border_radius $border_radius\n\nborder-radius-left()\n  border-radius: $border_radius 0 0 $border_radius\n","// Imports\n@import \"./../../../assets/stylus/settings/variables.styl\"\n@import \"./../../../assets/stylus/mixins/mixins.styl\"\n\n.Breadcrumb\n  +has(item)\n    display: inline-block\n    vertical-align: middle\n    &:after\n      content: '\\f238'\n      display: inline-block\n      font: normal normal normal 24px / 1 \"Material Design Icons\"\n      font-weight: 100\n      vertical-align: middle\n    &:last-child:after\n      display: none\n    +variant(primary) // Breadcrumb__item--primary\n      color: $primary\n    +variant(success) // Breadcrumb__item--success\n      color: $success\n    +variant(danger) // Breadcrumb__item--danger \n      color: $danger\n    +variant(warning) // Breadcrumb__item--warning\n      color: $warning\n    +variant(info) // Breadcrumb__item--info\n      color: $info\n    +variant(dark) // Breadcrumb__item--dark\n      color: $gray",".Breadcrumb__item {\n  display: inline-block;\n  vertical-align: middle;\n}\n.Breadcrumb__item:after {\n  content: '\\f238';\n  display: inline-block;\n  font: normal normal normal 24px/1 \"Material Design Icons\";\n  font-weight: 100;\n  vertical-align: middle;\n}\n.Breadcrumb__item:last-child:after {\n  display: none;\n}\n.Breadcrumb__item--primary {\n  color: #2196f3;\n}\n.Breadcrumb__item--success {\n  color: #4caf50;\n}\n.Breadcrumb__item--danger {\n  color: #f44336;\n}\n.Breadcrumb__item--warning {\n  color: #ff9800;\n}\n.Breadcrumb__item--info {\n  color: #03a9f4;\n}\n.Breadcrumb__item--dark {\n  color: #333;\n}\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -1595,9 +1698,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    props: {
 	        /**
-	         * The breadcrumb content
+	         * The breadcrumb body
 	         */
-	        content: {
+	        body: {
 	            type: Object,
 	            required: true
 	        },
@@ -1615,6 +1718,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	         */
 	        variants: {
 	            type: Array,
+	            required: false
+	        },
+	
+	        /**
+	         * The contextual styling
+	         */
+	        contextualStyle: {
+	            type: String,
 	            required: false
 	        }
 	    },
@@ -1659,11 +1770,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	         * @returns {Array} The corrected class names
 	         */
 	        itemClass: function itemClass() {
-	            if (!this.variants) {
-	                this.variants = this.$parent.variants;
+	            var classes = _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
+	
+	            if (!this.contextualStyle) {
+	                this.contextualStyle = this.$parent.contextualStyle;
 	            }
 	
-	            return _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
+	            classes.push(_CSSUtil2.default.contextualClass(_CSSUtil2.default.has(this.block, this.element), this.contextualStyle));
+	
+	            return classes;
 	        }
 	    }
 	};
@@ -1689,7 +1804,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/p.c.vanmeijgaard/Projects/vivid-web/vue-components/src/components/Breadcrumb/Content/Content.vue"
+	  var id = "/Users/p.c.vanmeijgaard/Projects/sandbox/vue-components-sandbox/vendor/vue-components/src/components/Breadcrumb/Content/Content.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1732,7 +1847,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, ".Breadcrumb__content {\n  display: inline-block;\n  vertical-align: middle;\n}\n", "", {"version":3,"sources":["/./src/components/Breadcrumb/Content/src/assets/stylus/mixins/mixins.styl","/./src/components/Breadcrumb/Content/src/components/Breadcrumb/Content/Content.styl","/./src/components/Breadcrumb/Content/Content.styl"],"names":[],"mappings":"AACE;ECKE,sBAAA;EACA,uBAAA;CCJH","file":"Content.styl","sourcesContent":["has($name)\n  / &{$element_separator}{$name}\n    {block}\n\nvariant($name)\n  / &{$modifier_separator}{$name}\n    {block}\n\ntransition($time)\n  transition: all $time ease-in-out\n\nborder-radius-none()\n  border-radius: 0\n\nborder-radius-all()\n  border-radius: $border_radius\n\nborder-radius-top()\n  border-radius: $border_radius $border_radius 0 0\n\nborder-radius-right()\n  border-radius: 0 $border_radius $border_radius 0\n\nborder-radius-bottom()\n  border-radius: 0 0 $border_radius $border_radius\n\nborder-radius-left()\n  border-radius: $border_radius 0 0 $border_radius\n","// Imports\n@import \"./../../../assets/stylus/settings/variables.styl\"\n@import \"./../../../assets/stylus/mixins/mixins.styl\"\n\n.Breadcrumb\n  +has(content)\n    display: inline-block\n    vertical-align: middle",".Breadcrumb__content {\n  display: inline-block;\n  vertical-align: middle;\n}\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, ".Breadcrumb__content {\n  display: inline-block;\n  vertical-align: middle;\n}\n.Breadcrumb__content--primary {\n  color: #2196f3;\n}\n.Breadcrumb__content--success {\n  color: #4caf50;\n}\n.Breadcrumb__content--danger {\n  color: #f44336;\n}\n.Breadcrumb__content--warning {\n  color: #ff9800;\n}\n.Breadcrumb__content--info {\n  color: #03a9f4;\n}\n.Breadcrumb__content--dark {\n  color: #333;\n}\n", "", {"version":3,"sources":["/./src/components/Breadcrumb/Content/src/assets/stylus/mixins/mixins.styl","/./src/components/Breadcrumb/Content/src/components/Breadcrumb/Content/Content.styl","/./src/components/Breadcrumb/Content/Content.styl"],"names":[],"mappings":"AACE;ECKE,sBAAA;EACA,uBAAA;CCJH;AFEC;ECII,eAAA;CCHL;AFDC;ECMI,eAAA;CCFL;AFJC;ECQI,eAAA;CCDL;AFPC;ECUI,eAAA;CCAL;AFVC;ECYI,eAAA;CCCL;AFbC;ECcI,YAAA;CCEL","file":"Content.styl","sourcesContent":["has($name)\n  / &{$element_separator}{$name}\n    {block}\n\nvariant($name)\n  / &{$modifier_separator}{$name}\n    {block}\n\ntransition($time)\n  transition: all $time ease-in-out\n\nborder-radius-none()\n  border-radius: 0\n\nborder-radius-all()\n  border-radius: $border_radius\n\nborder-radius-top()\n  border-radius: $border_radius $border_radius 0 0\n\nborder-radius-right()\n  border-radius: 0 $border_radius $border_radius 0\n\nborder-radius-bottom()\n  border-radius: 0 0 $border_radius $border_radius\n\nborder-radius-left()\n  border-radius: $border_radius 0 0 $border_radius\n","// Imports\n@import \"./../../../assets/stylus/settings/variables.styl\"\n@import \"./../../../assets/stylus/mixins/mixins.styl\"\n\n.Breadcrumb\n  +has(content)\n    display: inline-block\n    vertical-align: middle\n    +variant(primary) // Breadcrumb__content--primary\n      color: $primary\n    +variant(success) // Breadcrumb__content--success\n      color: $success\n    +variant(danger) // Breadcrumb__content--danger \n      color: $danger\n    +variant(warning) // Breadcrumb__content--warning\n      color: $warning\n    +variant(info) // Breadcrumb__content--info\n      color: $info\n    +variant(dark) // Breadcrumb__content--dark\n      color: $gray",".Breadcrumb__content {\n  display: inline-block;\n  vertical-align: middle;\n}\n.Breadcrumb__content--primary {\n  color: #2196f3;\n}\n.Breadcrumb__content--success {\n  color: #4caf50;\n}\n.Breadcrumb__content--danger {\n  color: #f44336;\n}\n.Breadcrumb__content--warning {\n  color: #ff9800;\n}\n.Breadcrumb__content--info {\n  color: #03a9f4;\n}\n.Breadcrumb__content--dark {\n  color: #333;\n}\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -1765,7 +1880,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        /**
 	         * The text to be displayed
 	         */
-	        text: {
+	        content: {
 	            type: String,
 	            required: true
 	        },
@@ -1775,6 +1890,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	         */
 	        variants: {
 	            type: Array,
+	            required: false
+	        },
+	
+	        /**
+	         * The contextual styling
+	         */
+	        contextualStyle: {
+	            type: String,
 	            required: false
 	        }
 	    },
@@ -1798,11 +1921,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	         * @returns {Array} The corrected class names
 	         */
 	        contentClass: function contentClass() {
-	            if (!this.variants) {
-	                this.variants = this.$parent.variants;
+	            var classes = _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
+	
+	            if (!this.contextualStyle) {
+	                this.contextualStyle = this.$parent.contextualStyle;
 	            }
 	
-	            return _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
+	            classes.push(_CSSUtil2.default.contextualClass(_CSSUtil2.default.has(this.block, this.element), this.contextualStyle));
+	
+	            return classes;
 	        }
 	    }
 	};
@@ -1811,7 +1938,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 42 */
 /***/ function(module, exports) {
 
-	module.exports = "<div :class=\"contentClass\">\n    {{text}}\n</div>";
+	module.exports = "<div :class=\"contentClass\">\n    {{content}}\n</div>";
 
 /***/ },
 /* 43 */
@@ -1834,7 +1961,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/p.c.vanmeijgaard/Projects/vivid-web/vue-components/src/components/Breadcrumb/Link/Link.vue"
+	  var id = "/Users/p.c.vanmeijgaard/Projects/sandbox/vue-components-sandbox/vendor/vue-components/src/components/Breadcrumb/Link/Link.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1877,7 +2004,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, ".Breadcrumb__link {\n  -webkit-transition: all 100ms ease-in-out;\n  transition: all 100ms ease-in-out;\n  color: #192226;\n  display: inline-block;\n  text-decoration: none;\n  vertical-align: middle;\n}\n.Breadcrumb__link:hover {\n  -webkit-transition: all 100ms ease-in-out;\n  transition: all 100ms ease-in-out;\n  color: #0af;\n}\n", "", {"version":3,"sources":["/./src/components/Breadcrumb/Link/src/assets/stylus/mixins/mixins.styl","/./src/components/Breadcrumb/Link/src/components/Breadcrumb/Link/Link.styl","/./src/components/Breadcrumb/Link/Link.styl"],"names":[],"mappings":"AACE;EAQA,0CAAA;EAAA,kCAAA;ECFE,eAAA;EACA,sBAAA;EACA,sBAAA;EACA,uBAAA;CCJH;ADKG;EDFF,0CAAA;EAAA,kCAAA;ECII,YAAA;CCHL","file":"Link.styl","sourcesContent":["has($name)\n  / &{$element_separator}{$name}\n    {block}\n\nvariant($name)\n  / &{$modifier_separator}{$name}\n    {block}\n\ntransition($time)\n  transition: all $time ease-in-out\n\nborder-radius-none()\n  border-radius: 0\n\nborder-radius-all()\n  border-radius: $border_radius\n\nborder-radius-top()\n  border-radius: $border_radius $border_radius 0 0\n\nborder-radius-right()\n  border-radius: 0 $border_radius $border_radius 0\n\nborder-radius-bottom()\n  border-radius: 0 0 $border_radius $border_radius\n\nborder-radius-left()\n  border-radius: $border_radius 0 0 $border_radius\n","// Imports\n@import \"./../../../assets/stylus/settings/variables.styl\"\n@import \"./../../../assets/stylus/mixins/mixins.styl\"\n\n.Breadcrumb\n  +has(link)\n    transition(100ms)\n    color: $dark_gray\n    display: inline-block\n    text-decoration: none\n    vertical-align: middle\n    &:hover\n      transition(100ms)\n      color: $primary",".Breadcrumb__link {\n  transition: all 100ms ease-in-out;\n  color: #192226;\n  display: inline-block;\n  text-decoration: none;\n  vertical-align: middle;\n}\n.Breadcrumb__link:hover {\n  transition: all 100ms ease-in-out;\n  color: #0af;\n}\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, ".Breadcrumb__link {\n  -webkit-transition: all 100ms ease-in-out;\n  transition: all 100ms ease-in-out;\n  color: #192226;\n  display: inline-block;\n  text-decoration: none;\n  vertical-align: middle;\n}\n.Breadcrumb__link:hover {\n  -webkit-transition: all 100ms ease-in-out;\n  transition: all 100ms ease-in-out;\n  color: #2196f3;\n}\n.Breadcrumb__link--primary {\n  color: #2196f3;\n}\n.Breadcrumb__link--success {\n  color: #4caf50;\n}\n.Breadcrumb__link--danger {\n  color: #f44336;\n}\n.Breadcrumb__link--warning {\n  color: #ff9800;\n}\n.Breadcrumb__link--info {\n  color: #03a9f4;\n}\n.Breadcrumb__link--dark {\n  color: #333;\n}\n", "", {"version":3,"sources":["/./src/components/Breadcrumb/Link/src/assets/stylus/mixins/mixins.styl","/./src/components/Breadcrumb/Link/src/components/Breadcrumb/Link/Link.styl","/./src/components/Breadcrumb/Link/Link.styl"],"names":[],"mappings":"AACE;EAQA,0CAAA;EAAA,kCAAA;ECFE,eAAA;EACA,sBAAA;EACA,sBAAA;EACA,uBAAA;CCJH;ADKG;EDFF,0CAAA;EAAA,kCAAA;ECII,eAAA;CCHL;AFLC;ECUI,eAAA;CCFL;AFRC;ECYI,eAAA;CCDL;AFXC;ECcI,eAAA;CCAL;AFdC;ECgBI,eAAA;CCCL;AFjBC;ECkBI,eAAA;CCEL;AFpBC;ECoBI,YAAA;CCGL","file":"Link.styl","sourcesContent":["has($name)\n  / &{$element_separator}{$name}\n    {block}\n\nvariant($name)\n  / &{$modifier_separator}{$name}\n    {block}\n\ntransition($time)\n  transition: all $time ease-in-out\n\nborder-radius-none()\n  border-radius: 0\n\nborder-radius-all()\n  border-radius: $border_radius\n\nborder-radius-top()\n  border-radius: $border_radius $border_radius 0 0\n\nborder-radius-right()\n  border-radius: 0 $border_radius $border_radius 0\n\nborder-radius-bottom()\n  border-radius: 0 0 $border_radius $border_radius\n\nborder-radius-left()\n  border-radius: $border_radius 0 0 $border_radius\n","// Imports\n@import \"./../../../assets/stylus/settings/variables.styl\"\n@import \"./../../../assets/stylus/mixins/mixins.styl\"\n\n.Breadcrumb\n  +has(link) // Breadcrumb__link\n    transition(100ms)\n    color: $dark_gray\n    display: inline-block\n    text-decoration: none\n    vertical-align: middle\n    &:hover\n      transition(100ms)\n      color: $primary\n    +variant(primary) // Breadcrumb__link--primary\n      color: $primary\n    +variant(success) // Breadcrumb__link--success\n      color: $success\n    +variant(danger) // Breadcrumb__link--danger\n      color: $danger\n    +variant(warning) // Breadcrumb__link--warning\n      color: $warning\n    +variant(info) // Breadcrumb__link--info\n      color: $info\n    +variant(dark) // Breadcrumb__link--dark\n      color: $gray",".Breadcrumb__link {\n  transition: all 100ms ease-in-out;\n  color: #192226;\n  display: inline-block;\n  text-decoration: none;\n  vertical-align: middle;\n}\n.Breadcrumb__link:hover {\n  transition: all 100ms ease-in-out;\n  color: #2196f3;\n}\n.Breadcrumb__link--primary {\n  color: #2196f3;\n}\n.Breadcrumb__link--success {\n  color: #4caf50;\n}\n.Breadcrumb__link--danger {\n  color: #f44336;\n}\n.Breadcrumb__link--warning {\n  color: #ff9800;\n}\n.Breadcrumb__link--info {\n  color: #03a9f4;\n}\n.Breadcrumb__link--dark {\n  color: #333;\n}\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -1898,7 +2025,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _Content = __webpack_require__(38);
 	
-	var _Content2 = _interopRequireDefault(_Content);
+	var BreadcrumbContent = _interopRequireWildcard(_Content);
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -1912,9 +2041,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    props: {
 	        /**
-	         * The content
+	         * The body
 	         */
-	        content: {
+	        body: {
 	            type: Object,
 	            required: true
 	        },
@@ -1933,6 +2062,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	        variants: {
 	            type: Array,
 	            required: false
+	        },
+	
+	        /**
+	         * The contextual styling
+	         */
+	        contextualStyle: {
+	            type: String,
+	            required: false
 	        }
 	    },
 	
@@ -1940,7 +2077,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        /**
 	         * The breadcrumb content component
 	         */
-	        BreadcrumbContent: _Content2.default
+	        BreadcrumbContent: BreadcrumbContent
 	    },
 	
 	    computed: {
@@ -1962,11 +2099,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	         * @returns {Array} The corrected class names
 	         */
 	        linkClass: function linkClass() {
-	            if (!this.variants) {
-	                this.variants = this.$parent.variants;
+	            var classes = _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
+	
+	            if (!this.contextualStyle) {
+	                this.contextualStyle = this.$parent.contextualStyle;
 	            }
 	
-	            return _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
+	            classes.push(_CSSUtil2.default.contextualClass(_CSSUtil2.default.has(this.block, this.element), this.contextualStyle));
+	
+	            return classes;
 	        }
 	    }
 	};
@@ -1975,19 +2116,19 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 47 */
 /***/ function(module, exports) {
 
-	module.exports = "<a\n        :class=\"linkClass\"\n        :href=\"to\"\n>\n    <breadcrumb-content\n            :text=\"content.text\"\n            :variants=\"content.variants\"\n    ></breadcrumb-content>\n</a>";
+	module.exports = "<a\n        :class=\"linkClass\"\n        :href=\"to\"\n>\n    <breadcrumb-content\n            :content=\"body.content\"\n            :variants=\"body.variants\"\n            :contextual-style=\"body.contextualStyle\"\n    ></breadcrumb-content>\n</a>";
 
 /***/ },
 /* 48 */
 /***/ function(module, exports) {
 
-	module.exports = "<div :class=\"itemClass\">\n    <breadcrumb-link\n            v-if=\"hasLink\"\n            :content=\"content\"\n            :to=\"link.to\"\n            :variants=\"link.variants\"\n    >\n    </breadcrumb-link>\n\n    <breadcrumb-content\n            v-else\n            :text=\"content.text\"\n            :variants=\"content.variants\"\n    ></breadcrumb-content>\n</div>";
+	module.exports = "<div :class=\"itemClass\">\n    <breadcrumb-link\n            v-if=\"hasLink\"\n            :body=\"body\"\n            :to=\"link.to\"\n            :variants=\"link.variants\"\n            :contextual-style=\"link.contextualStyle\"\n    >\n    </breadcrumb-link>\n\n    <breadcrumb-content\n            v-else\n            :content=\"body.content\"\n            :variants=\"body.variants\"\n            :contextual-style=\"body.contextualStyle\"\n    ></breadcrumb-content>\n</div>";
 
 /***/ },
 /* 49 */
 /***/ function(module, exports) {
 
-	module.exports = "<ul :class=\"breadcrumbClass\">\n    <breadcrumb-item\n            v-for=\"item in items\"\n            :content=\"item.content\"\n            :link=\"item.link\"\n            :variants=\"item.variants\"\n    ></breadcrumb-item>\n</ul>";
+	module.exports = "<ul :class=\"breadcrumbClass\">\n    <breadcrumb-item\n            v-for=\"item in items\"\n            :body=\"item.body\"\n            :link=\"item.link\"\n            :variants=\"item.variants\"\n            :contextual-style=\"item.contextualStyle\"\n    ></breadcrumb-item>\n</ul>";
 
 /***/ },
 /* 50 */
@@ -2010,7 +2151,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/p.c.vanmeijgaard/Projects/vivid-web/vue-components/src/components/Panel/Panel.vue"
+	  var id = "/Users/p.c.vanmeijgaard/Projects/sandbox/vue-components-sandbox/vendor/vue-components/src/components/Panel/Panel.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {

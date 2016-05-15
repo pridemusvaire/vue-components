@@ -1,0 +1,31 @@
+<div :class="notificationClass">
+
+    <notification-timer
+            v-if="hasTimer"
+            :variants="timer.variants"
+            :contextual-style="timer.contextualStyle"
+            :close-function="closeNotification"
+    ></notification-timer>
+
+    <notification-title
+            v-if="hasTitle"
+            :variants="title.variants"
+            :contextual-style="title.contextualStyle"
+            :content="title.content"
+    ></notification-title>
+
+    <notification-message
+            v-if="hasMessage"
+            :variants="message.variants"
+            :contextual-style="message.contextualStyle"
+            :content="message.content"
+    ></notification-message>
+
+    <notification-close-button
+            v-if="hasCloseButton"
+            :variants="closeButton.variants"
+            :contextual-style="closeButton.contextualStyle"
+            :close-function="closeNotification"
+    ></notification-close-button>
+
+</div>

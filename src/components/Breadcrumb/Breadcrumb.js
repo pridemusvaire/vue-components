@@ -23,6 +23,14 @@ export default {
         variants: {
             type: Array,
             required: false
+        },
+
+        /**
+         * The contextual styling
+         */
+        contextualStyle: {
+            type: String,
+            required: false
         }
     },
 
@@ -41,7 +49,10 @@ export default {
          * @returns {Array} The corrected class names
          */
         breadcrumbClass () {
-            return CSSUtil.blockClasses(this.block, this.variants);
+            var classes = CSSUtil.blockClasses(this.block, this.variants);
+            classes.push(CSSUtil.contextualClass(this.block, this.contextualStyle));
+
+            return classes;
         }
     }
 };

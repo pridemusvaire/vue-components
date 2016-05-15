@@ -1,28 +1,31 @@
 @import "./../../assets/stylus/mixins/mixins.styl"
 @import "./../../assets/stylus/settings/variables.styl"
 
-.Alert // alert
-  border-radius-all()
-  border: 1px solid $black
-  display: block
-  margin-top: 1rem
-  overflow: hidden
-  padding: 1rem
+.Notification // Notification
   position: relative
+  background-color: $white
+  box-shadow: $box_shadow_normal
+  display: block
+  font-weight: 300
+  margin-top: 1rem
+  padding: 1rem
   &:first-child
     margin-top: 0
-  +variant(primary) // alert--primary
+  +variant(primary) // Notification--primary
     background-color: $primary
     border-color: $primary
-  +variant(success) // alert--success
+  +variant(success) // Notification--success
     background-color: $success_light
     border-color: $success
-  +variant(danger) // alert--danger
+  +variant(danger) // Notification--danger
     background-color: $danger_light
     border-color: $danger
-  +variant(warning) // alert--warning
+  +variant(warning) // Notification--warning
     background-color: $warning_light
     border-color: $warning
-  +variant(info) // alert--info
+  +variant(info) // Notification--info
     background-color: $info_light
     border-color: $info
+  +variant(dark) // Notification--dark
+    color: $white
+    background-color: $gray

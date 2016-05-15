@@ -1,0 +1,22 @@
+@import "./../../../assets/stylus/mixins/mixins.styl"
+@import "./../../../assets/stylus/settings/variables.styl"
+
+.Notification
+  +has(title) // Notification__title
+    display: block
+    font-size: 1.125rem
+    font-weight: 600
+    margin: 0
+    padding: 0
+    +variant(primary) // Notification__title--primary
+      color: $white
+    +variant(success) // Notification__title--success
+      color: $success_dark
+    +variant(danger) // Notification__title--danger
+      color: $danger_dark
+    +variant(warning) // Notification__title--warning
+      color: $warning_dark
+    +variant(info) // Notification__title--info
+      color: $info_dark
+    +variant(dark) // Notification__title--dark
+      color: $white

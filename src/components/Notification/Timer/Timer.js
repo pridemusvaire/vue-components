@@ -1,33 +1,24 @@
 import CSSUtil from './../../../utils/CSSUtil';
-import * as BreadcrumbContent from './../Content/Content.vue';
-import * as BreadcrumbLink from './../Link/Link.vue';
 
 export default {
     data () {
         return {
-            element: 'item'
+            element: 'timer',
+            timer: null
         };
     },
 
     props: {
         /**
-         * The breadcrumb body
+         * The function to close the notification
          */
-        body: {
-            type: Object,
+        closeFunction: {
+            type: Function,
             required: true
         },
 
         /**
-         * The linked page
-         */
-        link: {
-            type: Object,
-            required: false
-        },
-
-        /**
-         * The variant styling
+         * The message variants
          */
         variants: {
             type: Array,
@@ -43,18 +34,6 @@ export default {
         }
     },
 
-    components: {
-        /**
-         * The component for the breadcrumb content
-         */
-        BreadcrumbContent,
-
-        /**
-         * The component for the breadcrumb link
-         */
-        BreadcrumbLink
-    },
-
     computed: {
         /**
          * The block name from the parent
@@ -67,19 +46,11 @@ export default {
 
         /**
          * Computed property which will output
-         * whether the item has a link or not
-         */
-        hasLink () {
-            return !!this.link;
-        },
-
-        /**
-         * Computed property which will output
-         * the corrected class names for the item
+         * the corrected class names for the timer
          *
          * @returns {Array} The corrected class names
          */
-        itemClass () {
+        timerClass () {
             var classes = CSSUtil.elementClasses(this.block, this.element, this.variants);
 
             if (!this.contextualStyle) {
@@ -90,5 +61,18 @@ export default {
 
             return classes;
         }
+    },
+
+    methods: {
+        /**
+         * Method used to start the timer
+         */
+        startTimer () {
+            this.timer = setTimeout(this.closeFunction, 5000);
+        }
+    },
+
+    ready () {
+        this.startTimer();
     }
 };

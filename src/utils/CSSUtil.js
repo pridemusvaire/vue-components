@@ -10,7 +10,8 @@ export default {
         'info',
         'primary',
         'success',
-        'warning'
+        'warning',
+        'dark'
     ],
 
     /**
