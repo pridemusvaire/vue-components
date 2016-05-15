@@ -1,6 +1,6 @@
 import CSSUtil from './../../utils/CSSUtil';
-import * as AlertCloseButton from './CloseButton/CloseButton.html';
-import * as AlertMessage from './Message/Message.html';
+import * as AlertCloseButton from './CloseButton/CloseButton.vue';
+import * as AlertMessage from './Message/Message.vue';
 import * as AlertTimer from './Timer/Timer.vue';
 import * as AlertTitle from './Title/Title.vue';
 
