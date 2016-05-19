@@ -1,79 +1,110 @@
-import CSSHelper from './../../utils/CSSUtil';
+import CSSUtil from './../../utils/CSSUtil';
+import * as PanelBody from './Body/Body.vue';
+import * as PanelFooter from './Footer/Footer.vue';
+import * as PanelHeader from './Header/Header.vue';
 
 export default {
     data () {
         return {
-            block: 'panel'
+            block: 'Panel'
         };
     },
 
-    props: [
-        'style',
-        'header',
-        'title',
-        'body',
-        'footer',
-        'hasHeader',
-        'hasBody',
-        'hasFooter'
-    ],
-    components: {},
+    props: {
+        /**
+         * The header of the panel
+         */
+        header: {
+            type: Object,
+            required: false
+        },
+
+        /**
+         * The body of the panel
+         */
+        body: {
+            type: Object,
+            required: false
+        },
+
+        /**
+         * The footer of the panel
+         */
+        footer: {
+            type: Object,
+            required: false
+        },
+
+        /**
+         * The contextual style
+         */
+        contextualStyle: {
+            type: String,
+            required: false
+        },
+
+        /**
+         * The variants
+         */
+        variants: {
+            type: Array,
+            required: false
+        }
+    },
+
+    components: {
+        /**
+         * The body of the panel
+         */
+        PanelBody,
+
+        /**
+         * The footer of the panel
+         */
+        PanelFooter,
+
+        /**
+         * The header of the panel
+         */
+        PanelHeader
+    },
     computed: {
-
         /**
-         * Computed property which will output the
-         * corrected style for the header
+         * Computed property which will check whether
+         * there is a header
          *
-         * @returns {string} The corrected style
+         * @returns {boolean}
          */
-        headerStyle () {
-            if (this.header) {
-                return this.header.style || this.style;
-            }
-
-            return this.style;
+        hasHeader () {
+            return !!this.header;
         },
 
         /**
-         * Computed property which will output the
-         * corrected style for the title
+         * Computed property which will check whether
+         * there is a body
          *
-         * @returns {string} The corrected style
+         * @returns {boolean}
          */
-        titleStyle () {
-            if (this.title) {
-                return this.title.style || this.style;
+        hasBody () {
+            if (!this.body) {
+                return false;
             }
 
-            return this.style;
+            return this.body.enabled;
         },
 
         /**
-         * Computed property which will output the
-         * corrected style for the body
+         * Computed property which will check whether
+         * there is a footer
          *
-         * @returns {string} The corrected style
+         * @returns {boolean}
          */
-        bodyStyle () {
-            if (this.body) {
-                return this.body.style || this.style;
+        hasFooter () {
+            if (!this.footer) {
+                return false;
             }
 
-            return this.style;
-        },
-
-        /**
-         * Computed property which will output the
-         * corrected style for the footer
-         *
-         * @returns {string} The corrected style
-         */
-        footerStyle () {
-            if (this.footer) {
-                return this.footer.style || this.style;
-            }
-
-            return this.style;
+            return this.footer.enabled;
         },
 
         /**
@@ -83,104 +114,10 @@ export default {
          * @returns {Array} The corrected class name
          */
         panelClass () {
-            var classNames = [];
-            var contextualClass = CSSHelper.contextualClass(this.block, this.style);
+            var classes = CSSUtil.blockClasses(this.block, this.variants);
+            classes.push(CSSUtil.contextualClass(this.block, this.contextualStyle));
 
-            classNames.push(this.block);
-
-            if (contextualClass) {
-                classNames.push(contextualClass);
-            }
-
-            return classNames;
-        },
-
-        /**
-         * Computed property which will output the
-         * corrected class names for the header
-         *
-         * @returns {Array} The corrected class name
-         */
-        headerClass () {
-            var classNames = [];
-            var element = CSSHelper.has(this.block, 'header');
-            var contextualClass = CSSHelper.contextualClass(element, this.headerStyle);
-
-            classNames.push(element);
-
-            if (contextualClass) {
-                classNames.push(contextualClass);
-            }
-
-            return classNames;
-        },
-
-        /**
-         * Computed property which will output the
-         * corrected class names for the title
-         *
-         * @returns {Array} The corrected class name
-         */
-        titleClass () {
-            var classNames = [];
-            var element = CSSHelper.has(this.block, 'title');
-            var contextualClass = CSSHelper.contextualClass(element, this.titleStyle);
-
-            classNames.push(element);
-
-            if (contextualClass) {
-                classNames.push(contextualClass);
-            }
-
-            return classNames;
-        },
-
-        /**
-         * Computed property which will output the
-         * corrected class names for the body
-         *
-         * @returns {Array} The corrected class name
-         */
-        bodyClass () {
-            var classNames = [];
-            var element = CSSHelper.has(this.block, 'body');
-            var contextualClass = CSSHelper.contextualClass(element, this.bodyStyle);
-
-            classNames.push(element);
-
-            if (contextualClass) {
-                classNames.push(contextualClass);
-            }
-
-            if (!this.hasFooter && !this.hasHeader) {
-                classNames.push(CSSHelper.variant(element, 'border-radius'));
-            } else if (!this.hasFooter) {
-                classNames.push(CSSHelper.variant(element, 'no-border-radius-top'));
-            } else if (!this.hasHeader) {
-                classNames.push(CSSHelper.variant(element, 'no-border-radius-bottom'));
-            }
-
-            return classNames;
-        },
-
-        /**
-         * Computed property which will output the
-         * corrected class names for the header
-         *
-         * @returns {Array} The corrected class name
-         */
-        footerClass () {
-            var classNames = [];
-            var element = CSSHelper.has(this.block, 'footer');
-            var contextualClass = CSSHelper.contextualClass(element, this.footerStyle);
-
-            classNames.push(element);
-
-            if (contextualClass) {
-                classNames.push(contextualClass);
-            }
-
-            return classNames;
+            return classes;
         }
     }
 };

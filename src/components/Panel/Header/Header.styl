@@ -1,0 +1,21 @@
+// Imports
+@import "./../../../assets/stylus/mixins/mixins.styl"
+@import "./../../../assets/stylus/settings/variables.styl"
+
+.Panel
+  +has(header) // Panel__header
+    background-color: #eee
+    border-bottom: none
+    padding: .75rem 1rem
+    +variant(primary) // Panel__header--primary
+      background-color: $primary
+    +variant(success) // Panel__header--success
+      background-color: $success
+    +variant(danger) // Panel__header--danger
+      background-color: $danger
+    +variant(warning) // Panel__header--warning
+      background-color: $warning
+    +variant(info) // Panel__header--info
+      background-color: $info
+    +variant(dark) // Panel__header--dark
+      background-color: $gray

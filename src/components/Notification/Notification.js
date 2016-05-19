@@ -129,7 +129,7 @@ export default {
                 return false;
             }
 
-            return !!this.timer.enabled;
+            return this.timer.enabled;
         },
 
         /**
