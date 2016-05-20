@@ -1,0 +1,49 @@
+// Imports
+@import "./../../assets/stylus/settings/variables.styl"
+@import "./../../assets/stylus/mixins/mixins.styl"
+
+.Button // Button
+  transition(100ms)
+  box-shadow: $box_shadow_minimum
+  color: $black
+  display: inline-block
+  font-weight: 400
+  margin: 0
+  padding: .75rem 1rem
+  text-decoration: none
+  &:hover
+    cursor: pointer
+
+  +variant(primary) // Button--primary
+    background-color: $primary
+    color: $white
+    &:hover
+      background-color: $primary_600
+  +variant(success) // Button--success
+    background-color: $success
+    color: $white
+    &:hover
+      background-color: $success_600
+  +variant(danger) // Button--danger
+    background-color: $danger
+    color: $white
+    &:hover
+      background-color: $danger_600
+  +variant(warning) // Button--warning
+    background-color: $warning
+    color: $white
+    &:hover
+      background-color: $warning_600
+  +variant(info) // Button--info
+    background-color: $info
+    color: $white
+    &:hover
+      background-color: $info_600
+  +variant(dark) // Button--dark
+    background-color: $gray
+    color: $white
+    &:hover
+      background-color: $dark_gray
+  +variant('block') // Button--block
+    display: block
+    text-align: center

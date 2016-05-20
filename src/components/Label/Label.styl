@@ -1,0 +1,31 @@
+// Imports
+@import "./../../assets/stylus/settings/variables.styl"
+@import "./../../assets/stylus/mixins/mixins.styl"
+
+.Label // Label
+  transition(100ms)
+  color: $black
+  display: inline-block
+  font-size: .875rem
+  font-weight: 300
+  margin: 0
+  padding: .25rem
+  text-decoration: none
+  +variant(primary) // Label--primary
+    background-color: $primary
+    color: $white
+  +variant(success) // Label--success
+    background-color: $success
+    color: $white
+  +variant(danger) // Label--danger
+    background-color: $danger
+    color: $white
+  +variant(warning) // Label--warning
+    background-color: $warning
+    color: $white
+  +variant(info) // Label--info
+    background-color: $info
+    color: $white
+  +variant(dark) // Label--dark
+    background-color: $gray
+    color: $white

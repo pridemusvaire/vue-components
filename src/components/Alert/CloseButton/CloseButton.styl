@@ -1,0 +1,24 @@
+@import "./../../../assets/stylus/mixins/mixins.styl"
+@import "./../../../assets/stylus/settings/variables.styl"
+
+.Alert
+  +has(close-button) // Alert__close-button
+    cursor: pointer
+    font-size: 1.5rem
+    font-weight: 600
+    line-height: 2rem
+    position: absolute
+    right: 1rem
+    top: .75rem
+    +variant(primary) // Alert__close-button--primary
+      color: $white
+    +variant(success) // Alert__close-button--success
+      color: $white
+    +variant(danger) // Alert__close-button--danger
+      color: $white
+    +variant(warning) // Alert__close-button--warning
+      color: $white
+    +variant(info) // Alert__close-button--info
+      color: $white
+    +variant(dark) // Alert__close-button--dark
+      color: $white

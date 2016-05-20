@@ -1,19 +1,19 @@
 import CSSUtil from './../../utils/CSSUtil';
-import * as NotificationCloseButton from './CloseButton/CloseButton.vue';
-import * as NotificationMessage from './Message/Message.vue';
-import * as NotificationTimer from './Timer/Timer.vue';
-import * as NotificationTitle from './Title/Title.vue';
+import * as AlertCloseButton from './CloseButton/CloseButton.vue';
+import * as AlertMessage from './Message/Message.vue';
+import * as AlertTimer from './Timer/Timer.vue';
+import * as AlertTitle from './Title/Title.vue';
 
 export default {
     data () {
         return {
-            block: 'Notification'
+            block: 'Alert'
         };
     },
 
     props: {
         /**
-         * The close button of the notification
+         * The close button of the alert
          */
         closeButton: {
             type: Object,
@@ -21,7 +21,7 @@ export default {
         },
 
         /**
-         * The timer of the notification
+         * The timer of the alert
          */
         timer: {
             type: Object,
@@ -29,7 +29,7 @@ export default {
         },
 
         /**
-         * The title of the notification
+         * The title of the alert
          */
         title: {
             type: Object,
@@ -37,7 +37,7 @@ export default {
         },
 
         /**
-         * The message of the notification
+         * The message of the alert
          */
         message: {
             type: Object,
@@ -63,24 +63,24 @@ export default {
 
     components: {
         /**
-         * The notification dismiss button
+         * The alert dismiss button
          */
-        NotificationCloseButton,
+        AlertCloseButton,
 
         /**
-         * The notification message
+         * The alert message
          */
-        NotificationMessage,
+        AlertMessage,
 
         /**
-         * The notification timer
+         * The alert timer
          */
-        NotificationTimer,
+        AlertTimer,
 
         /**
-         * The notification timer
+         * The alert timer
          */
-        NotificationTitle
+        AlertTitle
     },
 
     computed: {
@@ -138,7 +138,7 @@ export default {
          *
          * @returns {Array} The corrected class names
          */
-        notificationClass () {
+        alertClass () {
             var classes = CSSUtil.blockClasses(this.block, this.variants);
             classes.push(CSSUtil.contextualClass(this.block, this.contextualStyle));
 
@@ -146,7 +146,7 @@ export default {
         },
 
         /**
-         * If the notifications can be closed
+         * If the alerts can be closed
          *
          * @returns {boolean}
          */
@@ -157,18 +157,18 @@ export default {
 
     methods: {
         /**
-         * Method used to close the notification.
+         * Method used to close the alert.
          * It will destroy the vm and clean it up.
          */
-        closeNotification () {
+        closeAlert () {
             this.$destroy(true);
         }
     },
 
     ready () {
-        // Check if the notification can be closed
+        // Check if the alert can be closed
         if (!this.isClosable) {
-            console.warn('Warning: Cannot close the notification!');
+            console.warn('Warning: Cannot close the alert!');
         }
     }
 };

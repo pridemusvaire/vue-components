@@ -10,22 +10,22 @@
   }
 }
 
-.Notification
-  +has(timer) // notification__timer
+.Alert
+  +has(timer) // Alert__timer
     animation: timer 5000ms infinite linear
     position: absolute
     top: 0
     left: 0
     height: .25rem
-    +variant(primary) // notification__timer--primary
+    +variant(primary) // Alert__timer--primary
       background: $primary_dark
-    +variant(success) // notification__timer--success
+    +variant(success) // Alert__timer--success
       background: $success_dark
-    +variant(danger) // notification__timer--danger
+    +variant(danger) // Alert__timer--danger
       background: $danger_dark
-    +variant(warning) // notification__timer--warning
+    +variant(warning) // Alert__timer--warning
       background: $warning_dark
-    +variant(info) // notification__timer--info
+    +variant(info) // Alert__timer--info
       background: $info_dark
-    +variant(dark) // notification__timer--dark
+    +variant(dark) // Alert__timer--dark
       background: $white

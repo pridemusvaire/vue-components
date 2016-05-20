@@ -1,7 +1,7 @@
 @import "./../../assets/stylus/mixins/mixins.styl"
 @import "./../../assets/stylus/settings/variables.styl"
 
-.Notification // Notification
+.Alert // Alert
   position: relative
   background-color: $white
   box-shadow: $box_shadow_normal
@@ -11,21 +11,21 @@
   padding: 1rem
   &:first-child
     margin-top: 0
-  +variant(primary) // Notification--primary
+  +variant(primary) // Alert--primary
     background-color: $primary
     border-color: $primary
-  +variant(success) // Notification--success
+  +variant(success) // Alert--success
     background-color: $success
     border-color: $success
-  +variant(danger) // Notification--danger
+  +variant(danger) // Alert--danger
     background-color: $danger
     border-color: $danger
-  +variant(warning) // Notification--warning
+  +variant(warning) // Alert--warning
     background-color: $warning
     border-color: $warning
-  +variant(info) // Notification--info
+  +variant(info) // Alert--info
     background-color: $info
     border-color: $info
-  +variant(dark) // Notification--dark
+  +variant(dark) // Alert--dark
     color: $white
     background-color: $gray
