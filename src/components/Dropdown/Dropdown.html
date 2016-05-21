@@ -1,0 +1,16 @@
+<div :class="dropdownClass">
+    <v-button
+            :content="title"
+            :link="button.link"
+            :contextual-style="contextualStyle"
+            :variants="button.variants"
+    ></v-button>
+
+    <dropdown-menu
+            v-if="isCollapsed"
+            transition="Dropdown__menu--expand"
+            :items="items"
+            :contextual-style="contextualStyle"
+            :variants="variants"
+    ></dropdown-menu>
+</div>

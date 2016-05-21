@@ -1,0 +1,13 @@
+// Imports
+@import "./../../../assets/stylus/settings/variables.styl"
+@import "./../../../assets/stylus/mixins/mixins.styl"
+
+.Dropdown // Dropdown
+  +has(item) // Dropdown__item
+    transition(100ms)
+    text-decoration: none
+    list-style: none
+    padding: .5rem 1rem
+    margin: 0
+    &:hover
+      background-color: $light_gray

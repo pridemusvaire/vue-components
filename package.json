@@ -67,6 +67,7 @@
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-spec-reporter": "0.0.26",
     "karma-webpack": "^1.7.0",
+    "mdi": "^1.6.50",
     "phantomjs-prebuilt": "^2.1.7",
     "rimraf": "^2.5.0",
     "stylus": "^0.54.5",
