@@ -1,6 +1,6 @@
+import BlockMixin from './../../mixins/block';
 import * as Button from './../Button/Button.vue';
 import * as DropdownMenu from './Menu/Menu.vue';
-import BlockMixin from './../../mixins/block';
 
 export default {
     data () {

@@ -1,7 +1,7 @@
+import BlockMixin from './../../mixins/block'
 import * as PanelBody from './Body/Body.vue';
 import * as PanelFooter from './Footer/Footer.vue';
 import * as PanelHeader from './Header/Header.vue';
-import BlockMixin from './../../mixins/block'
 
 export default {
     data () {

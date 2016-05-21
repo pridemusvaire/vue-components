@@ -1,7 +1,6 @@
 import * as Config from './../config.json';
 
 export default {
-
     /**
      * The allowed contextual types
      */

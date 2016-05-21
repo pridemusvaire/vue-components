@@ -1,6 +1,6 @@
+import ElementMixin from './../../../mixins/element';
 import * as BreadcrumbContent from './../Content/Content.vue';
 import * as BreadcrumbLink from './../Link/Link.vue';
-import ElementMixin from './../../../mixins/element';
 
 export default {
     data () {

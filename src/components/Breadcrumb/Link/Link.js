@@ -1,5 +1,5 @@
-import * as BreadcrumbContent from './../Content/Content.vue';
 import ElementMixin from './../../../mixins/element';
+import * as BreadcrumbContent from './../Content/Content.vue';
 
 export default {
     data () {

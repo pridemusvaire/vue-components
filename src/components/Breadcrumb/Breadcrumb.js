@@ -1,5 +1,5 @@
-import * as BreadcrumbItem from './Item/Item.vue';
 import BlockMixin from './../../mixins/block';
+import * as BreadcrumbItem from './Item/Item.vue';
 
 export default {
     data () {
