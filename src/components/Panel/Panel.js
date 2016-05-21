@@ -1,7 +1,7 @@
-import CSSUtil from './../../utils/CSSUtil';
 import * as PanelBody from './Body/Body.vue';
 import * as PanelFooter from './Footer/Footer.vue';
 import * as PanelHeader from './Header/Header.vue';
+import BlockMixin from './../../mixins/block'
 
 export default {
     data () {
@@ -33,22 +33,6 @@ export default {
         footer: {
             type: Object,
             required: false
-        },
-
-        /**
-         * The contextual style
-         */
-        contextualStyle: {
-            type: String,
-            required: false
-        },
-
-        /**
-         * The variants
-         */
-        variants: {
-            type: Array,
-            required: false
         }
     },
 
@@ -68,6 +52,11 @@ export default {
          */
         PanelHeader
     },
+    
+    mixins: [
+        BlockMixin
+    ],
+
     computed: {
         /**
          * Computed property which will check whether
@@ -105,19 +94,6 @@ export default {
             }
 
             return this.footer.enabled;
-        },
-
-        /**
-         * Computed property which will output the
-         * corrected class names for the panel
-         *
-         * @returns {Array} The corrected class name
-         */
-        panelClass () {
-            var classes = CSSUtil.blockClasses(this.block, this.variants);
-            classes.push(CSSUtil.contextualClass(this.block, this.contextualStyle));
-
-            return classes;
         }
     }
 };

@@ -1,4 +1,4 @@
-import CSSUtil from './../../../utils/CSSUtil';
+import ElementMixin from './../../../mixins/element';
 import * as PanelTitle from './../Title/Title.vue';
 
 export default {
@@ -15,24 +15,13 @@ export default {
         title: {
             type: Object,
             required: false
-        },
-
-        /**
-         * The header variants
-         */
-        variants: {
-            type: Array,
-            required: false
-        },
-
-        /**
-         * The contextual styling
-         */
-        contextualStyle: {
-            type: String,
-            required: false
         }
     },
+
+
+    mixins: [
+        ElementMixin
+    ],
 
     components: {
         /**
@@ -50,33 +39,6 @@ export default {
          */
         hasTitle () {
             return !!this.title;
-        },
-
-        /**
-         * The block name from the parent
-         *
-         * @returns {string}
-         */
-        block () {
-            return this.$parent.block;
-        },
-
-        /**
-         * Computed property which will output
-         * the corrected class names for the header
-         *
-         * @returns {Array} The corrected class names
-         */
-        headerClass () {
-            var classes = CSSUtil.elementClasses(this.block, this.element, this.variants);
-
-            if (!this.contextualStyle) {
-                this.contextualStyle = this.$parent.contextualStyle;
-            }
-
-            classes.push(CSSUtil.contextualClass(CSSUtil.has(this.block, this.element), this.contextualStyle));
-
-            return classes;
         }
     }
 };

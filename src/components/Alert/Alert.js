@@ -1,4 +1,4 @@
-import CSSUtil from './../../utils/CSSUtil';
+import BlockMixin from './../../mixins/block';
 import * as AlertCloseButton from './CloseButton/CloseButton.vue';
 import * as AlertMessage from './Message/Message.vue';
 import * as AlertTimer from './Timer/Timer.vue';
@@ -42,24 +42,12 @@ export default {
         message: {
             type: Object,
             required: false
-        },
-
-        /**
-         * The variant styling
-         */
-        variants: {
-            type: Array,
-            required: false
-        },
-
-        /**
-         * The contextual styling
-         */
-        contextualStyle: {
-            type: String,
-            required: false
         }
     },
+    
+    mixins: [
+        BlockMixin
+    ],
 
     components: {
         /**
@@ -130,19 +118,6 @@ export default {
             }
 
             return this.timer.enabled;
-        },
-
-        /**
-         * Computed property which will output the
-         * corrected class names for the breadcrumbs
-         *
-         * @returns {Array} The corrected class names
-         */
-        alertClass () {
-            var classes = CSSUtil.blockClasses(this.block, this.variants);
-            classes.push(CSSUtil.contextualClass(this.block, this.contextualStyle));
-
-            return classes;
         },
 
         /**

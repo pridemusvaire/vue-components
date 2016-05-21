@@ -1,6 +1,6 @@
 <a
         v-if="hasLink"
-        :class="buttonClass"
+        :class="classNames"
         :href="link.to"
 >
     {{content}}
@@ -8,7 +8,7 @@
 
 <a
         v-if="hasAction"
-        :class="buttonClass"
+        :class="classNames"
         @click.prevent="link.action"
 >
     {{content}}

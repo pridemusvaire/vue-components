@@ -60,23 +60,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var Alert = _interopRequireWildcard(_Alert);
 	
-	var _Breadcrumb = __webpack_require__(30);
+	var _Breadcrumb = __webpack_require__(33);
 	
 	var Breadcrumb = _interopRequireWildcard(_Breadcrumb);
 	
-	var _Button = __webpack_require__(50);
+	var _Button = __webpack_require__(53);
 	
 	var Button = _interopRequireWildcard(_Button);
 	
-	var _Dropdown = __webpack_require__(55);
+	var _Dropdown = __webpack_require__(58);
 	
 	var Dropdown = _interopRequireWildcard(_Dropdown);
 	
-	var _Label = __webpack_require__(70);
+	var _Label = __webpack_require__(73);
 	
 	var Label = _interopRequireWildcard(_Label);
 	
-	var _Panel = __webpack_require__(75);
+	var _Panel = __webpack_require__(78);
 	
 	var Panel = _interopRequireWildcard(_Panel);
 	
@@ -102,7 +102,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src\\components\\Alert\\Alert.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(29)
+	__vue_template__ = __webpack_require__(32)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -448,29 +448,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _CSSUtil = __webpack_require__(7);
-	
-	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
-	
-	var _CloseButton = __webpack_require__(9);
+	var _CloseButton = __webpack_require__(7);
 	
 	var AlertCloseButton = _interopRequireWildcard(_CloseButton);
 	
-	var _Message = __webpack_require__(14);
+	var _Message = __webpack_require__(16);
 	
 	var AlertMessage = _interopRequireWildcard(_Message);
 	
-	var _Timer = __webpack_require__(19);
+	var _Timer = __webpack_require__(21);
 	
 	var AlertTimer = _interopRequireWildcard(_Timer);
 	
-	var _Title = __webpack_require__(24);
+	var _Title = __webpack_require__(26);
 	
 	var AlertTitle = _interopRequireWildcard(_Title);
 	
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	var _block = __webpack_require__(31);
+	
+	var _block2 = _interopRequireDefault(_block);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
 	exports.default = {
 	    data: function data() {
@@ -511,24 +511,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        message: {
 	            type: Object,
 	            required: false
-	        },
-	
-	        /**
-	         * The variant styling
-	         */
-	        variants: {
-	            type: Array,
-	            required: false
-	        },
-	
-	        /**
-	         * The contextual styling
-	         */
-	        contextualStyle: {
-	            type: String,
-	            required: false
 	        }
 	    },
+	
+	    mixins: [_block2.default],
 	
 	    components: {
 	        /**
@@ -607,20 +593,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	        /**
-	         * Computed property which will output the
-	         * corrected class names for the breadcrumbs
-	         *
-	         * @returns {Array} The corrected class names
-	         */
-	        alertClass: function alertClass() {
-	            var classes = _CSSUtil2.default.blockClasses(this.block, this.variants);
-	            classes.push(_CSSUtil2.default.contextualClass(this.block, this.contextualStyle));
-	
-	            return classes;
-	        },
-	
-	
-	        /**
 	         * If the alerts can be closed
 	         *
 	         * @returns {boolean}
@@ -653,13 +625,174 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
+	var __vue_script__, __vue_template__
+	__webpack_require__(8)
+	__vue_script__ = __webpack_require__(10)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src\\components\\Alert\\CloseButton\\CloseButton.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(15)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "D:\\Projects\\sandbox\\vue-components-sandbox\\vendor\\vue-components\\src\\components\\Alert\\CloseButton\\CloseButton.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(9);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../node_modules/stylus-loader/index.js!./CloseButton.styl", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../node_modules/stylus-loader/index.js!./CloseButton.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".Alert__close-button {\n  cursor: pointer;\n  font-size: 1.5rem;\n  font-weight: 600;\n  line-height: 2rem;\n  position: absolute;\n  right: 1rem;\n  top: 0.75rem;\n}\n.Alert__close-button--primary {\n  color: #fff;\n}\n.Alert__close-button--success {\n  color: #fff;\n}\n.Alert__close-button--danger {\n  color: #fff;\n}\n.Alert__close-button--warning {\n  color: #fff;\n}\n.Alert__close-button--info {\n  color: #fff;\n}\n.Alert__close-button--dark {\n  color: #fff;\n}\n", "", {"version":3,"sources":["/./src/components/Alert/CloseButton/src/assets/stylus/mixins/mixins.styl","/./src/components/Alert/CloseButton/src/components/Alert/CloseButton/CloseButton.styl","/./src/components/Alert/CloseButton/CloseButton.styl"],"names":[],"mappings":"AACE;ECIE,gBAAA;EACA,kBAAA;EACA,iBAAA;EACA,kBAAA;EACA,mBAAA;EACA,YAAA;EACA,aAAA;CCHH;AFHC;ECQI,YAAA;CCFL;AFNC;ECUI,YAAA;CCDL;AFTC;ECYI,YAAA;CCAL;AFZC;ECcI,YAAA;CCCL;AFfC;ECgBI,YAAA;CCEL;AFlBC;ECkBI,YAAA;CCGL","file":"CloseButton.styl","sourcesContent":["has($name)\r\n  / &{$element_separator}{$name}\r\n    {block}\r\n\r\nvariant($name)\r\n  / &{$modifier_separator}{$name}\r\n    {block}\r\n\r\ntransition($time)\r\n  transition: all $time ease-in-out\r\n\r\nborder-radius-none()\r\n  border-radius: 0\r\n\r\nborder-radius-all()\r\n  border-radius: $border_radius\r\n\r\nborder-radius-top()\r\n  border-radius: $border_radius $border_radius 0 0\r\n\r\nborder-radius-right()\r\n  border-radius: 0 $border_radius $border_radius 0\r\n\r\nborder-radius-bottom()\r\n  border-radius: 0 0 $border_radius $border_radius\r\n\r\nborder-radius-left()\r\n  border-radius: $border_radius 0 0 $border_radius\r\n","@import \"./../../../assets/stylus/mixins/mixins.styl\"\r\n@import \"./../../../assets/stylus/settings/variables.styl\"\r\n\r\n.Alert\r\n  +has(close-button) // Alert__close-button\r\n    cursor: pointer\r\n    font-size: 1.5rem\r\n    font-weight: 600\r\n    line-height: 2rem\r\n    position: absolute\r\n    right: 1rem\r\n    top: .75rem\r\n    +variant(primary) // Alert__close-button--primary\r\n      color: $white\r\n    +variant(success) // Alert__close-button--success\r\n      color: $white\r\n    +variant(danger) // Alert__close-button--danger\r\n      color: $white\r\n    +variant(warning) // Alert__close-button--warning\r\n      color: $white\r\n    +variant(info) // Alert__close-button--info\r\n      color: $white\r\n    +variant(dark) // Alert__close-button--dark\r\n      color: $white",".Alert__close-button {\n  cursor: pointer;\n  font-size: 1.5rem;\n  font-weight: 600;\n  line-height: 2rem;\n  position: absolute;\n  right: 1rem;\n  top: 0.75rem;\n}\n.Alert__close-button--primary {\n  color: #fff;\n}\n.Alert__close-button--success {\n  color: #fff;\n}\n.Alert__close-button--danger {\n  color: #fff;\n}\n.Alert__close-button--warning {\n  color: #fff;\n}\n.Alert__close-button--info {\n  color: #fff;\n}\n.Alert__close-button--dark {\n  color: #fff;\n}\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
 	
-	var _config = __webpack_require__(8);
+	var _element = __webpack_require__(11);
+	
+	var _element2 = _interopRequireDefault(_element);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	    data: function data() {
+	        return {
+	            element: 'close-button'
+	        };
+	    },
+	
+	
+	    props: {
+	        /**
+	         * The function to close the notification
+	         */
+	        closeFunction: {
+	            type: Function,
+	            required: true
+	        }
+	    },
+	
+	    mixins: [_element2.default]
+	};
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _CSSUtil = __webpack_require__(12);
+	
+	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
+	
+	var _style = __webpack_require__(14);
+	
+	var _style2 = _interopRequireDefault(_style);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	    mixins: [_style2.default],
+	
+	    computed: {
+	        /**
+	         * The block name from the parent
+	         *
+	         * @returns {string}
+	         */
+	
+	        block: function block() {
+	            return this.$parent.block;
+	        },
+	
+	
+	        /**
+	         * Computed property which will output
+	         * the corrected class names
+	         *
+	         * @returns {Array} The corrected class names
+	         */
+	        classNames: function classNames() {
+	            var classes = _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
+	
+	            if (!this.contextualStyle) {
+	                this.contextualStyle = this.$parent.contextualStyle;
+	            }
+	
+	            classes.push(_CSSUtil2.default.contextualClass(_CSSUtil2.default.has(this.block, this.element), this.contextualStyle));
+	
+	            return classes;
+	        }
+	    }
+	};
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _config = __webpack_require__(13);
 	
 	var Config = _interopRequireWildcard(_config);
 	
@@ -802,7 +935,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 8 */
+/* 13 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -811,107 +944,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 9 */
-/***/ function(module, exports, __webpack_require__) {
+/* 14 */
+/***/ function(module, exports) {
 
-	var __vue_script__, __vue_template__
-	__webpack_require__(10)
-	__vue_script__ = __webpack_require__(12)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src\\components\\Alert\\CloseButton\\CloseButton.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(13)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
-	  if (!hotAPI.compatible) return
-	  var id = "D:\\Projects\\sandbox\\vue-components-sandbox\\vendor\\vue-components\\src\\components\\Alert\\CloseButton\\CloseButton.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 10 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(11);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../node_modules/stylus-loader/index.js!./CloseButton.styl", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../node_modules/stylus-loader/index.js!./CloseButton.styl");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 11 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".Alert__close-button {\n  cursor: pointer;\n  font-size: 1.5rem;\n  font-weight: 600;\n  line-height: 2rem;\n  position: absolute;\n  right: 1rem;\n  top: 0.75rem;\n}\n.Alert__close-button--primary {\n  color: #fff;\n}\n.Alert__close-button--success {\n  color: #fff;\n}\n.Alert__close-button--danger {\n  color: #fff;\n}\n.Alert__close-button--warning {\n  color: #fff;\n}\n.Alert__close-button--info {\n  color: #fff;\n}\n.Alert__close-button--dark {\n  color: #fff;\n}\n", "", {"version":3,"sources":["/./src/components/Alert/CloseButton/src/assets/stylus/mixins/mixins.styl","/./src/components/Alert/CloseButton/src/components/Alert/CloseButton/CloseButton.styl","/./src/components/Alert/CloseButton/CloseButton.styl"],"names":[],"mappings":"AACE;ECIE,gBAAA;EACA,kBAAA;EACA,iBAAA;EACA,kBAAA;EACA,mBAAA;EACA,YAAA;EACA,aAAA;CCHH;AFHC;ECQI,YAAA;CCFL;AFNC;ECUI,YAAA;CCDL;AFTC;ECYI,YAAA;CCAL;AFZC;ECcI,YAAA;CCCL;AFfC;ECgBI,YAAA;CCEL;AFlBC;ECkBI,YAAA;CCGL","file":"CloseButton.styl","sourcesContent":["has($name)\r\n  / &{$element_separator}{$name}\r\n    {block}\r\n\r\nvariant($name)\r\n  / &{$modifier_separator}{$name}\r\n    {block}\r\n\r\ntransition($time)\r\n  transition: all $time ease-in-out\r\n\r\nborder-radius-none()\r\n  border-radius: 0\r\n\r\nborder-radius-all()\r\n  border-radius: $border_radius\r\n\r\nborder-radius-top()\r\n  border-radius: $border_radius $border_radius 0 0\r\n\r\nborder-radius-right()\r\n  border-radius: 0 $border_radius $border_radius 0\r\n\r\nborder-radius-bottom()\r\n  border-radius: 0 0 $border_radius $border_radius\r\n\r\nborder-radius-left()\r\n  border-radius: $border_radius 0 0 $border_radius\r\n","@import \"./../../../assets/stylus/mixins/mixins.styl\"\r\n@import \"./../../../assets/stylus/settings/variables.styl\"\r\n\r\n.Alert\r\n  +has(close-button) // Alert__close-button\r\n    cursor: pointer\r\n    font-size: 1.5rem\r\n    font-weight: 600\r\n    line-height: 2rem\r\n    position: absolute\r\n    right: 1rem\r\n    top: .75rem\r\n    +variant(primary) // Alert__close-button--primary\r\n      color: $white\r\n    +variant(success) // Alert__close-button--success\r\n      color: $white\r\n    +variant(danger) // Alert__close-button--danger\r\n      color: $white\r\n    +variant(warning) // Alert__close-button--warning\r\n      color: $white\r\n    +variant(info) // Alert__close-button--info\r\n      color: $white\r\n    +variant(dark) // Alert__close-button--dark\r\n      color: $white",".Alert__close-button {\n  cursor: pointer;\n  font-size: 1.5rem;\n  font-weight: 600;\n  line-height: 2rem;\n  position: absolute;\n  right: 1rem;\n  top: 0.75rem;\n}\n.Alert__close-button--primary {\n  color: #fff;\n}\n.Alert__close-button--success {\n  color: #fff;\n}\n.Alert__close-button--danger {\n  color: #fff;\n}\n.Alert__close-button--warning {\n  color: #fff;\n}\n.Alert__close-button--info {\n  color: #fff;\n}\n.Alert__close-button--dark {\n  color: #fff;\n}\n"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
-
-/***/ },
-/* 12 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	
-	var _CSSUtil = __webpack_require__(7);
-	
-	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
 	exports.default = {
-	    data: function data() {
-	        return {
-	            element: 'close-button'
-	        };
-	    },
-	
-	
 	    props: {
-	        /**
-	         * The function to close the notification
-	         */
-	        closeFunction: {
-	            type: Function,
-	            required: true
-	        },
-	
 	        /**
 	         * The variant styling
 	         */
@@ -927,58 +969,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	            type: String,
 	            required: false
 	        }
-	    },
-	
-	    computed: {
-	        /**
-	         * The block name from the parent
-	         *
-	         * @returns {string}
-	         */
-	
-	        block: function block() {
-	            return this.$parent.block;
-	        },
-	
-	
-	        /**
-	         * Computed property which will output
-	         * the corrected class names for the close button
-	         *
-	         * @returns {Array} The corrected class names
-	         */
-	        closeButtonClass: function closeButtonClass() {
-	            var classes = _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
-	
-	            if (!this.contextualStyle) {
-	                this.contextualStyle = this.$parent.contextualStyle;
-	            }
-	
-	            classes.push(_CSSUtil2.default.contextualClass(_CSSUtil2.default.has(this.block, this.element), this.contextualStyle));
-	
-	            return classes;
-	        }
 	    }
 	};
 
 /***/ },
-/* 13 */
+/* 15 */
 /***/ function(module, exports) {
 
-	module.exports = "<span\r\n        :class=\"closeButtonClass\"\r\n        @click.prevent=\"closeFunction\">\r\n\t\t&times;\r\n</span>";
+	module.exports = "<span\r\n        :class=\"classNames\"\r\n        @click.prevent=\"closeFunction\">\r\n\t\t&times;\r\n</span>";
 
 /***/ },
-/* 14 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(15)
-	__vue_script__ = __webpack_require__(17)
+	__webpack_require__(17)
+	__vue_script__ = __webpack_require__(19)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src\\components\\Alert\\Message\\Message.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(18)
+	__vue_template__ = __webpack_require__(20)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -997,13 +1008,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 15 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(16);
+	var content = __webpack_require__(18);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -1023,7 +1034,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 16 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1037,7 +1048,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 17 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1046,9 +1057,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _CSSUtil = __webpack_require__(7);
+	var _element = __webpack_require__(11);
 	
-	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
+	var _element2 = _interopRequireDefault(_element);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -1067,75 +1078,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	        content: {
 	            type: String,
 	            required: true
-	        },
-	
-	        /**
-	         * The message variants
-	         */
-	        variants: {
-	            type: Array,
-	            required: false
-	        },
-	
-	        /**
-	         * The contextual styling
-	         */
-	        contextualStyle: {
-	            type: String,
-	            required: false
 	        }
 	    },
 	
-	    computed: {
-	        /**
-	         * The block name from the parent
-	         *
-	         * @returns {string}
-	         */
-	
-	        block: function block() {
-	            return this.$parent.block;
-	        },
-	
-	
-	        /**
-	         * Computed property which will output
-	         * the corrected class names for the message
-	         *
-	         * @returns {Array} The corrected class names
-	         */
-	        messageClass: function messageClass() {
-	            var classes = _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
-	
-	            if (!this.contextualStyle) {
-	                this.contextualStyle = this.$parent.contextualStyle;
-	            }
-	
-	            classes.push(_CSSUtil2.default.contextualClass(_CSSUtil2.default.has(this.block, this.element), this.contextualStyle));
-	
-	            return classes;
-	        }
-	    }
+	    mixins: [_element2.default]
 	};
 
 /***/ },
-/* 18 */
+/* 20 */
 /***/ function(module, exports) {
 
-	module.exports = "<span\r\n        :class=\"messageClass\">\r\n\t\t{{content}}\r\n</span>";
+	module.exports = "<span\r\n        :class=\"classNames\">\r\n\t\t{{content}}\r\n</span>";
 
 /***/ },
-/* 19 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(20)
-	__vue_script__ = __webpack_require__(22)
+	__webpack_require__(22)
+	__vue_script__ = __webpack_require__(24)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src\\components\\Alert\\Timer\\Timer.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(23)
+	__vue_template__ = __webpack_require__(25)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -1154,13 +1120,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 20 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(21);
+	var content = __webpack_require__(23);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -1180,7 +1146,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 21 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1194,7 +1160,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 22 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1203,9 +1169,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _CSSUtil = __webpack_require__(7);
+	var _element = __webpack_require__(11);
 	
-	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
+	var _element2 = _interopRequireDefault(_element);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -1225,55 +1191,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        closeFunction: {
 	            type: Function,
 	            required: true
-	        },
-	
-	        /**
-	         * The message variants
-	         */
-	        variants: {
-	            type: Array,
-	            required: false
-	        },
-	
-	        /**
-	         * The contextual styling
-	         */
-	        contextualStyle: {
-	            type: String,
-	            required: false
 	        }
 	    },
 	
-	    computed: {
-	        /**
-	         * The block name from the parent
-	         *
-	         * @returns {string}
-	         */
-	
-	        block: function block() {
-	            return this.$parent.block;
-	        },
-	
-	
-	        /**
-	         * Computed property which will output
-	         * the corrected class names for the timer
-	         *
-	         * @returns {Array} The corrected class names
-	         */
-	        timerClass: function timerClass() {
-	            var classes = _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
-	
-	            if (!this.contextualStyle) {
-	                this.contextualStyle = this.$parent.contextualStyle;
-	            }
-	
-	            classes.push(_CSSUtil2.default.contextualClass(_CSSUtil2.default.has(this.block, this.element), this.contextualStyle));
-	
-	            return classes;
-	        }
-	    },
+	    mixins: [_element2.default],
 	
 	    methods: {
 	        /**
@@ -1291,23 +1212,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 23 */
+/* 25 */
 /***/ function(module, exports) {
 
-	module.exports = "<div :class=\"timerClass\"></div>";
+	module.exports = "<div :class=\"classNames\"></div>";
 
 /***/ },
-/* 24 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(25)
-	__vue_script__ = __webpack_require__(27)
+	__webpack_require__(27)
+	__vue_script__ = __webpack_require__(29)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src\\components\\Alert\\Title\\Title.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(28)
+	__vue_template__ = __webpack_require__(30)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -1326,13 +1247,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 25 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(26);
+	var content = __webpack_require__(28);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -1352,7 +1273,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 26 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1366,7 +1287,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 27 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1375,9 +1296,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _CSSUtil = __webpack_require__(7);
+	var _element = __webpack_require__(11);
 	
-	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
+	var _element2 = _interopRequireDefault(_element);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -1396,51 +1317,52 @@ return /******/ (function(modules) { // webpackBootstrap
 	        content: {
 	            type: String,
 	            required: true
-	        },
-	
-	        /**
-	         * The message variants
-	         */
-	        variants: {
-	            type: Array,
-	            required: false
-	        },
-	
-	        /**
-	         * The contextual styling
-	         */
-	        contextualStyle: {
-	            type: String,
-	            required: false
 	        }
 	    },
 	
+	    mixins: [_element2.default]
+	};
+
+/***/ },
+/* 30 */
+/***/ function(module, exports) {
+
+	module.exports = "<span :class=\"classNames\">\r\n\t\t{{content}}\r\n</span>";
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _CSSUtil = __webpack_require__(12);
+	
+	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
+	
+	var _style = __webpack_require__(14);
+	
+	var _style2 = _interopRequireDefault(_style);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	    mixins: [_style2.default],
+	
 	    computed: {
 	        /**
-	         * The block name from the parent
-	         *
-	         * @returns {string}
-	         */
-	
-	        block: function block() {
-	            return this.$parent.block;
-	        },
-	
-	
-	        /**
-	         * Computed property which will output
-	         * the corrected class names for the title
+	         * Computed property which will output the
+	         * corrected class names
 	         *
 	         * @returns {Array} The corrected class names
 	         */
-	        titleClass: function titleClass() {
-	            var classes = _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
 	
-	            if (!this.contextualStyle) {
-	                this.contextualStyle = this.$parent.contextualStyle;
-	            }
-	
-	            classes.push(_CSSUtil2.default.contextualClass(_CSSUtil2.default.has(this.block, this.element), this.contextualStyle));
+	        classNames: function classNames() {
+	            var classes = _CSSUtil2.default.blockClasses(this.block, this.variants);
+	            classes.push(_CSSUtil2.default.contextualClass(this.block, this.contextualStyle));
 	
 	            return classes;
 	        }
@@ -1448,29 +1370,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 28 */
+/* 32 */
 /***/ function(module, exports) {
 
-	module.exports = "<span :class=\"titleClass\">\r\n\t\t{{content}}\r\n</span>";
+	module.exports = "<div :class=\"classNames\">\r\n\r\n    <alert-timer\r\n            v-if=\"hasTimer\"\r\n            :variants=\"timer.variants\"\r\n            :contextual-style=\"timer.contextualStyle\"\r\n            :close-function=\"closeAlert\"\r\n    ></alert-timer>\r\n\r\n    <alert-title\r\n            v-if=\"hasTitle\"\r\n            :variants=\"title.variants\"\r\n            :contextual-style=\"title.contextualStyle\"\r\n            :content=\"title.content\"\r\n    ></alert-title>\r\n\r\n    <alert-message\r\n            v-if=\"hasMessage\"\r\n            :variants=\"message.variants\"\r\n            :contextual-style=\"message.contextualStyle\"\r\n            :content=\"message.content\"\r\n    ></alert-message>\r\n\r\n    <alert-close-button\r\n            v-if=\"hasCloseButton\"\r\n            :variants=\"closeButton.variants\"\r\n            :contextual-style=\"closeButton.contextualStyle\"\r\n            :close-function=\"closeAlert\"\r\n    ></alert-close-button>\r\n\r\n</div>";
 
 /***/ },
-/* 29 */
-/***/ function(module, exports) {
-
-	module.exports = "<div :class=\"alertClass\">\r\n\r\n    <alert-timer\r\n            v-if=\"hasTimer\"\r\n            :variants=\"timer.variants\"\r\n            :contextual-style=\"timer.contextualStyle\"\r\n            :close-function=\"closeAlert\"\r\n    ></alert-timer>\r\n\r\n    <alert-title\r\n            v-if=\"hasTitle\"\r\n            :variants=\"title.variants\"\r\n            :contextual-style=\"title.contextualStyle\"\r\n            :content=\"title.content\"\r\n    ></alert-title>\r\n\r\n    <alert-message\r\n            v-if=\"hasMessage\"\r\n            :variants=\"message.variants\"\r\n            :contextual-style=\"message.contextualStyle\"\r\n            :content=\"message.content\"\r\n    ></alert-message>\r\n\r\n    <alert-close-button\r\n            v-if=\"hasCloseButton\"\r\n            :variants=\"closeButton.variants\"\r\n            :contextual-style=\"closeButton.contextualStyle\"\r\n            :close-function=\"closeAlert\"\r\n    ></alert-close-button>\r\n\r\n</div>";
-
-/***/ },
-/* 30 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(31)
-	__vue_script__ = __webpack_require__(33)
+	__webpack_require__(34)
+	__vue_script__ = __webpack_require__(36)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src\\components\\Breadcrumb\\Breadcrumb.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(49)
+	__vue_template__ = __webpack_require__(52)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -1489,13 +1405,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 31 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(32);
+	var content = __webpack_require__(35);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -1515,7 +1431,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 32 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1529,7 +1445,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 33 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1538,17 +1454,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _CSSUtil = __webpack_require__(7);
-	
-	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
-	
-	var _Item = __webpack_require__(34);
+	var _Item = __webpack_require__(37);
 	
 	var BreadcrumbItem = _interopRequireWildcard(_Item);
 	
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	var _block = __webpack_require__(31);
+	
+	var _block2 = _interopRequireDefault(_block);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
 	exports.default = {
 	    data: function data() {
@@ -1565,61 +1481,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	        items: {
 	            type: Array,
 	            required: true
-	        },
-	
-	        /**
-	         * The variant styling
-	         */
-	        variants: {
-	            type: Array,
-	            required: false
-	        },
-	
-	        /**
-	         * The contextual styling
-	         */
-	        contextualStyle: {
-	            type: String,
-	            required: false
 	        }
 	    },
+	
+	    mixins: [_block2.default],
 	
 	    components: {
 	        /**
 	         * The displayed breadcrumb item
 	         */
 	        BreadcrumbItem: BreadcrumbItem
-	    },
-	
-	    computed: {
-	        /**
-	         * Computed property which will output the
-	         * corrected class names for the breadcrumbs
-	         *
-	         * @returns {Array} The corrected class names
-	         */
-	
-	        breadcrumbClass: function breadcrumbClass() {
-	            var classes = _CSSUtil2.default.blockClasses(this.block, this.variants);
-	            classes.push(_CSSUtil2.default.contextualClass(this.block, this.contextualStyle));
-	
-	            return classes;
-	        }
 	    }
 	};
 
 /***/ },
-/* 34 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(35)
-	__vue_script__ = __webpack_require__(37)
+	__webpack_require__(38)
+	__vue_script__ = __webpack_require__(40)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src\\components\\Breadcrumb\\Item\\Item.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(48)
+	__vue_template__ = __webpack_require__(51)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -1638,13 +1524,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 35 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(36);
+	var content = __webpack_require__(39);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -1664,7 +1550,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 36 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1678,7 +1564,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 37 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1687,21 +1573,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _CSSUtil = __webpack_require__(7);
-	
-	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
-	
-	var _Content = __webpack_require__(38);
+	var _Content = __webpack_require__(41);
 	
 	var BreadcrumbContent = _interopRequireWildcard(_Content);
 	
-	var _Link = __webpack_require__(43);
+	var _Link = __webpack_require__(46);
 	
 	var BreadcrumbLink = _interopRequireWildcard(_Link);
 	
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	var _element = __webpack_require__(11);
+	
+	var _element2 = _interopRequireDefault(_element);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
 	exports.default = {
 	    data: function data() {
@@ -1726,24 +1612,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        link: {
 	            type: Object,
 	            required: false
-	        },
-	
-	        /**
-	         * The variant styling
-	         */
-	        variants: {
-	            type: Array,
-	            required: false
-	        },
-	
-	        /**
-	         * The contextual styling
-	         */
-	        contextualStyle: {
-	            type: String,
-	            required: false
 	        }
 	    },
+	
+	    mixins: [_element2.default],
 	
 	    components: {
 	        /**
@@ -1758,58 +1630,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	
 	    computed: {
-	        /**
-	         * The block name from the parent
-	         *
-	         * @returns {string}
-	         */
-	
-	        block: function block() {
-	            return this.$parent.block;
-	        },
-	
 	
 	        /**
 	         * Computed property which will output
 	         * whether the item has a link or not
 	         */
+	
 	        hasLink: function hasLink() {
 	            return !!this.link;
-	        },
-	
-	
-	        /**
-	         * Computed property which will output
-	         * the corrected class names for the item
-	         *
-	         * @returns {Array} The corrected class names
-	         */
-	        itemClass: function itemClass() {
-	            var classes = _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
-	
-	            if (!this.contextualStyle) {
-	                this.contextualStyle = this.$parent.contextualStyle;
-	            }
-	
-	            classes.push(_CSSUtil2.default.contextualClass(_CSSUtil2.default.has(this.block, this.element), this.contextualStyle));
-	
-	            return classes;
 	        }
 	    }
 	};
 
 /***/ },
-/* 38 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(39)
-	__vue_script__ = __webpack_require__(41)
+	__webpack_require__(42)
+	__vue_script__ = __webpack_require__(44)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src\\components\\Breadcrumb\\Content\\Content.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(42)
+	__vue_template__ = __webpack_require__(45)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -1828,13 +1672,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 39 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(40);
+	var content = __webpack_require__(43);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -1854,7 +1698,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 40 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1868,7 +1712,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 41 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1877,9 +1721,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _CSSUtil = __webpack_require__(7);
+	var _element = __webpack_require__(11);
 	
-	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
+	var _element2 = _interopRequireDefault(_element);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -1898,75 +1742,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	        content: {
 	            type: String,
 	            required: true
-	        },
-	
-	        /**
-	         * The variant styling
-	         */
-	        variants: {
-	            type: Array,
-	            required: false
-	        },
-	
-	        /**
-	         * The contextual styling
-	         */
-	        contextualStyle: {
-	            type: String,
-	            required: false
 	        }
 	    },
 	
-	    computed: {
-	        /**
-	         * The block name from the parent
-	         *
-	         * @returns {string}
-	         */
-	
-	        block: function block() {
-	            return this.$parent.block;
-	        },
-	
-	
-	        /**
-	         * Computed property which will output
-	         * the corrected class names for the content
-	         *
-	         * @returns {Array} The corrected class names
-	         */
-	        contentClass: function contentClass() {
-	            var classes = _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
-	
-	            if (!this.contextualStyle) {
-	                this.contextualStyle = this.$parent.contextualStyle;
-	            }
-	
-	            classes.push(_CSSUtil2.default.contextualClass(_CSSUtil2.default.has(this.block, this.element), this.contextualStyle));
-	
-	            return classes;
-	        }
-	    }
+	    mixins: [_element2.default]
 	};
 
 /***/ },
-/* 42 */
+/* 45 */
 /***/ function(module, exports) {
 
-	module.exports = "<div :class=\"contentClass\">\r\n    {{content}}\r\n</div>";
+	module.exports = "<div :class=\"classNames\">\r\n    {{content}}\r\n</div>";
 
 /***/ },
-/* 43 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(44)
-	__vue_script__ = __webpack_require__(46)
+	__webpack_require__(47)
+	__vue_script__ = __webpack_require__(49)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src\\components\\Breadcrumb\\Link\\Link.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(47)
+	__vue_template__ = __webpack_require__(50)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -1985,13 +1784,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 44 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(45);
+	var content = __webpack_require__(48);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2011,7 +1810,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 45 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2025,7 +1824,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 46 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2034,17 +1833,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _CSSUtil = __webpack_require__(7);
-	
-	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
-	
-	var _Content = __webpack_require__(38);
+	var _Content = __webpack_require__(41);
 	
 	var BreadcrumbContent = _interopRequireWildcard(_Content);
 	
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	var _element = __webpack_require__(11);
+	
+	var _element2 = _interopRequireDefault(_element);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
 	exports.default = {
 	    data: function data() {
@@ -2069,22 +1868,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        to: {
 	            type: String,
 	            required: true
-	        },
-	
-	        /**
-	         * The variant styling
-	         */
-	        variants: {
-	            type: Array,
-	            required: false
-	        },
-	
-	        /**
-	         * The contextual styling
-	         */
-	        contextualStyle: {
-	            type: String,
-	            required: false
 	        }
 	    },
 	
@@ -2095,68 +1878,39 @@ return /******/ (function(modules) { // webpackBootstrap
 	        BreadcrumbContent: BreadcrumbContent
 	    },
 	
-	    computed: {
-	        /**
-	         * The block name from the parent
-	         *
-	         * @returns {string}
-	         */
-	
-	        block: function block() {
-	            return this.$parent.block;
-	        },
-	
-	
-	        /**
-	         * Computed property which will output
-	         * the corrected class names for the link
-	         *
-	         * @returns {Array} The corrected class names
-	         */
-	        linkClass: function linkClass() {
-	            var classes = _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
-	
-	            if (!this.contextualStyle) {
-	                this.contextualStyle = this.$parent.contextualStyle;
-	            }
-	
-	            classes.push(_CSSUtil2.default.contextualClass(_CSSUtil2.default.has(this.block, this.element), this.contextualStyle));
-	
-	            return classes;
-	        }
-	    }
+	    mixins: [_element2.default]
 	};
 
 /***/ },
-/* 47 */
-/***/ function(module, exports) {
-
-	module.exports = "<a\r\n        :class=\"linkClass\"\r\n        :href=\"to\"\r\n>\r\n    <breadcrumb-content\r\n            :content=\"body.content\"\r\n            :variants=\"body.variants\"\r\n            :contextual-style=\"body.contextualStyle\"\r\n    ></breadcrumb-content>\r\n</a>";
-
-/***/ },
-/* 48 */
-/***/ function(module, exports) {
-
-	module.exports = "<div :class=\"itemClass\">\r\n    <breadcrumb-link\r\n            v-if=\"hasLink\"\r\n            :body=\"body\"\r\n            :to=\"link.to\"\r\n            :variants=\"link.variants\"\r\n            :contextual-style=\"link.contextualStyle\"\r\n    ></breadcrumb-link>\r\n\r\n    <breadcrumb-content\r\n            v-else\r\n            :content=\"body.content\"\r\n            :variants=\"body.variants\"\r\n            :contextual-style=\"body.contextualStyle\"\r\n    ></breadcrumb-content>\r\n</div>";
-
-/***/ },
-/* 49 */
-/***/ function(module, exports) {
-
-	module.exports = "<ul :class=\"breadcrumbClass\">\r\n    <breadcrumb-item\r\n            v-for=\"item in items\"\r\n            :body=\"item.body\"\r\n            :link=\"item.link\"\r\n            :variants=\"item.variants\"\r\n            :contextual-style=\"item.contextualStyle\"\r\n    ></breadcrumb-item>\r\n</ul>";
-
-/***/ },
 /* 50 */
+/***/ function(module, exports) {
+
+	module.exports = "<a\r\n        :class=\"classNames\"\r\n        :href=\"to\"\r\n>\r\n    <breadcrumb-content\r\n            :content=\"body.content\"\r\n            :variants=\"body.variants\"\r\n            :contextual-style=\"body.contextualStyle\"\r\n    ></breadcrumb-content>\r\n</a>";
+
+/***/ },
+/* 51 */
+/***/ function(module, exports) {
+
+	module.exports = "<div :class=\"classNames\">\r\n    <breadcrumb-link\r\n            v-if=\"hasLink\"\r\n            :body=\"body\"\r\n            :to=\"link.to\"\r\n            :variants=\"link.variants\"\r\n            :contextual-style=\"link.contextualStyle\"\r\n    ></breadcrumb-link>\r\n\r\n    <breadcrumb-content\r\n            v-else\r\n            :content=\"body.content\"\r\n            :variants=\"body.variants\"\r\n            :contextual-style=\"body.contextualStyle\"\r\n    ></breadcrumb-content>\r\n</div>";
+
+/***/ },
+/* 52 */
+/***/ function(module, exports) {
+
+	module.exports = "<ul :class=\"classNames\">\r\n    <breadcrumb-item\r\n            v-for=\"item in items\"\r\n            :body=\"item.body\"\r\n            :link=\"item.link\"\r\n            :variants=\"item.variants\"\r\n            :contextual-style=\"item.contextualStyle\"\r\n    ></breadcrumb-item>\r\n</ul>";
+
+/***/ },
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(51)
-	__vue_script__ = __webpack_require__(53)
+	__webpack_require__(54)
+	__vue_script__ = __webpack_require__(56)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src\\components\\Button\\Button.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(54)
+	__vue_template__ = __webpack_require__(57)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -2175,13 +1929,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 51 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(52);
+	var content = __webpack_require__(55);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2201,7 +1955,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 52 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2215,7 +1969,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 53 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2224,9 +1978,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _CSSUtil = __webpack_require__(7);
+	var _block = __webpack_require__(31);
 	
-	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
+	var _block2 = _interopRequireDefault(_block);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -2253,24 +2007,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        link: {
 	            type: Object,
 	            required: true
-	        },
-	
-	        /**
-	         * The variant styling
-	         */
-	        variants: {
-	            type: Array,
-	            required: false
-	        },
-	
-	        /**
-	         * The contextual styling
-	         */
-	        contextualStyle: {
-	            type: String,
-	            required: false
 	        }
 	    },
+	
+	    mixins: [_block2.default],
 	
 	    computed: {
 	        /**
@@ -2304,20 +2044,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	         */
 	        isValid: function isValid() {
 	            return !(!this.hasAction && !this.hasLink);
-	        },
-	
-	
-	        /**
-	         * Computed property which will output the
-	         * corrected class names for the button
-	         *
-	         * @returns {Array} The corrected class names
-	         */
-	        buttonClass: function buttonClass() {
-	            var classes = _CSSUtil2.default.blockClasses(this.block, this.variants);
-	            classes.push(_CSSUtil2.default.contextualClass(this.block, this.contextualStyle));
-	
-	            return classes;
 	        }
 	    },
 	
@@ -2330,23 +2056,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 54 */
+/* 57 */
 /***/ function(module, exports) {
 
-	module.exports = "<a\r\n        v-if=\"hasLink\"\r\n        :class=\"buttonClass\"\r\n        :href=\"link.to\"\r\n>\r\n    {{content}}\r\n</a>\r\n\r\n<a\r\n        v-if=\"hasAction\"\r\n        :class=\"buttonClass\"\r\n        @click.prevent=\"link.action\"\r\n>\r\n    {{content}}\r\n</a>";
+	module.exports = "<a\r\n        v-if=\"hasLink\"\r\n        :class=\"classNames\"\r\n        :href=\"link.to\"\r\n>\r\n    {{content}}\r\n</a>\r\n\r\n<a\r\n        v-if=\"hasAction\"\r\n        :class=\"classNames\"\r\n        @click.prevent=\"link.action\"\r\n>\r\n    {{content}}\r\n</a>";
 
 /***/ },
-/* 55 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(56)
-	__vue_script__ = __webpack_require__(58)
+	__webpack_require__(59)
+	__vue_script__ = __webpack_require__(61)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src\\components\\Dropdown\\Dropdown.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(69)
+	__vue_template__ = __webpack_require__(72)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -2365,13 +2091,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 56 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(57);
+	var content = __webpack_require__(60);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2391,7 +2117,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 57 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2405,7 +2131,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 58 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2414,21 +2140,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _CSSUtil = __webpack_require__(7);
-	
-	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
-	
-	var _Button = __webpack_require__(50);
+	var _Button = __webpack_require__(53);
 	
 	var Button = _interopRequireWildcard(_Button);
 	
-	var _Menu = __webpack_require__(59);
+	var _Menu = __webpack_require__(62);
 	
 	var DropdownMenu = _interopRequireWildcard(_Menu);
 	
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	var _block = __webpack_require__(31);
+	
+	var _block2 = _interopRequireDefault(_block);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
 	exports.default = {
 	    data: function data() {
@@ -2464,22 +2190,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        items: {
 	            type: Array,
 	            required: true
-	        },
-	
-	        /**
-	         * The variant styling
-	         */
-	        variants: {
-	            type: Array,
-	            required: false
-	        },
-	
-	        /**
-	         * The contextual styling
-	         */
-	        contextualStyle: {
-	            type: String,
-	            required: false
 	        }
 	    },
 	
@@ -2492,21 +2202,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        DropdownMenu: DropdownMenu
 	    },
 	
-	    computed: {
-	        /**
-	         * Computed property which will output the
-	         * corrected class names for the label
-	         *
-	         * @returns {Array} The corrected class names
-	         */
-	
-	        dropdownClass: function dropdownClass() {
-	            var classes = _CSSUtil2.default.blockClasses(this.block, this.variants);
-	            classes.push(_CSSUtil2.default.contextualClass(this.block, this.contextualStyle));
-	
-	            return classes;
-	        }
-	    },
+	    mixins: [_block2.default],
 	
 	    methods: {
 	        toggle: function toggle() {
@@ -2516,17 +2212,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 59 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(60)
-	__vue_script__ = __webpack_require__(62)
+	__webpack_require__(63)
+	__vue_script__ = __webpack_require__(65)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src\\components\\Dropdown\\Menu\\Menu.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(68)
+	__vue_template__ = __webpack_require__(71)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -2545,13 +2241,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 60 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(61);
+	var content = __webpack_require__(64);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2571,7 +2267,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 61 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2585,7 +2281,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 62 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2594,17 +2290,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _CSSUtil = __webpack_require__(7);
-	
-	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
-	
-	var _Item = __webpack_require__(63);
+	var _Item = __webpack_require__(66);
 	
 	var DropdownItem = _interopRequireWildcard(_Item);
 	
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	var _element = __webpack_require__(11);
+	
+	var _element2 = _interopRequireDefault(_element);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
 	exports.default = {
 	    data: function data() {
@@ -2622,73 +2318,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	        items: {
 	            type: Array,
 	            required: true
-	        },
-	
-	        /**
-	         * The variant styling
-	         */
-	        variants: {
-	            type: Array,
-	            required: false
-	        },
-	
-	        /**
-	         * The contextual styling
-	         */
-	        contextualStyle: {
-	            type: String,
-	            required: false
 	        }
 	    },
+	
+	    mixins: [_element2.default],
 	
 	    components: {
 	        DropdownItem: DropdownItem
-	    },
-	
-	    computed: {
-	        /**
-	         * The block name from the parent
-	         *
-	         * @returns {string}
-	         */
-	
-	        block: function block() {
-	            return this.$parent.block;
-	        },
-	
-	
-	        /**
-	         * Computed property which will output the
-	         * corrected class names for the menu
-	         *
-	         * @returns {Array} The corrected class names
-	         */
-	        menuClass: function menuClass() {
-	            var classes = _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
-	
-	            if (!this.contextualStyle) {
-	                this.contextualStyle = this.$parent.contextualStyle;
-	            }
-	
-	            classes.push(_CSSUtil2.default.contextualClass(_CSSUtil2.default.has(this.block, this.element), this.contextualStyle));
-	
-	            return classes;
-	        }
 	    }
 	};
 
 /***/ },
-/* 63 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(64)
-	__vue_script__ = __webpack_require__(66)
+	__webpack_require__(67)
+	__vue_script__ = __webpack_require__(69)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src\\components\\Dropdown\\Item\\Item.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(67)
+	__vue_template__ = __webpack_require__(70)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -2707,13 +2358,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 64 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(65);
+	var content = __webpack_require__(68);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2733,7 +2384,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 65 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2747,7 +2398,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 66 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2756,9 +2407,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _CSSUtil = __webpack_require__(7);
+	var _element = __webpack_require__(11);
 	
-	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
+	var _element2 = _interopRequireDefault(_element);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -2777,87 +2428,42 @@ return /******/ (function(modules) { // webpackBootstrap
 	        content: {
 	            type: String,
 	            required: true
-	        },
-	
-	        /**
-	         * The variant styling
-	         */
-	        variants: {
-	            type: Array,
-	            required: false
-	        },
-	
-	        /**
-	         * The contextual styling
-	         */
-	        contextualStyle: {
-	            type: String,
-	            required: false
 	        }
 	    },
 	
-	    computed: {
-	        /**
-	         * The block name from the parent
-	         *
-	         * @returns {string}
-	         */
-	
-	        block: function block() {
-	            return this.$parent.block;
-	        },
-	
-	
-	        /**
-	         * Computed property which will output the
-	         * corrected class names for the item
-	         *
-	         * @returns {Array} The corrected class names
-	         */
-	        itemClass: function itemClass() {
-	            var classes = _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
-	
-	            if (!this.contextualStyle) {
-	                this.contextualStyle = this.$parent.contextualStyle;
-	            }
-	
-	            classes.push(_CSSUtil2.default.contextualClass(_CSSUtil2.default.has(this.block, this.element), this.contextualStyle));
-	
-	            return classes;
-	        }
-	    }
+	    mixins: [_element2.default]
 	};
 
 /***/ },
-/* 67 */
-/***/ function(module, exports) {
-
-	module.exports = "<li :class=\"itemClass\">\r\n    {{content}}\r\n</li>";
-
-/***/ },
-/* 68 */
-/***/ function(module, exports) {
-
-	module.exports = "<ul :class=\"menuClass\">\r\n    <dropdown-item\r\n        v-for=\"item in items\"\r\n        :content=\"item.content\"\r\n    ></dropdown-item>\r\n</ul>";
-
-/***/ },
-/* 69 */
-/***/ function(module, exports) {
-
-	module.exports = "<div :class=\"dropdownClass\">\r\n    <v-button\r\n            :content=\"title\"\r\n            :link=\"button.link\"\r\n            :contextual-style=\"contextualStyle\"\r\n            :variants=\"button.variants\"\r\n    ></v-button>\r\n\r\n    <dropdown-menu\r\n            v-if=\"isCollapsed\"\r\n            transition=\"Dropdown__menu--expand\"\r\n            :items=\"items\"\r\n            :contextual-style=\"contextualStyle\"\r\n            :variants=\"variants\"\r\n    ></dropdown-menu>\r\n</div>";
-
-/***/ },
 /* 70 */
+/***/ function(module, exports) {
+
+	module.exports = "<li :class=\"classNames\">\r\n    {{content}}\r\n</li>";
+
+/***/ },
+/* 71 */
+/***/ function(module, exports) {
+
+	module.exports = "<ul :class=\"classNames\">\r\n    <dropdown-item\r\n        v-for=\"item in items\"\r\n        :content=\"item.content\"\r\n    ></dropdown-item>\r\n</ul>";
+
+/***/ },
+/* 72 */
+/***/ function(module, exports) {
+
+	module.exports = "<div :class=\"classNames\">\r\n    <v-button\r\n            :content=\"title\"\r\n            :link=\"button.link\"\r\n            :contextual-style=\"contextualStyle\"\r\n            :variants=\"button.variants\"\r\n    ></v-button>\r\n\r\n    <dropdown-menu\r\n            v-if=\"isCollapsed\"\r\n            transition=\"Dropdown__menu--expand\"\r\n            :items=\"items\"\r\n            :contextual-style=\"contextualStyle\"\r\n            :variants=\"variants\"\r\n    ></dropdown-menu>\r\n</div>";
+
+/***/ },
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(71)
-	__vue_script__ = __webpack_require__(73)
+	__webpack_require__(74)
+	__vue_script__ = __webpack_require__(76)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src\\components\\Label\\Label.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(74)
+	__vue_template__ = __webpack_require__(77)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -2876,13 +2482,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 71 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(72);
+	var content = __webpack_require__(75);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2902,7 +2508,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 72 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2916,7 +2522,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 73 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2925,9 +2531,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _CSSUtil = __webpack_require__(7);
+	var _block = __webpack_require__(31);
 	
-	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
+	var _block2 = _interopRequireDefault(_block);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -2946,60 +2552,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	        content: {
 	            type: String,
 	            required: true
-	        },
-	
-	        /**
-	         * The variant styling
-	         */
-	        variants: {
-	            type: Array,
-	            required: false
-	        },
-	
-	        /**
-	         * The contextual styling
-	         */
-	        contextualStyle: {
-	            type: String,
-	            required: false
 	        }
 	    },
 	
-	    computed: {
-	        /**
-	         * Computed property which will output the
-	         * corrected class names for the label
-	         *
-	         * @returns {Array} The corrected class names
-	         */
-	
-	        labelClass: function labelClass() {
-	            var classes = _CSSUtil2.default.blockClasses(this.block, this.variants);
-	            classes.push(_CSSUtil2.default.contextualClass(this.block, this.contextualStyle));
-	
-	            return classes;
-	        }
-	    }
+	    mixins: [_block2.default]
 	};
 
 /***/ },
-/* 74 */
+/* 77 */
 /***/ function(module, exports) {
 
-	module.exports = "<span :class=\"labelClass\">\r\n    {{content}}\r\n</span>";
+	module.exports = "<span :class=\"classNames\">\r\n    {{content}}\r\n</span>";
 
 /***/ },
-/* 75 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(76)
-	__vue_script__ = __webpack_require__(78)
+	__webpack_require__(79)
+	__vue_script__ = __webpack_require__(81)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src\\components\\Panel\\Panel.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(99)
+	__vue_template__ = __webpack_require__(102)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -3018,13 +2594,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 76 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(77);
+	var content = __webpack_require__(80);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -3044,7 +2620,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 77 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -3058,7 +2634,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 78 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3067,25 +2643,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _CSSUtil = __webpack_require__(7);
-	
-	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
-	
-	var _Body = __webpack_require__(79);
+	var _Body = __webpack_require__(82);
 	
 	var PanelBody = _interopRequireWildcard(_Body);
 	
-	var _Footer = __webpack_require__(84);
+	var _Footer = __webpack_require__(87);
 	
 	var PanelFooter = _interopRequireWildcard(_Footer);
 	
-	var _Header = __webpack_require__(89);
+	var _Header = __webpack_require__(92);
 	
 	var PanelHeader = _interopRequireWildcard(_Header);
 	
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	var _block = __webpack_require__(31);
+	
+	var _block2 = _interopRequireDefault(_block);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
 	exports.default = {
 	    data: function data() {
@@ -3118,22 +2694,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        footer: {
 	            type: Object,
 	            required: false
-	        },
-	
-	        /**
-	         * The contextual style
-	         */
-	        contextualStyle: {
-	            type: String,
-	            required: false
-	        },
-	
-	        /**
-	         * The variants
-	         */
-	        variants: {
-	            type: Array,
-	            required: false
 	        }
 	    },
 	
@@ -3153,6 +2713,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	         */
 	        PanelHeader: PanelHeader
 	    },
+	
+	    mixins: [_block2.default],
+	
 	    computed: {
 	        /**
 	         * Computed property which will check whether
@@ -3193,36 +2756,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	            }
 	
 	            return this.footer.enabled;
-	        },
-	
-	
-	        /**
-	         * Computed property which will output the
-	         * corrected class names for the panel
-	         *
-	         * @returns {Array} The corrected class name
-	         */
-	        panelClass: function panelClass() {
-	            var classes = _CSSUtil2.default.blockClasses(this.block, this.variants);
-	            classes.push(_CSSUtil2.default.contextualClass(this.block, this.contextualStyle));
-	
-	            return classes;
 	        }
 	    }
 	};
 
 /***/ },
-/* 79 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(80)
-	__vue_script__ = __webpack_require__(82)
+	__webpack_require__(83)
+	__vue_script__ = __webpack_require__(85)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src\\components\\Panel\\Body\\Body.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(83)
+	__vue_template__ = __webpack_require__(86)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -3241,13 +2790,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 80 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(81);
+	var content = __webpack_require__(84);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -3267,7 +2816,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 81 */
+/* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -3281,7 +2830,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 82 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3290,9 +2839,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _CSSUtil = __webpack_require__(7);
+	var _element = __webpack_require__(11);
 	
-	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
+	var _element2 = _interopRequireDefault(_element);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -3304,74 +2853,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	
 	
-	    props: {
-	        /**
-	         * The body variants
-	         */
-	        variants: {
-	            type: Array,
-	            required: false
-	        },
-	
-	        /**
-	         * The contextual styling
-	         */
-	        contextualStyle: {
-	            type: String,
-	            required: false
-	        }
-	    },
-	
-	    computed: {
-	        /**
-	         * The block name from the parent
-	         *
-	         * @returns {string}
-	         */
-	
-	        block: function block() {
-	            return this.$parent.block;
-	        },
-	
-	
-	        /**
-	         * Computed property which will output
-	         * the corrected class names for the body
-	         *
-	         * @returns {Array} The corrected class names
-	         */
-	        bodyClass: function bodyClass() {
-	            var classes = _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
-	
-	            if (!this.contextualStyle) {
-	                this.contextualStyle = this.$parent.contextualStyle;
-	            }
-	
-	            classes.push(_CSSUtil2.default.contextualClass(_CSSUtil2.default.has(this.block, this.element), this.contextualStyle));
-	
-	            return classes;
-	        }
-	    }
+	    mixins: [_element2.default]
 	};
 
 /***/ },
-/* 83 */
+/* 86 */
 /***/ function(module, exports) {
 
-	module.exports = "<div :class=\"bodyClass\">\r\n    <slot name=\"body\"></slot>\r\n</div>";
+	module.exports = "<div :class=\"classNames\">\r\n    <slot name=\"body\"></slot>\r\n</div>";
 
 /***/ },
-/* 84 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(85)
-	__vue_script__ = __webpack_require__(87)
+	__webpack_require__(88)
+	__vue_script__ = __webpack_require__(90)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src\\components\\Panel\\Footer\\Footer.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(88)
+	__vue_template__ = __webpack_require__(91)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -3390,13 +2892,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 85 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(86);
+	var content = __webpack_require__(89);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -3416,7 +2918,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 86 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -3430,7 +2932,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 87 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3439,9 +2941,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _CSSUtil = __webpack_require__(7);
+	var _element = __webpack_require__(11);
 	
-	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
+	var _element2 = _interopRequireDefault(_element);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -3453,74 +2955,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	
 	
-	    props: {
-	        /**
-	         * The footer variants
-	         */
-	        variants: {
-	            type: Array,
-	            required: false
-	        },
-	
-	        /**
-	         * The contextual styling
-	         */
-	        contextualStyle: {
-	            type: String,
-	            required: false
-	        }
-	    },
-	
-	    computed: {
-	        /**
-	         * The block name from the parent
-	         *
-	         * @returns {string}
-	         */
-	
-	        block: function block() {
-	            return this.$parent.block;
-	        },
-	
-	
-	        /**
-	         * Computed property which will output
-	         * the corrected class names for the footer
-	         *
-	         * @returns {Array} The corrected class names
-	         */
-	        footerClass: function footerClass() {
-	            var classes = _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
-	
-	            if (!this.contextualStyle) {
-	                this.contextualStyle = this.$parent.contextualStyle;
-	            }
-	
-	            classes.push(_CSSUtil2.default.contextualClass(_CSSUtil2.default.has(this.block, this.element), this.contextualStyle));
-	
-	            return classes;
-	        }
-	    }
+	    mixins: [_element2.default]
 	};
 
 /***/ },
-/* 88 */
+/* 91 */
 /***/ function(module, exports) {
 
-	module.exports = "<div :class=\"footerClass\">\r\n    <slot name=\"footer\"></slot>\r\n</div>";
+	module.exports = "<div :class=\"classNames\">\r\n    <slot name=\"footer\"></slot>\r\n</div>";
 
 /***/ },
-/* 89 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(90)
-	__vue_script__ = __webpack_require__(92)
+	__webpack_require__(93)
+	__vue_script__ = __webpack_require__(95)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src\\components\\Panel\\Header\\Header.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(98)
+	__vue_template__ = __webpack_require__(101)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -3539,13 +2994,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 90 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(91);
+	var content = __webpack_require__(94);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -3565,7 +3020,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 91 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -3579,7 +3034,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 92 */
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3588,11 +3043,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _CSSUtil = __webpack_require__(7);
+	var _element = __webpack_require__(11);
 	
-	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
+	var _element2 = _interopRequireDefault(_element);
 	
-	var _Title = __webpack_require__(93);
+	var _Title = __webpack_require__(96);
 	
 	var PanelTitle = _interopRequireWildcard(_Title);
 	
@@ -3615,24 +3070,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        title: {
 	            type: Object,
 	            required: false
-	        },
-	
-	        /**
-	         * The header variants
-	         */
-	        variants: {
-	            type: Array,
-	            required: false
-	        },
-	
-	        /**
-	         * The contextual styling
-	         */
-	        contextualStyle: {
-	            type: String,
-	            required: false
 	        }
 	    },
+	
+	    mixins: [_element2.default],
 	
 	    components: {
 	        /**
@@ -3651,51 +3092,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	        hasTitle: function hasTitle() {
 	            return !!this.title;
-	        },
-	
-	
-	        /**
-	         * The block name from the parent
-	         *
-	         * @returns {string}
-	         */
-	        block: function block() {
-	            return this.$parent.block;
-	        },
-	
-	
-	        /**
-	         * Computed property which will output
-	         * the corrected class names for the header
-	         *
-	         * @returns {Array} The corrected class names
-	         */
-	        headerClass: function headerClass() {
-	            var classes = _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
-	
-	            if (!this.contextualStyle) {
-	                this.contextualStyle = this.$parent.contextualStyle;
-	            }
-	
-	            classes.push(_CSSUtil2.default.contextualClass(_CSSUtil2.default.has(this.block, this.element), this.contextualStyle));
-	
-	            return classes;
 	        }
 	    }
 	};
 
 /***/ },
-/* 93 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(94)
-	__vue_script__ = __webpack_require__(96)
+	__webpack_require__(97)
+	__vue_script__ = __webpack_require__(99)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src\\components\\Panel\\Title\\Title.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(97)
+	__vue_template__ = __webpack_require__(100)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -3714,13 +3126,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 94 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(95);
+	var content = __webpack_require__(98);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -3740,7 +3152,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 95 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -3754,7 +3166,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 96 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3763,9 +3175,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _CSSUtil = __webpack_require__(7);
+	var _element = __webpack_require__(11);
 	
-	var _CSSUtil2 = _interopRequireDefault(_CSSUtil);
+	var _element2 = _interopRequireDefault(_element);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -3784,74 +3196,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	        content: {
 	            type: String,
 	            required: true
-	        },
-	
-	        /**
-	         * The title variants
-	         */
-	        variants: {
-	            type: Array,
-	            required: false
-	        },
-	
-	        /**
-	         * The contextual styling
-	         */
-	        contextualStyle: {
-	            type: String,
-	            required: false
 	        }
 	    },
 	
-	    computed: {
-	        /**
-	         * The block name from the parent
-	         *
-	         * @returns {string}
-	         */
-	
-	        block: function block() {
-	            return this.$parent.block;
-	        },
-	
-	
-	        /**
-	         * Computed property which will output
-	         * the corrected class names for the title
-	         *
-	         * @returns {Array} The corrected class names
-	         */
-	        titleClass: function titleClass() {
-	            var classes = _CSSUtil2.default.elementClasses(this.block, this.element, this.variants);
-	
-	            if (!this.contextualStyle) {
-	                this.contextualStyle = this.$parent.contextualStyle;
-	            }
-	
-	            classes.push(_CSSUtil2.default.contextualClass(_CSSUtil2.default.has(this.block, this.element), this.contextualStyle));
-	
-	            return classes;
-	        }
-	    }
+	    mixins: [_element2.default]
 	};
 
 /***/ },
-/* 97 */
+/* 100 */
 /***/ function(module, exports) {
 
-	module.exports = "<h4 :class=\"titleClass\">\r\n    {{content}}\r\n</h4>";
+	module.exports = "<h4 :class=\"classNames\">\r\n    {{content}}\r\n</h4>";
 
 /***/ },
-/* 98 */
+/* 101 */
 /***/ function(module, exports) {
 
-	module.exports = "<div :class=\"headerClass\">\r\n    <panel-title\r\n            v-if=\"hasTitle\"\r\n            :variants=\"title.variants\"\r\n            :contextual-style=\"title.contextualStyle\"\r\n            :content=\"title.content\"\r\n    ></panel-title>\r\n</div>";
+	module.exports = "<div :class=\"classNames\">\r\n    <panel-title\r\n            v-if=\"hasTitle\"\r\n            :variants=\"title.variants\"\r\n            :contextual-style=\"title.contextualStyle\"\r\n            :content=\"title.content\"\r\n    ></panel-title>\r\n</div>";
 
 /***/ },
-/* 99 */
+/* 102 */
 /***/ function(module, exports) {
 
-	module.exports = "<div :class=\"panelClass\">\r\n\r\n    <panel-header\r\n            v-if=\"hasHeader\"\r\n            :title=\"header.title\"\r\n            :variants=\"header.variants\"\r\n            :contextual-style=\"header.contextualStyle\"\r\n    ></panel-header>\r\n\r\n    <panel-body\r\n            v-if=\"hasBody\"\r\n            :variants=\"body.variants\"\r\n            :contextual-style=\"body.contextualStyle\"\r\n    >\r\n        <slot name=\"body\" slot=\"body\"></slot>\r\n    </panel-body>\r\n\r\n    <panel-footer\r\n            v-if=\"hasFooter\"\r\n            :variants=\"footer.variants\"\r\n            :contextual-style=\"footer.contextualStyle\"\r\n    >\r\n        <slot name=\"footer\" slot=\"footer\"></slot>\r\n    </panel-footer>\r\n</div>";
+	module.exports = "<div :class=\"classNames\">\r\n\r\n    <panel-header\r\n            v-if=\"hasHeader\"\r\n            :title=\"header.title\"\r\n            :variants=\"header.variants\"\r\n            :contextual-style=\"header.contextualStyle\"\r\n    ></panel-header>\r\n\r\n    <panel-body\r\n            v-if=\"hasBody\"\r\n            :variants=\"body.variants\"\r\n            :contextual-style=\"body.contextualStyle\"\r\n    >\r\n        <slot name=\"body\" slot=\"body\"></slot>\r\n    </panel-body>\r\n\r\n    <panel-footer\r\n            v-if=\"hasFooter\"\r\n            :variants=\"footer.variants\"\r\n            :contextual-style=\"footer.contextualStyle\"\r\n    >\r\n        <slot name=\"footer\" slot=\"footer\"></slot>\r\n    </panel-footer>\r\n</div>";
 
 /***/ }
 /******/ ])

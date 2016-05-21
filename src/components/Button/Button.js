@@ -1,4 +1,4 @@
-import CSSUtil from './../../utils/CSSUtil';
+import BlockMixin from './../../mixins/block';
 
 export default {
     data () {
@@ -22,24 +22,12 @@ export default {
         link: {
             type: Object,
             required: true
-        },
-
-        /**
-         * The variant styling
-         */
-        variants: {
-            type: Array,
-            required: false
-        },
-
-        /**
-         * The contextual styling
-         */
-        contextualStyle: {
-            type: String,
-            required: false
         }
     },
+
+    mixins: [
+        BlockMixin
+    ],
 
     computed: {
         /**
@@ -70,19 +58,6 @@ export default {
          */
         isValid() {
             return !(!this.hasAction && !this.hasLink);
-        },
-
-        /**
-         * Computed property which will output the
-         * corrected class names for the button
-         *
-         * @returns {Array} The corrected class names
-         */
-        buttonClass () {
-            var classes = CSSUtil.blockClasses(this.block, this.variants);
-            classes.push(CSSUtil.contextualClass(this.block, this.contextualStyle));
-
-            return classes;
         }
     },
 
