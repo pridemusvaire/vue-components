@@ -1,0 +1,22 @@
+// Imports
+@import "./../../../assets/stylus/mixins/mixins.styl"
+@import "./../../../assets/stylus/settings/variables.styl"
+
+.Panel
+  +has(title) // Panel__title
+    font-size: 1rem
+    font-weight: 400
+    margin: 0
+    padding: 0
+    +variant(primary) // Panel__title--primary
+      color: $white
+    +variant(success) // Panel__title--success
+      color: $white
+    +variant(danger) // Panel__title--danger
+      color: $white
+    +variant(warning) // Panel__title--warning
+      color: $white
+    +variant(info) // Panel__title--info
+      color: $white
+    +variant(dark) // Panel__title--dark
+      color: $white

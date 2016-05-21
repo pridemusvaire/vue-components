@@ -1,0 +1,28 @@
+// Imports
+@import "./../../../assets/stylus/settings/variables.styl"
+@import "./../../../assets/stylus/mixins/mixins.styl"
+
+.Breadcrumb
+  +has(item)
+    display: inline-block
+    vertical-align: middle
+    &:after
+      content: '\f238'
+      display: inline-block
+      font: normal normal normal 24px / 1 "Material Design Icons"
+      font-weight: 100
+      vertical-align: middle
+    &:last-child:after
+      display: none
+    +variant(primary) // Breadcrumb__item--primary
+      color: $primary
+    +variant(success) // Breadcrumb__item--success
+      color: $success
+    +variant(danger) // Breadcrumb__item--danger 
+      color: $danger
+    +variant(warning) // Breadcrumb__item--warning
+      color: $warning
+    +variant(info) // Breadcrumb__item--info
+      color: $info
+    +variant(dark) // Breadcrumb__item--dark
+      color: $gray

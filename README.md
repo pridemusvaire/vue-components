@@ -97,74 +97,60 @@ You can create a panel.
 
 ##### Example #####
 ```javascript
-// App.vue, inside script tag or in a different JS file.
-import {panel} from 'vue-components';
+import {Panel} from 'vue-components';
+
+// Vue JS script
 export default {
-   data () {
-      return {
-         alert : {
-             style: 'primary',
-             // Optional
-             hasHeader: true,
-             // Optional
-             hasBody: true,
-             // Optional
-             hasFooter: true,
-             // Optional
-             body: {
-                 // You can specify a different styling
-                 // If left blank or null, the parent style will be used
-                 style: 'success'
-             },
-             // Optional
-             header: {
-                 // You can specify a different styling
-                 // If left blank or null, the parent style will be used
-                 style: 'danger'
-             },
-             // Optional
-             title: {
-                 // You can specify a different styling
-                 // If left blank or null, the parent style will be used
-                 style: 'info'
-             },
-             // Optional
-             footer: {
-                 // You can specify a different styling
-                 // If left blank or null, the parent style will be used
-                 style: 'warning'
-             }
-         }
-      }
-   },
-   components : {
-      'v-panel' : panel
-   }
+    data() {
+        return {
+            panel : {
+                contextualStyle: 'info',
+                variants: ['test'],
+                header: {
+                    contextualStyle: 'info',
+                    variants: ['test'],
+                    title: {
+                        contextualStyle: 'info',
+                        variants: ['test'],
+                        content: 'Panel'
+                    }
+                },
+                body: {
+                    contextualStyle: 'info',
+                    variants: ['test'],
+                    enabled: true
+                },
+                footer: {
+                    contextualStyle: 'info',
+                    variants: ['test'],
+                    enabled: true
+                }
+            }
+        }
+    },
+
+    components: {
+        Panel
+    }
 };
 ```
 
 ```html
-<!-- App.vue, inside template tag or in a different HTML file. -->
-<v-panel
-        :style="panel.style"
-        :header="panel.header"
-        :title="panel.title"
+<!-- Inside your template-tag or a different html-file -->
+<panel
+        :variants="panel.variants"
+        :contextual-style="panel.contextualStyle"
         :body="panel.body"
         :footer="panel.footer"
-        :has-header="panel.hasHeader"
-        :has-body="panel.hasBody"
-        :has-footer="panel.hasFooter"
+        :header="panel.header"
 >
-    <span slot="title">
-        Ik ben een titel!
+    <span slot="body">
+        Body
     </span>
-    <div slot="body">
-        Ik ben een body
-    </div>
-    <div slot="footer">
-        Ik ben een footer
-    </div>
-</v-panel>
+    <span slot="footer">
+        Footer
+    </span>
+</panel>
 ```
 
 ### License ###

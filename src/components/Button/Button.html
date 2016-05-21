@@ -1,0 +1,15 @@
+<a
+        v-if="hasLink"
+        :class="classNames"
+        :href="link.to"
+>
+    {{content}}
+</a>
+
+<a
+        v-if="hasAction"
+        :class="classNames"
+        @click.prevent="link.action"
+>
+    {{content}}
+</a>

@@ -1,0 +1,31 @@
+@import "./../../../assets/stylus/mixins/mixins.styl"
+@import "./../../../assets/stylus/settings/variables.styl"
+
+@keyframes timer {
+  0% {
+    width: 100%
+  }
+  100% {
+    width: 0
+  }
+}
+
+.Alert
+  +has(timer) // Alert__timer
+    animation: timer 5000ms infinite linear
+    position: absolute
+    top: 0
+    left: 0
+    height: .25rem
+    +variant(primary) // Alert__timer--primary
+      background: $primary_dark
+    +variant(success) // Alert__timer--success
+      background: $success_dark
+    +variant(danger) // Alert__timer--danger
+      background: $danger_dark
+    +variant(warning) // Alert__timer--warning
+      background: $warning_dark
+    +variant(info) // Alert__timer--info
+      background: $info_dark
+    +variant(dark) // Alert__timer--dark
+      background: $white

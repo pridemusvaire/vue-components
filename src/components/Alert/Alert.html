@@ -1,16 +1,31 @@
-<div :class="alertClass">
+<div :class="classNames">
 
-	<div :class="timerClass" v-if="hasTimer"></div>
+    <alert-timer
+            v-if="hasTimer"
+            :variants="timer.variants"
+            :contextual-style="timer.contextualStyle"
+            :close-function="closeAlert"
+    ></alert-timer>
 
-	<span :class="titleClass" v-if="hasTitle">
-		{{title.content}}
-	</span>
+    <alert-title
+            v-if="hasTitle"
+            :variants="title.variants"
+            :contextual-style="title.contextualStyle"
+            :content="title.content"
+    ></alert-title>
 
-	<span :class="messageClass" v-if="hasMessage">
-		{{message.content}}
-	</span>
+    <alert-message
+            v-if="hasMessage"
+            :variants="message.variants"
+            :contextual-style="message.contextualStyle"
+            :content="message.content"
+    ></alert-message>
 
-	<span :class="dismissClass" v-if="isDismissable" @click.prevent="dismissAlert">
-		&times;
-	</span>
+    <alert-close-button
+            v-if="hasCloseButton"
+            :variants="closeButton.variants"
+            :contextual-style="closeButton.contextualStyle"
+            :close-function="closeAlert"
+    ></alert-close-button>
+
 </div>

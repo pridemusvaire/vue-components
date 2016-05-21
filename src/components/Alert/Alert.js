@@ -1,23 +1,77 @@
-import CSSHelper from './../../utils/CSSUtil';
+import BlockMixin from './../../mixins/block';
+import * as AlertCloseButton from './CloseButton/CloseButton.vue';
+import * as AlertMessage from './Message/Message.vue';
+import * as AlertTimer from './Timer/Timer.vue';
+import * as AlertTitle from './Title/Title.vue';
 
 export default {
     data () {
         return {
-            block: 'alert'
+            block: 'Alert'
         };
     },
-    props: [
-        'style',
-        'title',
-        'message',
-        'dismiss',
-        'timer',
-        'isDismissable',
-        'hasTimer'
-    ],
-    components: {},
-    computed: {
 
+    props: {
+        /**
+         * The close button of the alert
+         */
+        closeButton: {
+            type: Object,
+            required: false
+        },
+
+        /**
+         * The timer of the alert
+         */
+        timer: {
+            type: Object,
+            required: false
+        },
+
+        /**
+         * The title of the alert
+         */
+        title: {
+            type: Object,
+            required: false
+        },
+
+        /**
+         * The message of the alert
+         */
+        message: {
+            type: Object,
+            required: false
+        }
+    },
+    
+    mixins: [
+        BlockMixin
+    ],
+
+    components: {
+        /**
+         * The alert dismiss button
+         */
+        AlertCloseButton,
+
+        /**
+         * The alert message
+         */
+        AlertMessage,
+
+        /**
+         * The alert timer
+         */
+        AlertTimer,
+
+        /**
+         * The alert timer
+         */
+        AlertTitle
+    },
+
+    computed: {
         /**
          * Computed property which will output
          * whether there is a title or not
@@ -39,181 +93,57 @@ export default {
         },
 
         /**
-         * Computed property which will output the
-         * corrected style for the title
+         * Computed property which will output
+         * whether there is a close button or not
          *
-         * @returns {string} The corrected style
+         * @returns {boolean} If there is a close button
          */
-        titleStyle () {
-            if (this.title) {
-                return this.title.style || this.style;
+        hasCloseButton () {
+            if (!this.closeButton) {
+                return false;
             }
 
-            return this.style;
+            return !!this.closeButton.enabled;
         },
 
         /**
-         * Computed property which will output the
-         * corrected style for the message
+         * Computed property which will output
+         * whether there is a timer or not
          *
-         * @returns {string} The corrected style
+         * @returns {boolean} If there is a timer
          */
-        messageStyle () {
-            if (this.message) {
-                return this.message.style || this.style;
+        hasTimer () {
+            if (!this.timer) {
+                return false;
             }
 
-            return this.style;
+            return this.timer.enabled;
         },
 
         /**
-         * Computed property which will output the
-         * corrected style for the dismiss button
+         * If the alerts can be closed
          *
-         * @returns {string} The corrected style
+         * @returns {boolean}
          */
-        dismissStyle () {
-            if (this.dismiss) {
-                return this.dismiss.style || this.style;
-            }
-
-            return this.style;
-        },
-
-        /**
-         * Computed property which will output the
-         * corrected style for the timer
-         *
-         * @returns {string} The corrected style
-         */
-        timerStyle () {
-            if (this.timer) {
-                return this.timer.style || this.style;
-            }
-
-            return this.style;
-        },
-
-        /**
-         * Computed property which will output the
-         * corrected class names for the alert
-         *
-         * @returns {Array} The corrected class name
-         */
-        alertClass () {
-            var classNames = [];
-            var contextualClass = CSSHelper.contextualClass(this.block, this.style);
-
-            classNames.push(this.block);
-
-            if (contextualClass) {
-                classNames.push(contextualClass);
-            }
-
-            return classNames;
-        },
-
-        /**
-         * Computed property which will output the
-         * corrected class names for the title
-         *
-         * @returns {Array} The corrected class name
-         */
-        titleClass () {
-            var classNames = [];
-            var element = CSSHelper.has(this.block, 'title');
-            var contextualClass = CSSHelper.contextualClass(element, this.titleStyle);
-
-            classNames.push(element);
-
-            if (contextualClass) {
-                classNames.push(contextualClass);
-            }
-
-            return classNames;
-        },
-
-        /**
-         * Computed property which will output the
-         * corrected class names for the message
-         *
-         * @returns {Array} The corrected class name
-         */
-        messageClass () {
-            var classNames = [];
-            var element = CSSHelper.has(this.block, 'message');
-            var contextualClass = CSSHelper.contextualClass(element, this.messageStyle);
-
-            classNames.push(element);
-
-            if (contextualClass) {
-                classNames.push(contextualClass);
-            }
-
-            return classNames;
-        },
-
-        /**
-         * Computed property which will output the
-         * corrected class names for the dismiss button
-         *
-         * @returns {Array} The corrected class name
-         */
-        dismissClass () {
-            var classNames = [];
-            var element = CSSHelper.has(this.block, 'dismiss');
-            var contextualClass = CSSHelper.contextualClass(element, this.dismissStyle);
-
-            classNames.push(element);
-
-            if (contextualClass) {
-                classNames.push(contextualClass);
-            }
-
-            return classNames;
-        },
-
-        /**
-         * Computed property which will output the
-         * corrected class names for the timer button
-         *
-         * @returns {Array} The corrected class name
-         */
-        timerClass () {
-            var classNames = [];
-            var element = CSSHelper.has(this.block, 'timer');
-            var contextualClass = CSSHelper.contextualClass(element, this.timerStyle);
-
-            classNames.push(element);
-
-            if (contextualClass) {
-                classNames.push(contextualClass);
-            }
-
-            return classNames;
+        isClosable () {
+            return !!(this.hasTimer || this.hasCloseButton);
         }
     },
-    methods: {
 
+    methods: {
         /**
-         * Method used to dismiss the alert.
+         * Method used to close the alert.
          * It will destroy the vm and clean it up.
          */
-        dismissAlert () {
+        closeAlert () {
             this.$destroy(true);
-        },
-
-        /**
-         * Method used to start the timer.
-         * When the timer is complete, it will dismiss the alert.
-         */
-        startTimer () {
-            setTimeout(this.dismissAlert, 5000);
         }
     },
+
     ready () {
-        if (this.hasTimer) {
-            this.startTimer();
+        // Check if the alert can be closed
+        if (!this.isClosable) {
+            console.warn('Warning: Cannot close the alert!');
         }
     }
 };
