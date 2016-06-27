@@ -3,54 +3,54 @@ import * as BreadcrumbLink from './../Link/Link.vue';
 import ElementMixin from './../../../mixins/element';
 
 export default {
-    data () {
-        return {
-            element: 'item'
-        };
+  data() {
+    return {
+      element: 'item',
+    };
+  },
+
+  props: {
+    /**
+     * The breadcrumb body
+     */
+    body: {
+      type: Object,
+      required: true,
     },
 
-    props: {
-        /**
-         * The breadcrumb body
-         */
-        body: {
-            type: Object,
-            required: true
-        },
-
-        /**
-         * The linked page
-         */
-        link: {
-            type: Object,
-            required: false
-        }
+    /**
+     * The linked page
+     */
+    link: {
+      type: Object,
+      required: false,
     },
+  },
 
-    mixins: [
-        ElementMixin
-    ],
+  mixins: [
+    ElementMixin,
+  ],
 
-    components: {
-        /**
-         * The component for the breadcrumb content
-         */
-        BreadcrumbContent,
+  components: {
+    /**
+     * The component for the breadcrumb content
+     */
+    BreadcrumbContent,
 
-        /**
-         * The component for the breadcrumb link
-         */
-        BreadcrumbLink
+    /**
+     * The component for the breadcrumb link
+     */
+    BreadcrumbLink,
+  },
+
+  computed: {
+
+    /**
+     * Computed property which will output
+     * whether the item has a link or not
+     */
+    hasLink() {
+      return !!this.link;
     },
-
-    computed: {
-
-        /**
-         * Computed property which will output
-         * whether the item has a link or not
-         */
-        hasLink () {
-            return !!this.link;
-        }
-    }
+  },
 };

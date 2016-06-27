@@ -1,31 +1,31 @@
 <div :class="classNames">
 
-    <alert-timer
-            v-if="hasTimer"
-            :variants="timer.variants"
-            :contextual-style="timer.contextualStyle"
-            :close-function="closeAlert"
-    ></alert-timer>
+  <alert-timer
+    v-if="hasTimer"
+    :variants="timer.variants"
+    :contextual-style="timer.contextualStyle"
+    :close-function="closeAlert"
+  ></alert-timer>
 
-    <alert-title
-            v-if="hasTitle"
-            :variants="title.variants"
-            :contextual-style="title.contextualStyle"
-            :content="title.content"
-    ></alert-title>
+  <alert-title
+    v-if="hasTitle"
+    :variants="title.variants"
+    :contextual-style="title.contextualStyle"
+    :content="title.content"
+  ></alert-title>
 
-    <alert-message
-            v-if="hasMessage"
-            :variants="message.variants"
-            :contextual-style="message.contextualStyle"
-            :content="message.content"
-    ></alert-message>
+  <alert-message
+    v-if="hasMessage"
+    :variants="message.variants"
+    :contextual-style="message.contextualStyle"
+    :content="message.content"
+  ></alert-message>
 
-    <alert-close-button
-            v-if="hasCloseButton"
-            :variants="closeButton.variants"
-            :contextual-style="closeButton.contextualStyle"
-            :close-function="closeAlert"
-    ></alert-close-button>
+  <alert-close-button
+    v-if="hasCloseButton"
+    :variants="closeButton.variants"
+    :contextual-style="closeButton.contextualStyle"
+    :close-function="closeAlert"
+  ></alert-close-button>
 
 </div>

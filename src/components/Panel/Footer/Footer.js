@@ -1,13 +1,13 @@
 import ElementMixin from './../../../mixins/element';
 
 export default {
-    data () {
-        return {
-            element: 'footer'
-        };
-    },
+  data() {
+    return {
+      element: 'footer',
+    };
+  },
 
-    mixins: [
-        ElementMixin
-    ]
+  mixins: [
+    ElementMixin,
+  ],
 };

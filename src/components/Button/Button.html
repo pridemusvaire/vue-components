@@ -1,15 +1,15 @@
 <a
-        v-if="hasLink"
-        :class="classNames"
-        :href="link.to"
+  v-if="hasLink"
+  :class="classNames"
+  :href="link.to"
 >
-    {{content}}
+  {{content}}
 </a>
 
 <a
-        v-if="hasAction"
-        :class="classNames"
-        @click.prevent="link.action"
+  v-if="hasAction"
+  :class="classNames"
+  @click.prevent="link.action"
 >
-    {{content}}
+  {{content}}
 </a>

@@ -1,60 +1,60 @@
-import * as Button from './../Button/Button.vue';
+import * as VButton from './../Button/Button.vue';
 import * as DropdownMenu from './Menu/Menu.vue';
 import BlockMixin from './../../mixins/block';
 
 export default {
-    data () {
-        return {
-            block: 'Dropdown',
-            button: {
-                variants: [
-                    'block',
-                    'dropdown'
-                ],
-                link: {
-                    action: () => {
-                        this.toggle();
-                    }
-                }
-            },
-            isCollapsed: false
-        };
-    },
-
-    props: {
-        /**
-         * The title of the dropdown
-         */
-        title: {
-            type: String,
-            required: true
+  data() {
+    return {
+      block: 'Dropdown',
+      button: {
+        variants: [
+          'block',
+          'dropdown',
+        ],
+        link: {
+          action: () => {
+            this.toggle();
+          },
         },
+      },
+      isCollapsed: false,
+    };
+  },
 
-        /**
-         * The content displayed inside the button
-         */
-        items: {
-            type: Array,
-            required: true
-        }
+  props: {
+    /**
+     * The title of the dropdown
+     */
+    title: {
+      type: String,
+      required: true,
     },
 
-    components: {
-        VButton: Button,
-
-        /**
-         * The dropdown menu
-         */
-        DropdownMenu
+    /**
+     * The content displayed inside the button
+     */
+    items: {
+      type: Array,
+      required: true,
     },
-    
-    mixins: [
-        BlockMixin
-    ],
-    
-    methods: {
-        toggle() {
-            this.isCollapsed = !this.isCollapsed;
-        }
-    }
+  },
+
+  components: {
+    VButton,
+
+    /**
+     * The dropdown menu
+     */
+    DropdownMenu,
+  },
+
+  mixins: [
+    BlockMixin,
+  ],
+
+  methods: {
+    toggle() {
+      this.isCollapsed = !this.isCollapsed;
+    },
+  },
 };

@@ -5,11 +5,13 @@ import * as Dropdown from './components/Dropdown/Dropdown.vue';
 import * as Label from './components/Label/Label.vue';
 import * as Panel from './components/Panel/Panel.vue';
 
+require('./assets/stylus/vue-components.styl');
+
 module.exports = {
-    Alert,
-    Breadcrumb,
-    Button,
-    Dropdown,
-    Label,
-    Panel
+  Alert,
+  Breadcrumb,
+  Button,
+  Dropdown,
+  Label,
+  Panel,
 };
