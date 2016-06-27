@@ -1,25 +1,25 @@
 <div :class="classNames">
 
-    <panel-header
-            v-if="hasHeader"
-            :title="header.title"
-            :variants="header.variants"
-            :contextual-style="header.contextualStyle"
-    ></panel-header>
+  <panel-header
+    v-if="hasHeader"
+    :title="header.title"
+    :variants="header.variants"
+    :contextual-style="header.contextualStyle"
+  ></panel-header>
 
-    <panel-body
-            v-if="hasBody"
-            :variants="body.variants"
-            :contextual-style="body.contextualStyle"
-    >
-        <slot name="body" slot="body"></slot>
-    </panel-body>
+  <panel-body
+    v-if="hasBody"
+    :variants="body.variants"
+    :contextual-style="body.contextualStyle"
+  >
+    <slot name="body" slot="body"></slot>
+  </panel-body>
 
-    <panel-footer
-            v-if="hasFooter"
-            :variants="footer.variants"
-            :contextual-style="footer.contextualStyle"
-    >
-        <slot name="footer" slot="footer"></slot>
-    </panel-footer>
+  <panel-footer
+    v-if="hasFooter"
+    :variants="footer.variants"
+    :contextual-style="footer.contextualStyle"
+  >
+    <slot name="footer" slot="footer"></slot>
+  </panel-footer>
 </div>
