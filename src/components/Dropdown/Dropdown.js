@@ -4,19 +4,21 @@ import * as DropdownMenu from './Menu/Menu.vue';
 
 export default {
   data() {
-    return {
-      block: 'Dropdown',
-      button: {
-        variants: [
-          'block',
-          'dropdown',
-        ],
-        link: {
-          action: () => {
-            this.toggle();
-          },
+    const button = {
+      variants: [
+        'block',
+        'dropdown',
+      ],
+      link: {
+        action: () => {
+          this.toggle();
         },
       },
+    };
+
+    return {
+      block: 'Dropdown',
+      button,
       isCollapsed: false,
     };
   },
@@ -37,6 +39,22 @@ export default {
       type: Array,
       required: true,
     },
+
+    /**
+     * The chosen item
+     */
+    chosen: {
+      type: Object,
+      required: false,
+    },
+
+    /**
+     * The field identifier
+     */
+    fieldName: {
+      type: String,
+      required: true,
+    },
   },
 
   components: {
@@ -55,6 +73,31 @@ export default {
   methods: {
     toggle() {
       this.isCollapsed = !this.isCollapsed;
+    },
+  },
+
+  computed: {
+    /**
+     * The icon for the button
+     *
+     * @returns {Object} The object given to the button
+     */
+    buttonIcon() {
+      const icon = this.isCollapsed ? 'menu-up' : 'menu-down';
+
+      return {
+        variants: [
+          icon,
+        ],
+      };
+    },
+
+    titleDisplayed() {
+      if (this.chosen && this.chosen[this.fieldName]) {
+        return this.chosen[this.fieldName];
+      }
+
+      return this.title;
     },
   },
 };

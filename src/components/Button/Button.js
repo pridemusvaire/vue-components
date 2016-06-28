@@ -1,4 +1,5 @@
 import BlockMixin from './../../mixins/block';
+import Icon from './../Icon/Icon.vue';
 
 export default {
   data() {
@@ -22,6 +23,14 @@ export default {
     link: {
       type: Object,
       required: true,
+    },
+
+    /**
+     * The icon displayed in the button
+     */
+    icon: {
+      type: Object,
+      required: false,
     },
   },
 
@@ -69,6 +78,16 @@ export default {
     isValid() {
       return !(!this.hasAction && !this.hasLink);
     },
+
+    /**
+     * Computer property which will check if
+     * the button has an icon
+     *
+     * @returns {boolean}
+     */
+    hasIcon() {
+      return !!this.icon;
+    },
   },
 
   created() {
@@ -76,5 +95,9 @@ export default {
     if (!this.isValid) {
       console.warn('Warning: The button contains an action and a link. It cannot have both!');
     }
+  },
+
+  components: {
+    Icon,
   },
 };

@@ -7,7 +7,7 @@ import * as Panel from './components/Panel/Panel.vue';
 
 require('./assets/stylus/vue-components.styl');
 
-module.export = {
+module.exports = {
   Alert,
   Breadcrumb,
   Button,

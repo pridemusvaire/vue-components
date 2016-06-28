@@ -4,6 +4,10 @@
   :href="link.to"
 >
   {{content}}
+  <icon
+    v-if="hasIcon"
+    :variants="[icon.variants, 'button']"
+  ></icon>
 </a>
 
 <a
@@ -12,6 +16,10 @@
   v-link="link.to"
 >
   {{content}}
+  <icon
+    v-if="hasIcon"
+    :variants="[icon.variants, 'button']"
+  ></icon>
 </a>
 
 <a
@@ -20,4 +28,8 @@
   @click.prevent="link.action"
 >
   {{content}}
+  <icon
+    v-if="hasIcon"
+    :variants="[icon.variants, 'button']"
+  ></icon>
 </a>

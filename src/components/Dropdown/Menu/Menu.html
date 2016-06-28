@@ -1,6 +1,11 @@
-<ul :class="classNames">
+<ul
+  :class="classNames"
+>
   <dropdown-item
     v-for="item in items"
-    :content="item.content"
+    :item="item"
+    :chosen.sync="chosen"
+    :field-name="fieldName"
+    :collapse="collapse"
   ></dropdown-item>
 </ul>
