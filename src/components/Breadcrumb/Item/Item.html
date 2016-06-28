@@ -2,6 +2,7 @@
   <breadcrumb-link
     v-if="hasLink"
     :body="body"
+    :vue-router="link.vueRouter"
     :to="link.to"
     :variants="link.variants"
     :contextual-style="link.contextualStyle"

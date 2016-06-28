@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+var utils = require('./build/utils.js')
 
 module.exports = {
   entry: './src/main.js',
@@ -37,7 +38,27 @@ module.exports = {
           limit: 10000,
           name: '[name].[ext]?[hash]'
         }
-      }
+      },
+      {
+        test: /\.styl$/,
+        loader: 'style-loader!css-loader!stylus-loader'
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url',
+        query: {
+          limit: 10000,
+          name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
+        }
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        loader: 'url',
+        query: {
+          limit: 10000,
+          name: utils.assetsPath('img/[name].[hash:7].[ext]')
+        }
+      },
     ]
   },
   devServer: {

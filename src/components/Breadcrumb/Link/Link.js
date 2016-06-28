@@ -24,6 +24,14 @@ export default {
       type: String,
       required: true,
     },
+
+    /**
+     * If vue-router will be used
+     */
+    vueRouter: {
+      type: Boolean,
+      required: true,
+    },
   },
 
   components: {

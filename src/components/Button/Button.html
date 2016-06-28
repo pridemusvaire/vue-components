@@ -1,7 +1,15 @@
 <a
-  v-if="hasLink"
+  v-if="hasLink && !link.vueRouter"
   :class="classNames"
   :href="link.to"
+>
+  {{content}}
+</a>
+
+<a
+  v-if="hasLink && link.vueRouter"
+  :class="classNames"
+  v-link="link.to"
 >
   {{content}}
 </a>

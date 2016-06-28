@@ -37,6 +37,7 @@ export default {
           this.contextualStyle
         )
       );
+
       return classes;
     },
   },

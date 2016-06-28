@@ -1,4 +1,17 @@
 <a
+  v-if="vueRouter"
+  :class="classNames"
+  v-link="to"
+>
+  <breadcrumb-content
+    :content="body.content"
+    :variants="body.variants"
+    :contextual-style="body.contextualStyle"
+  ></breadcrumb-content>
+</a>
+
+<a
+  v-else
   :class="classNames"
   :href="to"
 >

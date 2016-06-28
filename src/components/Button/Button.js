@@ -37,6 +37,11 @@ export default {
      * @returns {boolean}
      */
     hasLink() {
+      // Check when the property link isn't set
+      if (!this.link) {
+        return false;
+      }
+
       return !!this.link.to && !this.link.action;
     },
 
@@ -47,6 +52,11 @@ export default {
      * @returns {boolean}
      */
     hasAction() {
+      // Check when the property link isn't set
+      if (!this.link) {
+        return false;
+      }
+
       return !!this.link.action && !this.link.to;
     },
 
